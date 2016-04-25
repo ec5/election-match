@@ -6,12 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const $app = $('#app').html('')
   const $motionSelect = $('<select name="select-items" multiple />').appendTo($app).selectize()
   const motionSelectize = $motionSelect[0].selectize
-  const $motionCount = $('<span>0</span>')
-
-  $('<div />').appendTo($app)
-    .append('<span>共 </span>')
-    .append($motionCount)
-    .append('<span> 個議案</span></div>')
+  const $motionCount = $('<div>載入議案資料中⋯⋯</div>').appendTo($app)
 
   let motionCount = 0
   $.getJSON('data/votes.json', (votes) => {
@@ -38,6 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
     motionSelectize.refreshOptions()
-    $motionCount.text(motionCount)
+    $motionCount.text(`共 ${motionCount} 個議案`)
   })
 })
