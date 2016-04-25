@@ -2,7 +2,10 @@
   "private": true,
   "scripts": {
     "start": "brunch watch --server",
-    "prod": "brunch build --production"
+    "prod": "brunch build --production",
+    "clean": "rimraf public",
+    "gh-pages": "gh-pages -d public",
+    "deploy": "npm-run-all clean prod gh-pages"
   },
   "dependencies": {
     "jquery": "^2.2.3",
@@ -20,8 +23,11 @@
     "clean-css-brunch": "^2.0.0",
     "css-brunch": "^2.6.1",
     "eslint-brunch": "^3.5.1",
+    "gh-pages": "^0.11.0",
     "javascript-brunch": "^2.0.0",
     "less-brunch": "^2.6.0",
+    "npm-run-all": "^1.8.0",
+    "rimraf": "^2.5.2",
     "stylus-brunch": "^2.6.0",
     "uglify-js-brunch": "^2.0.1"
   }
