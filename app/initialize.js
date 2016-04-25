@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     .append('<span> 個議案</span></div>')
 
   let motionCount = 0
-  $.getJSON('/data/votes.json', (votes) => {
+  $.getJSON('data/votes.json', (votes) => {
     votes = _.flatten(_.map(votes, (v) => v))
     console.log(votes)
 
