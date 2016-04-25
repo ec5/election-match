@@ -6,10 +6,21 @@ module.exports = {
         'app.js': /^app/
       }
     },
-    stylesheets: {joinTo: 'app.css'}
+    stylesheets: {
+      joinTo: 'app.css',
+    },
   },
 
   plugins: {
-    babel: {presets: ['es2015', 'stage-0']}
-  }
-};
+    babel: {presets: ['es2015', 'stage-0']},
+    less: {},
+  },
+
+  overrides: {
+    production: {
+      optimize: true,
+      sourceMaps: false,
+      plugins: {autoReload: {enabled: false}},
+    },
+  },
+}
