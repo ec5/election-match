@@ -4,9 +4,16 @@ import selectize from 'selectize'
 
 document.addEventListener('DOMContentLoaded', () => {
   const $app = $('#app').html('')
-  const $selectVoteItem = $('<select name="select-items" multiple />').appendTo($app).selectize()
-  const selectizeVoteItem = $selectVoteItem[0].selectize
+  const $motionSelect = $('<select name="select-items" multiple />').appendTo($app).selectize()
+  const motionSelectize = $motionSelect[0].selectize
+  const $motionCount = $('<span>0</span>')
 
+  $('<div />').appendTo($app)
+    .append('<span>共 </span>')
+    .append($motionCount)
+    .append('<span> 個議案</span></div>')
+
+  let motionCount = 0
   $.getJSON('/data/votes.json', (votes) => {
     votes = _.flatten(_.map(votes, (v) => v))
     console.log(votes)
@@ -14,20 +21,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const groups = new Set()
     _.each(votes, (meeting) => {
       const optgroup = `${meeting['@type']} - ${meeting['@start-date']}`
-      selectizeVoteItem.addOptionGroup(optgroup, {
+      motionSelectize.addOptionGroup(optgroup, {
         label: optgroup,
       })
       _.each(meeting.vote, (vote) => {
         if (!vote) {
           return
         }
-        selectizeVoteItem.addOption({
+        motionCount += 1
+        motionSelectize.addOption({
           value: `${optgroup} - ${vote['@number']}`,
           text: `${vote['motion-ch']}`,
           optgroup,
         })
       })
     })
-    selectizeVoteItem.refreshOptions()
+
+    motionSelectize.refreshOptions()
+    $motionCount.text(motionCount)
   })
 })

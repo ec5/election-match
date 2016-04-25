@@ -14,6 +14,11 @@ module.exports = {
   plugins: {
     babel: {presets: ['es2015', 'stage-0']},
     less: {},
+    uglify: {
+      compress: {
+        drop_console: true,
+      },
+    },
   },
 
   overrides: {
