@@ -14,6 +14,15 @@ module.exports = {
   plugins: {
     babel: {presets: ['es2015', 'stage-0']},
     less: {},
+    sass: {
+      options: {
+        includePaths: [
+          'node_modules/bootstrap/scss',
+          'node_modules/select2/src/scss',
+          'node_modules/select2-bootstrap-theme/src',
+        ]
+      },
+    },
     uglify: {
       compress: {
         drop_console: true,

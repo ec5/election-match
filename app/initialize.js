@@ -1,38 +1,41 @@
 import _ from 'lodash'
 import $ from 'jquery'
-import selectize from 'selectize'
+import 'select2'
 
 document.addEventListener('DOMContentLoaded', () => {
   const $app = $('#app').html('')
-  const $motionSelect = $('<select name="select-items" multiple />').appendTo($app).selectize()
-  const motionSelectize = $motionSelect[0].selectize
   const $motionCount = $('<div>載入議案資料中⋯⋯</div>').appendTo($app)
 
   let motionCount = 0
   $.getJSON('data/votes.json', (votes) => {
+    // TODO generate data as simple array
     votes = _.flatten(_.map(votes, (v) => v))
     console.log(votes)
 
-    const groups = new Set()
+    const groups = {}
     _.each(votes, (meeting) => {
-      const optgroup = `${meeting['@type']} - ${meeting['@start-date']}`
-      motionSelectize.addOptionGroup(optgroup, {
-        label: optgroup,
-      })
-      _.each(meeting.vote, (vote) => {
+      const group = `${meeting['@type']}_${meeting['@start-date']}`
+      groups[group] = _.compact(_.map(meeting.vote, (vote) => {
         if (!vote) {
           return
         }
         motionCount += 1
-        motionSelectize.addOption({
-          value: `${optgroup} - ${vote['@number']}`,
+        return {
+          id: `${group}-${vote['@number']}`,
           text: `${vote['motion-ch']}`,
-          optgroup,
-        })
-      })
+        }
+      }))
     })
 
-    motionSelectize.refreshOptions()
+    const $motionSelect = $('<select name="select-items" multiple style="width: 100%" />').appendTo($app).select2({
+      data: _.map(groups, (children, text) => {
+        return {
+          children, text,
+        }
+      }),
+      theme: 'bootstrap',
+    })
+
     $motionCount.text(`共 ${motionCount} 個議案`)
   })
 })
