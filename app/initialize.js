@@ -5,11 +5,33 @@ import {render} from 'react-dom'
 import $ from 'jquery'
 import 'select2'
 
-const votes = {}
+const motions = {}
 
 const updateSelect = (rootNode, $motionSelect) => (event) => {
+  const selectedMotions = _.map($motionSelect.val(), (motionId) => {
+    return motions[motionId]
+  })
+  console.log(selectedMotions)
   render((
-    <div>Votes</div>
+    <form className="container list-group">
+      <h3>議案投票</h3>
+      {_.map(selectedMotions, (motion, i) => {
+        return (
+          <div key={i} className="form-group list-group-item">
+            <h4 className="list-group-item-heading">{motion['motion-ch']}</h4>
+            <label className="radio-inline">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" /> 贊成
+            </label>
+            <label className="radio-inline">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" /> 反對
+            </label>
+            <label className="radio-inline">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" /> 棄權
+            </label>
+          </div>
+        )
+      })}
+    </form>
   ), rootNode)
 }
 
@@ -36,9 +58,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         motionCount += 1
         const id = `${group}_${vote['@number']}`
-        votes[id] = {
+        motions[id] = {
           ...vote,
-          ...group,
+          group,
         }
         return {
           id,
