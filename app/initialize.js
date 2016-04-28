@@ -9,24 +9,24 @@ const motions = {}
 
 const updateSelect = (rootNode, $motionSelect) => (event) => {
   const selectedMotions = _.map($motionSelect.val(), (motionId) => {
-    return motions[motionId]
+    return [motionId, motions[motionId]]
   })
   console.log(selectedMotions)
   render((
     <form className="container list-group">
       <h3>議案投票</h3>
-      {_.map(selectedMotions, (motion, i) => {
+      {_.map(selectedMotions, ([motionId, motion], i) => {
         return (
           <div key={i} className="form-group list-group-item">
             <h4 className="list-group-item-heading">{motion['motion-ch']}</h4>
             <label className="radio-inline">
-              <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" /> 贊成
+              <input type="radio" name={motionId} value="yes" /> 贊成
             </label>
             <label className="radio-inline">
-              <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" /> 反對
+              <input type="radio" name={motionId} value="no" /> 反對
             </label>
             <label className="radio-inline">
-              <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" /> 棄權
+              <input type="radio" name={motionId} value="abs" /> 棄權
             </label>
           </div>
         )
