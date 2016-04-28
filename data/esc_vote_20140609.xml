@@ -1,0 +1,4385 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<legcohk-vote xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="/schema/legcohk-vote-schema.xsd">
+  <meeting start-date="09/06/2014" type="Establishment Subcommittee">
+    <vote number="1">
+      <vote-date>09/06/2014</vote-date>
+      <vote-time>08:48:29</vote-time>
+      <motion-ch>本委員會同意處理議員根據《人事編制小組委員會會議程序》第31A段擬動議的議案（議案編號：2）</motion-ch>
+      <motion-en>That this Committee should proceed with the motion proposed to be moved by a member under paragraph 31A of the Establishment Subcommittee Procedure (Motion No. 2)</motion-en>
+      <vote-separate-mechanism>No</vote-separate-mechanism>
+      <vote-summary>
+        <overall>
+          <present-count>11</present-count>
+          <vote-count>10</vote-count>
+          <yes-count>3</yes-count>
+          <no-count>7</no-count>
+          <abstain-count>0</abstain-count>
+          <result>Negatived</result>
+        </overall>
+      </vote-summary>
+      <individual-votes>
+        <member name-ch="葉劉淑儀" name-en="Mrs Regina IP" constituency="Geographical">
+          <vote>Present</vote>
+        </member>
+        <member name-ch="劉慧卿" name-en="Emily LAU" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="黃定光" name-en="WONG Ting-kwong" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="李慧琼" name-en="Starry LEE" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="黃國健" name-en="WONG Kwok-kin" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="梁國雄" name-en="LEUNG Kwok-hung" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="何俊賢" name-en="Steven HO" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="姚思榮" name-en="YIU Si-wing" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁繼昌" name-en="Kenneth LEUNG" constituency="Functional">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="郭家麒" name-en="Dr KWOK Ka-ki" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="郭偉强" name-en="KWOK Wai-keung" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="張華峰" name-en="Christopher CHEUNG" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="單仲偕" name-en="SIN Chung-kai" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="葉建源" name-en="IP Kin-yuen" constituency="Functional">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="廖長江" name-en="Martin LIAO" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="潘兆平" name-en="POON Siu-ping" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鄧家彪" name-en="TANG Ka-piu" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鍾國斌" name-en="CHUNG Kwok-pan" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+      </individual-votes>
+    </vote>
+    <vote number="2">
+      <vote-date>09/06/2014</vote-date>
+      <vote-time>08:54:12</vote-time>
+      <motion-ch>委員根據《人事編制小組委員會會議程序》第39A段動議於其後就相同的議程項目下的任何議案或待議議題進行點名表決時，委員會須在點名表決鐘聲響起一分鐘後立即進行各該點名表決</motion-ch>
+      <motion-en>Motion moved by a member under para 39A of the ESC Procedure that in the event of further divisions being claimed in respect of any motions or questions under the same agenda item, the Committee do proceed to each of such divisions immediately after the division bell has been rung for one minute</motion-en>
+      <vote-separate-mechanism>No</vote-separate-mechanism>
+      <vote-summary>
+        <overall>
+          <present-count>12</present-count>
+          <vote-count>11</vote-count>
+          <yes-count>10</yes-count>
+          <no-count>1</no-count>
+          <abstain-count>0</abstain-count>
+          <result>Passed</result>
+        </overall>
+      </vote-summary>
+      <individual-votes>
+        <member name-ch="葉劉淑儀" name-en="Mrs Regina IP" constituency="Geographical">
+          <vote>Present</vote>
+        </member>
+        <member name-ch="劉慧卿" name-en="Emily LAU" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="黃定光" name-en="WONG Ting-kwong" constituency="Functional">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="李慧琼" name-en="Starry LEE" constituency="Functional">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="黃國健" name-en="WONG Kwok-kin" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="梁國雄" name-en="LEUNG Kwok-hung" constituency="Geographical">
+          <vote>No</vote>
+        </member>
+        <member name-ch="何俊賢" name-en="Steven HO" constituency="Functional">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="姚思榮" name-en="YIU Si-wing" constituency="Functional">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="梁繼昌" name-en="Kenneth LEUNG" constituency="Functional">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="郭家麒" name-en="Dr KWOK Ka-ki" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="郭偉强" name-en="KWOK Wai-keung" constituency="Functional">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="張華峰" name-en="Christopher CHEUNG" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="單仲偕" name-en="SIN Chung-kai" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="葉建源" name-en="IP Kin-yuen" constituency="Functional">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="廖長江" name-en="Martin LIAO" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="潘兆平" name-en="POON Siu-ping" constituency="Functional">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="鄧家彪" name-en="TANG Ka-piu" constituency="Functional">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="鍾國斌" name-en="CHUNG Kwok-pan" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+      </individual-votes>
+    </vote>
+    <vote number="3">
+      <vote-date>09/06/2014</vote-date>
+      <vote-time>08:56:20</vote-time>
+      <motion-ch>本委員會同意處理議員根據《人事編制小組委員會會議程序》第31A段擬動議的議案（議案編號：3）</motion-ch>
+      <motion-en>That this Committee should proceed with the motion proposed to be moved by a member under paragraph 31A of the Establishment Subcommittee Procedure (Motion No. 3)</motion-en>
+      <vote-separate-mechanism>No</vote-separate-mechanism>
+      <vote-summary>
+        <overall>
+          <present-count>12</present-count>
+          <vote-count>11</vote-count>
+          <yes-count>2</yes-count>
+          <no-count>8</no-count>
+          <abstain-count>1</abstain-count>
+          <result>Negatived</result>
+        </overall>
+      </vote-summary>
+      <individual-votes>
+        <member name-ch="葉劉淑儀" name-en="Mrs Regina IP" constituency="Geographical">
+          <vote>Present</vote>
+        </member>
+        <member name-ch="劉慧卿" name-en="Emily LAU" constituency="Geographical">
+          <vote>No</vote>
+        </member>
+        <member name-ch="黃定光" name-en="WONG Ting-kwong" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="李慧琼" name-en="Starry LEE" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="黃國健" name-en="WONG Kwok-kin" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="梁國雄" name-en="LEUNG Kwok-hung" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="何俊賢" name-en="Steven HO" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="姚思榮" name-en="YIU Si-wing" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁繼昌" name-en="Kenneth LEUNG" constituency="Functional">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="郭家麒" name-en="Dr KWOK Ka-ki" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="郭偉强" name-en="KWOK Wai-keung" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="張華峰" name-en="Christopher CHEUNG" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="單仲偕" name-en="SIN Chung-kai" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="葉建源" name-en="IP Kin-yuen" constituency="Functional">
+          <vote>Abstain</vote>
+        </member>
+        <member name-ch="廖長江" name-en="Martin LIAO" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="潘兆平" name-en="POON Siu-ping" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鄧家彪" name-en="TANG Ka-piu" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鍾國斌" name-en="CHUNG Kwok-pan" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+      </individual-votes>
+    </vote>
+    <vote number="4">
+      <vote-date>09/06/2014</vote-date>
+      <vote-time>08:57:55</vote-time>
+      <motion-ch>本委員會同意處理議員根據《人事編制小組委員會會議程序》第31A段擬動議的議案（議案編號：4）</motion-ch>
+      <motion-en>That this Committee should proceed with the motion proposed to be moved by a member under paragraph 31A of the Establishment Subcommittee Procedure (Motion No. 4)</motion-en>
+      <vote-separate-mechanism>No</vote-separate-mechanism>
+      <vote-summary>
+        <overall>
+          <present-count>12</present-count>
+          <vote-count>10</vote-count>
+          <yes-count>1</yes-count>
+          <no-count>9</no-count>
+          <abstain-count>0</abstain-count>
+          <result>Negatived</result>
+        </overall>
+      </vote-summary>
+      <individual-votes>
+        <member name-ch="葉劉淑儀" name-en="Mrs Regina IP" constituency="Geographical">
+          <vote>Present</vote>
+        </member>
+        <member name-ch="劉慧卿" name-en="Emily LAU" constituency="Geographical">
+          <vote>No</vote>
+        </member>
+        <member name-ch="黃定光" name-en="WONG Ting-kwong" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="李慧琼" name-en="Starry LEE" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="黃國健" name-en="WONG Kwok-kin" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="梁國雄" name-en="LEUNG Kwok-hung" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="何俊賢" name-en="Steven HO" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="姚思榮" name-en="YIU Si-wing" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁繼昌" name-en="Kenneth LEUNG" constituency="Functional">
+          <vote>Present</vote>
+        </member>
+        <member name-ch="郭家麒" name-en="Dr KWOK Ka-ki" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="郭偉强" name-en="KWOK Wai-keung" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="張華峰" name-en="Christopher CHEUNG" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="單仲偕" name-en="SIN Chung-kai" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="葉建源" name-en="IP Kin-yuen" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="廖長江" name-en="Martin LIAO" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="潘兆平" name-en="POON Siu-ping" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鄧家彪" name-en="TANG Ka-piu" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鍾國斌" name-en="CHUNG Kwok-pan" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+      </individual-votes>
+    </vote>
+    <vote number="5">
+      <vote-date>09/06/2014</vote-date>
+      <vote-time>08:59:47</vote-time>
+      <motion-ch>本委員會同意處理議員根據《人事編制小組委員會會議程序》第31A段擬動議的議案（議案編號：5）</motion-ch>
+      <motion-en>That this Committee should proceed with the motion proposed to be moved by a member under paragraph 31A of the Establishment Subcommittee Procedure (Motion No. 5)</motion-en>
+      <vote-separate-mechanism>No</vote-separate-mechanism>
+      <vote-summary>
+        <overall>
+          <present-count>10</present-count>
+          <vote-count>9</vote-count>
+          <yes-count>2</yes-count>
+          <no-count>7</no-count>
+          <abstain-count>0</abstain-count>
+          <result>Negatived</result>
+        </overall>
+      </vote-summary>
+      <individual-votes>
+        <member name-ch="葉劉淑儀" name-en="Mrs Regina IP" constituency="Geographical">
+          <vote>Present</vote>
+        </member>
+        <member name-ch="劉慧卿" name-en="Emily LAU" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="黃定光" name-en="WONG Ting-kwong" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="李慧琼" name-en="Starry LEE" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="黃國健" name-en="WONG Kwok-kin" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="梁國雄" name-en="LEUNG Kwok-hung" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="何俊賢" name-en="Steven HO" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="姚思榮" name-en="YIU Si-wing" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁繼昌" name-en="Kenneth LEUNG" constituency="Functional">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="郭家麒" name-en="Dr KWOK Ka-ki" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="郭偉强" name-en="KWOK Wai-keung" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="張華峰" name-en="Christopher CHEUNG" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="單仲偕" name-en="SIN Chung-kai" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="葉建源" name-en="IP Kin-yuen" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="廖長江" name-en="Martin LIAO" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="潘兆平" name-en="POON Siu-ping" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鄧家彪" name-en="TANG Ka-piu" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鍾國斌" name-en="CHUNG Kwok-pan" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+      </individual-votes>
+    </vote>
+    <vote number="6">
+      <vote-date>09/06/2014</vote-date>
+      <vote-time>09:01:51</vote-time>
+      <motion-ch>本委員會同意處理議員根據《人事編制小組委員會會議程序》第31A段擬動議的議案（議案編號：7）</motion-ch>
+      <motion-en>That this Committee should proceed with the motion proposed to be moved by a member under paragraph 31A of the Establishment Subcommittee Procedure (Motion No. 7)</motion-en>
+      <vote-separate-mechanism>No</vote-separate-mechanism>
+      <vote-summary>
+        <overall>
+          <present-count>11</present-count>
+          <vote-count>9</vote-count>
+          <yes-count>2</yes-count>
+          <no-count>7</no-count>
+          <abstain-count>0</abstain-count>
+          <result>Negatived</result>
+        </overall>
+      </vote-summary>
+      <individual-votes>
+        <member name-ch="葉劉淑儀" name-en="Mrs Regina IP" constituency="Geographical">
+          <vote>Present</vote>
+        </member>
+        <member name-ch="劉慧卿" name-en="Emily LAU" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="黃定光" name-en="WONG Ting-kwong" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="李慧琼" name-en="Starry LEE" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="黃國健" name-en="WONG Kwok-kin" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="梁國雄" name-en="LEUNG Kwok-hung" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="何俊賢" name-en="Steven HO" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="姚思榮" name-en="YIU Si-wing" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁繼昌" name-en="Kenneth LEUNG" constituency="Functional">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="郭家麒" name-en="Dr KWOK Ka-ki" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="郭偉强" name-en="KWOK Wai-keung" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="張華峰" name-en="Christopher CHEUNG" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="單仲偕" name-en="SIN Chung-kai" constituency="Geographical">
+          <vote>Present</vote>
+        </member>
+        <member name-ch="葉建源" name-en="IP Kin-yuen" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="廖長江" name-en="Martin LIAO" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="潘兆平" name-en="POON Siu-ping" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鄧家彪" name-en="TANG Ka-piu" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鍾國斌" name-en="CHUNG Kwok-pan" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+      </individual-votes>
+    </vote>
+    <vote number="7">
+      <vote-date>09/06/2014</vote-date>
+      <vote-time>09:03:31</vote-time>
+      <motion-ch>本委員會同意處理議員根據《人事編制小組委員會會議程序》第31A段擬動議的議案（議案編號：8）</motion-ch>
+      <motion-en>That this Committee should proceed with the motion proposed to be moved by a member under paragraph 31A of the Establishment Subcommittee Procedure  (Motion No. 8)</motion-en>
+      <vote-separate-mechanism>No</vote-separate-mechanism>
+      <vote-summary>
+        <overall>
+          <present-count>12</present-count>
+          <vote-count>10</vote-count>
+          <yes-count>1</yes-count>
+          <no-count>9</no-count>
+          <abstain-count>0</abstain-count>
+          <result>Negatived</result>
+        </overall>
+      </vote-summary>
+      <individual-votes>
+        <member name-ch="葉劉淑儀" name-en="Mrs Regina IP" constituency="Geographical">
+          <vote>Present</vote>
+        </member>
+        <member name-ch="劉慧卿" name-en="Emily LAU" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="黃定光" name-en="WONG Ting-kwong" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="李慧琼" name-en="Starry LEE" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="黃國健" name-en="WONG Kwok-kin" constituency="Geographical">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁國雄" name-en="LEUNG Kwok-hung" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="何俊賢" name-en="Steven HO" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="姚思榮" name-en="YIU Si-wing" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁繼昌" name-en="Kenneth LEUNG" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="郭家麒" name-en="Dr KWOK Ka-ki" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="郭偉强" name-en="KWOK Wai-keung" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="張華峰" name-en="Christopher CHEUNG" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="單仲偕" name-en="SIN Chung-kai" constituency="Geographical">
+          <vote>Present</vote>
+        </member>
+        <member name-ch="葉建源" name-en="IP Kin-yuen" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="廖長江" name-en="Martin LIAO" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="潘兆平" name-en="POON Siu-ping" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鄧家彪" name-en="TANG Ka-piu" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鍾國斌" name-en="CHUNG Kwok-pan" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+      </individual-votes>
+    </vote>
+    <vote number="8">
+      <vote-date>09/06/2014</vote-date>
+      <vote-time>09:05:13</vote-time>
+      <motion-ch>本委員會同意處理議員根據《人事編制小組委員會會議程序》第31A段擬動議的議案（議案編號：9）</motion-ch>
+      <motion-en>That this Committee should proceed with the motion proposed to be moved by a member under paragraph 31A of the Establishment Subcommittee Procedure (Motion No. 9)</motion-en>
+      <vote-separate-mechanism>No</vote-separate-mechanism>
+      <vote-summary>
+        <overall>
+          <present-count>12</present-count>
+          <vote-count>10</vote-count>
+          <yes-count>3</yes-count>
+          <no-count>7</no-count>
+          <abstain-count>0</abstain-count>
+          <result>Negatived</result>
+        </overall>
+      </vote-summary>
+      <individual-votes>
+        <member name-ch="葉劉淑儀" name-en="Mrs Regina IP" constituency="Geographical">
+          <vote>Present</vote>
+        </member>
+        <member name-ch="劉慧卿" name-en="Emily LAU" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="黃定光" name-en="WONG Ting-kwong" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="李慧琼" name-en="Starry LEE" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="黃國健" name-en="WONG Kwok-kin" constituency="Geographical">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁國雄" name-en="LEUNG Kwok-hung" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="何俊賢" name-en="Steven HO" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="姚思榮" name-en="YIU Si-wing" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="梁繼昌" name-en="Kenneth LEUNG" constituency="Functional">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="郭家麒" name-en="Dr KWOK Ka-ki" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="郭偉强" name-en="KWOK Wai-keung" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="張華峰" name-en="Christopher CHEUNG" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="單仲偕" name-en="SIN Chung-kai" constituency="Geographical">
+          <vote>Present</vote>
+        </member>
+        <member name-ch="葉建源" name-en="IP Kin-yuen" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="廖長江" name-en="Martin LIAO" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="潘兆平" name-en="POON Siu-ping" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鄧家彪" name-en="TANG Ka-piu" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鍾國斌" name-en="CHUNG Kwok-pan" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+      </individual-votes>
+    </vote>
+    <vote number="9">
+      <vote-date>09/06/2014</vote-date>
+      <vote-time>09:06:46</vote-time>
+      <motion-ch>本委員會同意處理議員根據《人事編制小組委員會會議程序》第31A段擬動議的議案（議案編號：10）</motion-ch>
+      <motion-en>That this Committee should proceed with the motion proposed to be moved by a member under paragraph 31A of the Establishment Subcommittee Procedure (Motion No. 10)</motion-en>
+      <vote-separate-mechanism>No</vote-separate-mechanism>
+      <vote-summary>
+        <overall>
+          <present-count>12</present-count>
+          <vote-count>11</vote-count>
+          <yes-count>2</yes-count>
+          <no-count>9</no-count>
+          <abstain-count>0</abstain-count>
+          <result>Negatived</result>
+        </overall>
+      </vote-summary>
+      <individual-votes>
+        <member name-ch="葉劉淑儀" name-en="Mrs Regina IP" constituency="Geographical">
+          <vote>Present</vote>
+        </member>
+        <member name-ch="劉慧卿" name-en="Emily LAU" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="黃定光" name-en="WONG Ting-kwong" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="李慧琼" name-en="Starry LEE" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="黃國健" name-en="WONG Kwok-kin" constituency="Geographical">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁國雄" name-en="LEUNG Kwok-hung" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="何俊賢" name-en="Steven HO" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="姚思榮" name-en="YIU Si-wing" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁繼昌" name-en="Kenneth LEUNG" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="郭家麒" name-en="Dr KWOK Ka-ki" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="郭偉强" name-en="KWOK Wai-keung" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="張華峰" name-en="Christopher CHEUNG" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="單仲偕" name-en="SIN Chung-kai" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="葉建源" name-en="IP Kin-yuen" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="廖長江" name-en="Martin LIAO" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="潘兆平" name-en="POON Siu-ping" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鄧家彪" name-en="TANG Ka-piu" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鍾國斌" name-en="CHUNG Kwok-pan" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+      </individual-votes>
+    </vote>
+    <vote number="10">
+      <vote-date>09/06/2014</vote-date>
+      <vote-time>09:08:19</vote-time>
+      <motion-ch>本委員會同意處理議員根據《人事編制小組委員會會議程序》第31A段擬動議的議案（議案編號：11）</motion-ch>
+      <motion-en>That this Committee should proceed with the motion proposed to be moved by a member under paragraph 31A of the Establishment Subcommittee Procedure (Motion No. 11)</motion-en>
+      <vote-separate-mechanism>No</vote-separate-mechanism>
+      <vote-summary>
+        <overall>
+          <present-count>12</present-count>
+          <vote-count>11</vote-count>
+          <yes-count>3</yes-count>
+          <no-count>8</no-count>
+          <abstain-count>0</abstain-count>
+          <result>Negatived</result>
+        </overall>
+      </vote-summary>
+      <individual-votes>
+        <member name-ch="葉劉淑儀" name-en="Mrs Regina IP" constituency="Geographical">
+          <vote>Present</vote>
+        </member>
+        <member name-ch="劉慧卿" name-en="Emily LAU" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="黃定光" name-en="WONG Ting-kwong" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="李慧琼" name-en="Starry LEE" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="黃國健" name-en="WONG Kwok-kin" constituency="Geographical">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁國雄" name-en="LEUNG Kwok-hung" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="何俊賢" name-en="Steven HO" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="姚思榮" name-en="YIU Si-wing" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁繼昌" name-en="Kenneth LEUNG" constituency="Functional">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="郭家麒" name-en="Dr KWOK Ka-ki" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="郭偉强" name-en="KWOK Wai-keung" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="張華峰" name-en="Christopher CHEUNG" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="單仲偕" name-en="SIN Chung-kai" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="葉建源" name-en="IP Kin-yuen" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="廖長江" name-en="Martin LIAO" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="潘兆平" name-en="POON Siu-ping" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鄧家彪" name-en="TANG Ka-piu" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鍾國斌" name-en="CHUNG Kwok-pan" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+      </individual-votes>
+    </vote>
+    <vote number="11">
+      <vote-date>09/06/2014</vote-date>
+      <vote-time>09:09:50</vote-time>
+      <motion-ch>本委員會同意處理議員根據《人事編制小組委員會會議程序》第31A段擬動議的議案（議案編號：12）</motion-ch>
+      <motion-en>That this Committee should proceed with the motion proposed to be moved by a member under paragraph 31A of the Establishment Subcommittee Procedure (Motion No. 12)</motion-en>
+      <vote-separate-mechanism>No</vote-separate-mechanism>
+      <vote-summary>
+        <overall>
+          <present-count>12</present-count>
+          <vote-count>11</vote-count>
+          <yes-count>3</yes-count>
+          <no-count>8</no-count>
+          <abstain-count>0</abstain-count>
+          <result>Negatived</result>
+        </overall>
+      </vote-summary>
+      <individual-votes>
+        <member name-ch="葉劉淑儀" name-en="Mrs Regina IP" constituency="Geographical">
+          <vote>Present</vote>
+        </member>
+        <member name-ch="劉慧卿" name-en="Emily LAU" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="黃定光" name-en="WONG Ting-kwong" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="李慧琼" name-en="Starry LEE" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="黃國健" name-en="WONG Kwok-kin" constituency="Geographical">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁國雄" name-en="LEUNG Kwok-hung" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="何俊賢" name-en="Steven HO" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="姚思榮" name-en="YIU Si-wing" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁繼昌" name-en="Kenneth LEUNG" constituency="Functional">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="郭家麒" name-en="Dr KWOK Ka-ki" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="郭偉强" name-en="KWOK Wai-keung" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="張華峰" name-en="Christopher CHEUNG" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="單仲偕" name-en="SIN Chung-kai" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="葉建源" name-en="IP Kin-yuen" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="廖長江" name-en="Martin LIAO" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="潘兆平" name-en="POON Siu-ping" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鄧家彪" name-en="TANG Ka-piu" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鍾國斌" name-en="CHUNG Kwok-pan" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+      </individual-votes>
+    </vote>
+    <vote number="12">
+      <vote-date>09/06/2014</vote-date>
+      <vote-time>09:11:21</vote-time>
+      <motion-ch>本委員會同意處理議員根據《人事編制小組委員會會議程序》第31A段擬動議的議案（議案編號：13）</motion-ch>
+      <motion-en>That this Committee should proceed with the motion proposed to be moved by a member under paragraph 31A of the Establishment Subcommittee Procedure (Motion No. 13)</motion-en>
+      <vote-separate-mechanism>No</vote-separate-mechanism>
+      <vote-summary>
+        <overall>
+          <present-count>12</present-count>
+          <vote-count>11</vote-count>
+          <yes-count>2</yes-count>
+          <no-count>9</no-count>
+          <abstain-count>0</abstain-count>
+          <result>Negatived</result>
+        </overall>
+      </vote-summary>
+      <individual-votes>
+        <member name-ch="葉劉淑儀" name-en="Mrs Regina IP" constituency="Geographical">
+          <vote>Present</vote>
+        </member>
+        <member name-ch="劉慧卿" name-en="Emily LAU" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="黃定光" name-en="WONG Ting-kwong" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="李慧琼" name-en="Starry LEE" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="黃國健" name-en="WONG Kwok-kin" constituency="Geographical">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁國雄" name-en="LEUNG Kwok-hung" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="何俊賢" name-en="Steven HO" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="姚思榮" name-en="YIU Si-wing" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁繼昌" name-en="Kenneth LEUNG" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="郭家麒" name-en="Dr KWOK Ka-ki" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="郭偉强" name-en="KWOK Wai-keung" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="張華峰" name-en="Christopher CHEUNG" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="單仲偕" name-en="SIN Chung-kai" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="葉建源" name-en="IP Kin-yuen" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="廖長江" name-en="Martin LIAO" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="潘兆平" name-en="POON Siu-ping" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鄧家彪" name-en="TANG Ka-piu" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鍾國斌" name-en="CHUNG Kwok-pan" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+      </individual-votes>
+    </vote>
+    <vote number="13">
+      <vote-date>09/06/2014</vote-date>
+      <vote-time>09:12:51</vote-time>
+      <motion-ch>本委員會同意處理議員根據《人事編制小組委員會會議程序》第31A段擬動議的議案（議案編號：14）</motion-ch>
+      <motion-en>That this Committee should proceed with the motion proposed to be moved by a member under paragraph 31A of the Establishment Subcommittee Procedure (Motion No. 14)</motion-en>
+      <vote-separate-mechanism>No</vote-separate-mechanism>
+      <vote-summary>
+        <overall>
+          <present-count>12</present-count>
+          <vote-count>11</vote-count>
+          <yes-count>2</yes-count>
+          <no-count>9</no-count>
+          <abstain-count>0</abstain-count>
+          <result>Negatived</result>
+        </overall>
+      </vote-summary>
+      <individual-votes>
+        <member name-ch="葉劉淑儀" name-en="Mrs Regina IP" constituency="Geographical">
+          <vote>Present</vote>
+        </member>
+        <member name-ch="劉慧卿" name-en="Emily LAU" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="黃定光" name-en="WONG Ting-kwong" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="李慧琼" name-en="Starry LEE" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="黃國健" name-en="WONG Kwok-kin" constituency="Geographical">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁國雄" name-en="LEUNG Kwok-hung" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="何俊賢" name-en="Steven HO" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="姚思榮" name-en="YIU Si-wing" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁繼昌" name-en="Kenneth LEUNG" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="郭家麒" name-en="Dr KWOK Ka-ki" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="郭偉强" name-en="KWOK Wai-keung" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="張華峰" name-en="Christopher CHEUNG" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="單仲偕" name-en="SIN Chung-kai" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="葉建源" name-en="IP Kin-yuen" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="廖長江" name-en="Martin LIAO" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="潘兆平" name-en="POON Siu-ping" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鄧家彪" name-en="TANG Ka-piu" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鍾國斌" name-en="CHUNG Kwok-pan" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+      </individual-votes>
+    </vote>
+    <vote number="14">
+      <vote-date>09/06/2014</vote-date>
+      <vote-time>09:14:34</vote-time>
+      <motion-ch>本委員會同意處理議員根據《人事編制小組委員會會議程序》第31A段擬動議的議案（議案編號：15）</motion-ch>
+      <motion-en>That this Committee should proceed with the motion proposed to be moved by a member under paragraph 31A of the Establishment Subcommittee Procedure (Motion No. 15)</motion-en>
+      <vote-separate-mechanism>No</vote-separate-mechanism>
+      <vote-summary>
+        <overall>
+          <present-count>12</present-count>
+          <vote-count>11</vote-count>
+          <yes-count>2</yes-count>
+          <no-count>9</no-count>
+          <abstain-count>0</abstain-count>
+          <result>Negatived</result>
+        </overall>
+      </vote-summary>
+      <individual-votes>
+        <member name-ch="葉劉淑儀" name-en="Mrs Regina IP" constituency="Geographical">
+          <vote>Present</vote>
+        </member>
+        <member name-ch="劉慧卿" name-en="Emily LAU" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="黃定光" name-en="WONG Ting-kwong" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="李慧琼" name-en="Starry LEE" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="黃國健" name-en="WONG Kwok-kin" constituency="Geographical">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁國雄" name-en="LEUNG Kwok-hung" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="何俊賢" name-en="Steven HO" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="姚思榮" name-en="YIU Si-wing" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁繼昌" name-en="Kenneth LEUNG" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="郭家麒" name-en="Dr KWOK Ka-ki" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="郭偉强" name-en="KWOK Wai-keung" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="張華峰" name-en="Christopher CHEUNG" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="單仲偕" name-en="SIN Chung-kai" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="葉建源" name-en="IP Kin-yuen" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="廖長江" name-en="Martin LIAO" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="潘兆平" name-en="POON Siu-ping" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鄧家彪" name-en="TANG Ka-piu" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鍾國斌" name-en="CHUNG Kwok-pan" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+      </individual-votes>
+    </vote>
+    <vote number="15">
+      <vote-date>09/06/2014</vote-date>
+      <vote-time>09:16:05</vote-time>
+      <motion-ch>本委員會同意處理議員根據《人事編制小組委員會會議程序》第31A段擬動議的議案（議案編號：16）</motion-ch>
+      <motion-en>That this Committee should proceed with the motion proposed to be moved by a member under paragraph 31A of the Establishment Subcommittee Procedure (Motion No. 16)</motion-en>
+      <vote-separate-mechanism>No</vote-separate-mechanism>
+      <vote-summary>
+        <overall>
+          <present-count>12</present-count>
+          <vote-count>11</vote-count>
+          <yes-count>2</yes-count>
+          <no-count>8</no-count>
+          <abstain-count>1</abstain-count>
+          <result>Negatived</result>
+        </overall>
+      </vote-summary>
+      <individual-votes>
+        <member name-ch="葉劉淑儀" name-en="Mrs Regina IP" constituency="Geographical">
+          <vote>Present</vote>
+        </member>
+        <member name-ch="劉慧卿" name-en="Emily LAU" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="黃定光" name-en="WONG Ting-kwong" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="李慧琼" name-en="Starry LEE" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="黃國健" name-en="WONG Kwok-kin" constituency="Geographical">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁國雄" name-en="LEUNG Kwok-hung" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="何俊賢" name-en="Steven HO" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="姚思榮" name-en="YIU Si-wing" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁繼昌" name-en="Kenneth LEUNG" constituency="Functional">
+          <vote>Abstain</vote>
+        </member>
+        <member name-ch="郭家麒" name-en="Dr KWOK Ka-ki" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="郭偉强" name-en="KWOK Wai-keung" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="張華峰" name-en="Christopher CHEUNG" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="單仲偕" name-en="SIN Chung-kai" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="葉建源" name-en="IP Kin-yuen" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="廖長江" name-en="Martin LIAO" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="潘兆平" name-en="POON Siu-ping" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鄧家彪" name-en="TANG Ka-piu" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鍾國斌" name-en="CHUNG Kwok-pan" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+      </individual-votes>
+    </vote>
+    <vote number="16">
+      <vote-date>09/06/2014</vote-date>
+      <vote-time>09:17:32</vote-time>
+      <motion-ch>本委員會同意處理議員根據《人事編制小組委員會會議程序》第31A段擬動議的議案（議案編號：17）</motion-ch>
+      <motion-en>That this Committee should proceed with the motion proposed to be moved by a member under paragraph 31A of the Establishment Subcommittee Procedure (Motion No. 17)</motion-en>
+      <vote-separate-mechanism>No</vote-separate-mechanism>
+      <vote-summary>
+        <overall>
+          <present-count>12</present-count>
+          <vote-count>11</vote-count>
+          <yes-count>2</yes-count>
+          <no-count>9</no-count>
+          <abstain-count>0</abstain-count>
+          <result>Negatived</result>
+        </overall>
+      </vote-summary>
+      <individual-votes>
+        <member name-ch="葉劉淑儀" name-en="Mrs Regina IP" constituency="Geographical">
+          <vote>Present</vote>
+        </member>
+        <member name-ch="劉慧卿" name-en="Emily LAU" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="黃定光" name-en="WONG Ting-kwong" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="李慧琼" name-en="Starry LEE" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="黃國健" name-en="WONG Kwok-kin" constituency="Geographical">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁國雄" name-en="LEUNG Kwok-hung" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="何俊賢" name-en="Steven HO" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="姚思榮" name-en="YIU Si-wing" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁繼昌" name-en="Kenneth LEUNG" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="郭家麒" name-en="Dr KWOK Ka-ki" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="郭偉强" name-en="KWOK Wai-keung" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="張華峰" name-en="Christopher CHEUNG" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="單仲偕" name-en="SIN Chung-kai" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="葉建源" name-en="IP Kin-yuen" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="廖長江" name-en="Martin LIAO" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="潘兆平" name-en="POON Siu-ping" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鄧家彪" name-en="TANG Ka-piu" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鍾國斌" name-en="CHUNG Kwok-pan" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+      </individual-votes>
+    </vote>
+    <vote number="17">
+      <vote-date>09/06/2014</vote-date>
+      <vote-time>09:18:59</vote-time>
+      <motion-ch>本委員會同意處理議員根據《人事編制小組委員會會議程序》第31A段擬動議的議案（議案編號：18）</motion-ch>
+      <motion-en>That this Committee should proceed with the motion proposed to be moved by a member under paragraph 31A of the Establishment Subcommittee Procedure (Motion No. 18)</motion-en>
+      <vote-separate-mechanism>No</vote-separate-mechanism>
+      <vote-summary>
+        <overall>
+          <present-count>12</present-count>
+          <vote-count>11</vote-count>
+          <yes-count>2</yes-count>
+          <no-count>9</no-count>
+          <abstain-count>0</abstain-count>
+          <result>Negatived</result>
+        </overall>
+      </vote-summary>
+      <individual-votes>
+        <member name-ch="葉劉淑儀" name-en="Mrs Regina IP" constituency="Geographical">
+          <vote>Present</vote>
+        </member>
+        <member name-ch="劉慧卿" name-en="Emily LAU" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="黃定光" name-en="WONG Ting-kwong" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="李慧琼" name-en="Starry LEE" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="黃國健" name-en="WONG Kwok-kin" constituency="Geographical">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁國雄" name-en="LEUNG Kwok-hung" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="何俊賢" name-en="Steven HO" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="姚思榮" name-en="YIU Si-wing" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁繼昌" name-en="Kenneth LEUNG" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="郭家麒" name-en="Dr KWOK Ka-ki" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="郭偉强" name-en="KWOK Wai-keung" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="張華峰" name-en="Christopher CHEUNG" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="單仲偕" name-en="SIN Chung-kai" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="葉建源" name-en="IP Kin-yuen" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="廖長江" name-en="Martin LIAO" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="潘兆平" name-en="POON Siu-ping" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鄧家彪" name-en="TANG Ka-piu" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鍾國斌" name-en="CHUNG Kwok-pan" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+      </individual-votes>
+    </vote>
+    <vote number="18">
+      <vote-date>09/06/2014</vote-date>
+      <vote-time>09:20:30</vote-time>
+      <motion-ch>本委員會同意處理議員根據《人事編制小組委員會會議程序》第31A段擬動議的議案（議案編號：19）</motion-ch>
+      <motion-en>That this Committee should proceed with the motion proposed to be moved by a member under paragraph 31A of the Establishment Subcommittee Procedure (Motion No. 19)</motion-en>
+      <vote-separate-mechanism>No</vote-separate-mechanism>
+      <vote-summary>
+        <overall>
+          <present-count>11</present-count>
+          <vote-count>10</vote-count>
+          <yes-count>1</yes-count>
+          <no-count>9</no-count>
+          <abstain-count>0</abstain-count>
+          <result>Negatived</result>
+        </overall>
+      </vote-summary>
+      <individual-votes>
+        <member name-ch="葉劉淑儀" name-en="Mrs Regina IP" constituency="Geographical">
+          <vote>Present</vote>
+        </member>
+        <member name-ch="劉慧卿" name-en="Emily LAU" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="黃定光" name-en="WONG Ting-kwong" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="李慧琼" name-en="Starry LEE" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="黃國健" name-en="WONG Kwok-kin" constituency="Geographical">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁國雄" name-en="LEUNG Kwok-hung" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="何俊賢" name-en="Steven HO" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="姚思榮" name-en="YIU Si-wing" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁繼昌" name-en="Kenneth LEUNG" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="郭家麒" name-en="Dr KWOK Ka-ki" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="郭偉强" name-en="KWOK Wai-keung" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="張華峰" name-en="Christopher CHEUNG" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="單仲偕" name-en="SIN Chung-kai" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="葉建源" name-en="IP Kin-yuen" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="廖長江" name-en="Martin LIAO" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="潘兆平" name-en="POON Siu-ping" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鄧家彪" name-en="TANG Ka-piu" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鍾國斌" name-en="CHUNG Kwok-pan" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+      </individual-votes>
+    </vote>
+    <vote number="19">
+      <vote-date>09/06/2014</vote-date>
+      <vote-time>09:21:57</vote-time>
+      <motion-ch>本委員會同意處理議員根據《人事編制小組委員會會議程序》第31A段擬動議的議案（議案編號：20）</motion-ch>
+      <motion-en>That this Committee should proceed with the motion proposed to be moved by a member under paragraph 31A of the Establishment Subcommittee Procedure (Motion No. 20)</motion-en>
+      <vote-separate-mechanism>No</vote-separate-mechanism>
+      <vote-summary>
+        <overall>
+          <present-count>12</present-count>
+          <vote-count>11</vote-count>
+          <yes-count>2</yes-count>
+          <no-count>9</no-count>
+          <abstain-count>0</abstain-count>
+          <result>Negatived</result>
+        </overall>
+      </vote-summary>
+      <individual-votes>
+        <member name-ch="葉劉淑儀" name-en="Mrs Regina IP" constituency="Geographical">
+          <vote>Present</vote>
+        </member>
+        <member name-ch="劉慧卿" name-en="Emily LAU" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="黃定光" name-en="WONG Ting-kwong" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="李慧琼" name-en="Starry LEE" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="黃國健" name-en="WONG Kwok-kin" constituency="Geographical">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁國雄" name-en="LEUNG Kwok-hung" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="何俊賢" name-en="Steven HO" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="姚思榮" name-en="YIU Si-wing" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁繼昌" name-en="Kenneth LEUNG" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="郭家麒" name-en="Dr KWOK Ka-ki" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="郭偉强" name-en="KWOK Wai-keung" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="張華峰" name-en="Christopher CHEUNG" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="單仲偕" name-en="SIN Chung-kai" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="葉建源" name-en="IP Kin-yuen" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="廖長江" name-en="Martin LIAO" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="潘兆平" name-en="POON Siu-ping" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鄧家彪" name-en="TANG Ka-piu" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鍾國斌" name-en="CHUNG Kwok-pan" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+      </individual-votes>
+    </vote>
+    <vote number="20">
+      <vote-date>09/06/2014</vote-date>
+      <vote-time>09:23:27</vote-time>
+      <motion-ch>本委員會同意處理議員根據《人事編制小組委員會會議程序》第31A段擬動議的議案（議案編號：21）</motion-ch>
+      <motion-en>That this Committee should proceed with the motion proposed to be moved by a member under paragraph 31A of the Establishment Subcommittee Procedure (Motion No. 21)</motion-en>
+      <vote-separate-mechanism>No</vote-separate-mechanism>
+      <vote-summary>
+        <overall>
+          <present-count>12</present-count>
+          <vote-count>11</vote-count>
+          <yes-count>1</yes-count>
+          <no-count>9</no-count>
+          <abstain-count>1</abstain-count>
+          <result>Negatived</result>
+        </overall>
+      </vote-summary>
+      <individual-votes>
+        <member name-ch="葉劉淑儀" name-en="Mrs Regina IP" constituency="Geographical">
+          <vote>Present</vote>
+        </member>
+        <member name-ch="劉慧卿" name-en="Emily LAU" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="黃定光" name-en="WONG Ting-kwong" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="李慧琼" name-en="Starry LEE" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="黃國健" name-en="WONG Kwok-kin" constituency="Geographical">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁國雄" name-en="LEUNG Kwok-hung" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="何俊賢" name-en="Steven HO" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="姚思榮" name-en="YIU Si-wing" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁繼昌" name-en="Kenneth LEUNG" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="郭家麒" name-en="Dr KWOK Ka-ki" constituency="Geographical">
+          <vote>Abstain</vote>
+        </member>
+        <member name-ch="郭偉强" name-en="KWOK Wai-keung" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="張華峰" name-en="Christopher CHEUNG" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="單仲偕" name-en="SIN Chung-kai" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="葉建源" name-en="IP Kin-yuen" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="廖長江" name-en="Martin LIAO" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="潘兆平" name-en="POON Siu-ping" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鄧家彪" name-en="TANG Ka-piu" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鍾國斌" name-en="CHUNG Kwok-pan" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+      </individual-votes>
+    </vote>
+    <vote number="21">
+      <vote-date>09/06/2014</vote-date>
+      <vote-time>09:24:57</vote-time>
+      <motion-ch>本委員會同意處理議員根據《人事編制小組委員會會議程序》第31A段擬動議的議案（議案編號：22）</motion-ch>
+      <motion-en>That this Committee should proceed with the motion proposed to be moved by a member under paragraph 31A of the Establishment Subcommittee Procedure (Motion No. 22)</motion-en>
+      <vote-separate-mechanism>No</vote-separate-mechanism>
+      <vote-summary>
+        <overall>
+          <present-count>13</present-count>
+          <vote-count>12</vote-count>
+          <yes-count>1</yes-count>
+          <no-count>10</no-count>
+          <abstain-count>1</abstain-count>
+          <result>Negatived</result>
+        </overall>
+      </vote-summary>
+      <individual-votes>
+        <member name-ch="葉劉淑儀" name-en="Mrs Regina IP" constituency="Geographical">
+          <vote>Present</vote>
+        </member>
+        <member name-ch="劉慧卿" name-en="Emily LAU" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="黃定光" name-en="WONG Ting-kwong" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="李慧琼" name-en="Starry LEE" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="黃國健" name-en="WONG Kwok-kin" constituency="Geographical">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁國雄" name-en="LEUNG Kwok-hung" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="何俊賢" name-en="Steven HO" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="姚思榮" name-en="YIU Si-wing" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁繼昌" name-en="Kenneth LEUNG" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="郭家麒" name-en="Dr KWOK Ka-ki" constituency="Geographical">
+          <vote>Abstain</vote>
+        </member>
+        <member name-ch="郭偉强" name-en="KWOK Wai-keung" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="張華峰" name-en="Christopher CHEUNG" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="單仲偕" name-en="SIN Chung-kai" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="葉建源" name-en="IP Kin-yuen" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="廖長江" name-en="Martin LIAO" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="潘兆平" name-en="POON Siu-ping" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鄧家彪" name-en="TANG Ka-piu" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鍾國斌" name-en="CHUNG Kwok-pan" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+      </individual-votes>
+    </vote>
+    <vote number="22">
+      <vote-date>09/06/2014</vote-date>
+      <vote-time>09:26:31</vote-time>
+      <motion-ch>本委員會同意處理議員根據《人事編制小組委員會會議程序》第31A段擬動議的議案（議案編號：23）</motion-ch>
+      <motion-en>That this Committee should proceed with the motion proposed to be moved by a member under paragraph 31A of the Establishment Subcommittee Procedure (Motion No. 23)</motion-en>
+      <vote-separate-mechanism>No</vote-separate-mechanism>
+      <vote-summary>
+        <overall>
+          <present-count>12</present-count>
+          <vote-count>11</vote-count>
+          <yes-count>2</yes-count>
+          <no-count>9</no-count>
+          <abstain-count>0</abstain-count>
+          <result>Negatived</result>
+        </overall>
+      </vote-summary>
+      <individual-votes>
+        <member name-ch="葉劉淑儀" name-en="Mrs Regina IP" constituency="Geographical">
+          <vote>Present</vote>
+        </member>
+        <member name-ch="劉慧卿" name-en="Emily LAU" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="黃定光" name-en="WONG Ting-kwong" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="李慧琼" name-en="Starry LEE" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="黃國健" name-en="WONG Kwok-kin" constituency="Geographical">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁國雄" name-en="LEUNG Kwok-hung" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="何俊賢" name-en="Steven HO" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="姚思榮" name-en="YIU Si-wing" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁繼昌" name-en="Kenneth LEUNG" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="郭家麒" name-en="Dr KWOK Ka-ki" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="郭偉强" name-en="KWOK Wai-keung" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="張華峰" name-en="Christopher CHEUNG" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="單仲偕" name-en="SIN Chung-kai" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="葉建源" name-en="IP Kin-yuen" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="廖長江" name-en="Martin LIAO" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="潘兆平" name-en="POON Siu-ping" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鄧家彪" name-en="TANG Ka-piu" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鍾國斌" name-en="CHUNG Kwok-pan" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+      </individual-votes>
+    </vote>
+    <vote number="23">
+      <vote-date>09/06/2014</vote-date>
+      <vote-time>09:28:05</vote-time>
+      <motion-ch>本委員會同意處理議員根據《人事編制小組委員會會議程序》第31A段擬動議的議案（議案編號：24）</motion-ch>
+      <motion-en>That this Committee should proceed with the motion proposed to be moved by a member under paragraph 31A of the Establishment Subcommittee Procedure (Motion No. 24)</motion-en>
+      <vote-separate-mechanism>No</vote-separate-mechanism>
+      <vote-summary>
+        <overall>
+          <present-count>12</present-count>
+          <vote-count>11</vote-count>
+          <yes-count>1</yes-count>
+          <no-count>10</no-count>
+          <abstain-count>0</abstain-count>
+          <result>Negatived</result>
+        </overall>
+      </vote-summary>
+      <individual-votes>
+        <member name-ch="葉劉淑儀" name-en="Mrs Regina IP" constituency="Geographical">
+          <vote>Present</vote>
+        </member>
+        <member name-ch="劉慧卿" name-en="Emily LAU" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="黃定光" name-en="WONG Ting-kwong" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="李慧琼" name-en="Starry LEE" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="黃國健" name-en="WONG Kwok-kin" constituency="Geographical">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁國雄" name-en="LEUNG Kwok-hung" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="何俊賢" name-en="Steven HO" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="姚思榮" name-en="YIU Si-wing" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁繼昌" name-en="Kenneth LEUNG" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="郭家麒" name-en="Dr KWOK Ka-ki" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="郭偉强" name-en="KWOK Wai-keung" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="張華峰" name-en="Christopher CHEUNG" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="單仲偕" name-en="SIN Chung-kai" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="葉建源" name-en="IP Kin-yuen" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="廖長江" name-en="Martin LIAO" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="潘兆平" name-en="POON Siu-ping" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鄧家彪" name-en="TANG Ka-piu" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鍾國斌" name-en="CHUNG Kwok-pan" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+      </individual-votes>
+    </vote>
+    <vote number="24">
+      <vote-date>09/06/2014</vote-date>
+      <vote-time>09:29:40</vote-time>
+      <motion-ch>本委員會同意處理議員根據《人事編制小組委員會會議程序》第31A段擬動議的議案（議案編號：26）</motion-ch>
+      <motion-en>That this Committee should proceed with the motion proposed to be moved by a member under paragraph 31A of the Establishment Subcommittee Procedure (Motion No. 26)</motion-en>
+      <vote-separate-mechanism>No</vote-separate-mechanism>
+      <vote-summary>
+        <overall>
+          <present-count>13</present-count>
+          <vote-count>12</vote-count>
+          <yes-count>3</yes-count>
+          <no-count>9</no-count>
+          <abstain-count>0</abstain-count>
+          <result>Negatived</result>
+        </overall>
+      </vote-summary>
+      <individual-votes>
+        <member name-ch="葉劉淑儀" name-en="Mrs Regina IP" constituency="Geographical">
+          <vote>Present</vote>
+        </member>
+        <member name-ch="劉慧卿" name-en="Emily LAU" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="黃定光" name-en="WONG Ting-kwong" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="李慧琼" name-en="Starry LEE" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="黃國健" name-en="WONG Kwok-kin" constituency="Geographical">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁國雄" name-en="LEUNG Kwok-hung" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="何俊賢" name-en="Steven HO" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="姚思榮" name-en="YIU Si-wing" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁繼昌" name-en="Kenneth LEUNG" constituency="Functional">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="郭家麒" name-en="Dr KWOK Ka-ki" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="郭偉强" name-en="KWOK Wai-keung" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="張華峰" name-en="Christopher CHEUNG" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="單仲偕" name-en="SIN Chung-kai" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="葉建源" name-en="IP Kin-yuen" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="廖長江" name-en="Martin LIAO" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="潘兆平" name-en="POON Siu-ping" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鄧家彪" name-en="TANG Ka-piu" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鍾國斌" name-en="CHUNG Kwok-pan" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+      </individual-votes>
+    </vote>
+    <vote number="25">
+      <vote-date>09/06/2014</vote-date>
+      <vote-time>09:31:09</vote-time>
+      <motion-ch>本委員會同意處理議員根據《人事編制小組委員會會議程序》第31A段擬動議的議案（議案編號：27）</motion-ch>
+      <motion-en>That this Committee should proceed with the motion proposed to be moved by a member under paragraph 31A of the Establishment Subcommittee Procedure (Motion No. 27)</motion-en>
+      <vote-separate-mechanism>No</vote-separate-mechanism>
+      <vote-summary>
+        <overall>
+          <present-count>13</present-count>
+          <vote-count>12</vote-count>
+          <yes-count>3</yes-count>
+          <no-count>9</no-count>
+          <abstain-count>0</abstain-count>
+          <result>Negatived</result>
+        </overall>
+      </vote-summary>
+      <individual-votes>
+        <member name-ch="葉劉淑儀" name-en="Mrs Regina IP" constituency="Geographical">
+          <vote>Present</vote>
+        </member>
+        <member name-ch="劉慧卿" name-en="Emily LAU" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="黃定光" name-en="WONG Ting-kwong" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="李慧琼" name-en="Starry LEE" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="黃國健" name-en="WONG Kwok-kin" constituency="Geographical">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁國雄" name-en="LEUNG Kwok-hung" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="何俊賢" name-en="Steven HO" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="姚思榮" name-en="YIU Si-wing" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁繼昌" name-en="Kenneth LEUNG" constituency="Functional">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="郭家麒" name-en="Dr KWOK Ka-ki" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="郭偉强" name-en="KWOK Wai-keung" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="張華峰" name-en="Christopher CHEUNG" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="單仲偕" name-en="SIN Chung-kai" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="葉建源" name-en="IP Kin-yuen" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="廖長江" name-en="Martin LIAO" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="潘兆平" name-en="POON Siu-ping" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鄧家彪" name-en="TANG Ka-piu" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鍾國斌" name-en="CHUNG Kwok-pan" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+      </individual-votes>
+    </vote>
+    <vote number="26">
+      <vote-date>09/06/2014</vote-date>
+      <vote-time>09:32:39</vote-time>
+      <motion-ch>本委員會同意處理議員根據《人事編制小組委員會會議程序》第31A段擬動議的議案（議案編號：28）</motion-ch>
+      <motion-en>That this Committee should proceed with the motion proposed to be moved by a member under paragraph 31A of the Establishment Subcommittee Procedure (Motion No. 28)</motion-en>
+      <vote-separate-mechanism>No</vote-separate-mechanism>
+      <vote-summary>
+        <overall>
+          <present-count>13</present-count>
+          <vote-count>12</vote-count>
+          <yes-count>2</yes-count>
+          <no-count>10</no-count>
+          <abstain-count>0</abstain-count>
+          <result>Negatived</result>
+        </overall>
+      </vote-summary>
+      <individual-votes>
+        <member name-ch="葉劉淑儀" name-en="Mrs Regina IP" constituency="Geographical">
+          <vote>Present</vote>
+        </member>
+        <member name-ch="劉慧卿" name-en="Emily LAU" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="黃定光" name-en="WONG Ting-kwong" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="李慧琼" name-en="Starry LEE" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="黃國健" name-en="WONG Kwok-kin" constituency="Geographical">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁國雄" name-en="LEUNG Kwok-hung" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="何俊賢" name-en="Steven HO" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="姚思榮" name-en="YIU Si-wing" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁繼昌" name-en="Kenneth LEUNG" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="郭家麒" name-en="Dr KWOK Ka-ki" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="郭偉强" name-en="KWOK Wai-keung" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="張華峰" name-en="Christopher CHEUNG" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="單仲偕" name-en="SIN Chung-kai" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="葉建源" name-en="IP Kin-yuen" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="廖長江" name-en="Martin LIAO" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="潘兆平" name-en="POON Siu-ping" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鄧家彪" name-en="TANG Ka-piu" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鍾國斌" name-en="CHUNG Kwok-pan" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+      </individual-votes>
+    </vote>
+    <vote number="27">
+      <vote-date>09/06/2014</vote-date>
+      <vote-time>09:34:07</vote-time>
+      <motion-ch>本委員會同意處理議員根據《人事編制小組委員會會議程序》第31A段擬動議的議案（議案編號：29）</motion-ch>
+      <motion-en>That this Committee should proceed with the motion proposed to be moved by a member under paragraph 31A of the Establishment Subcommittee Procedure (Motion No. 29)</motion-en>
+      <vote-separate-mechanism>No</vote-separate-mechanism>
+      <vote-summary>
+        <overall>
+          <present-count>13</present-count>
+          <vote-count>12</vote-count>
+          <yes-count>2</yes-count>
+          <no-count>10</no-count>
+          <abstain-count>0</abstain-count>
+          <result>Negatived</result>
+        </overall>
+      </vote-summary>
+      <individual-votes>
+        <member name-ch="葉劉淑儀" name-en="Mrs Regina IP" constituency="Geographical">
+          <vote>Present</vote>
+        </member>
+        <member name-ch="劉慧卿" name-en="Emily LAU" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="黃定光" name-en="WONG Ting-kwong" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="李慧琼" name-en="Starry LEE" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="黃國健" name-en="WONG Kwok-kin" constituency="Geographical">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁國雄" name-en="LEUNG Kwok-hung" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="何俊賢" name-en="Steven HO" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="姚思榮" name-en="YIU Si-wing" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁繼昌" name-en="Kenneth LEUNG" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="郭家麒" name-en="Dr KWOK Ka-ki" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="郭偉强" name-en="KWOK Wai-keung" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="張華峰" name-en="Christopher CHEUNG" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="單仲偕" name-en="SIN Chung-kai" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="葉建源" name-en="IP Kin-yuen" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="廖長江" name-en="Martin LIAO" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="潘兆平" name-en="POON Siu-ping" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鄧家彪" name-en="TANG Ka-piu" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鍾國斌" name-en="CHUNG Kwok-pan" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+      </individual-votes>
+    </vote>
+    <vote number="28">
+      <vote-date>09/06/2014</vote-date>
+      <vote-time>09:35:37</vote-time>
+      <motion-ch>本委員會同意處理議員根據《人事編制小組委員會會議程序》第31A段擬動議的議案（議案編號：34）</motion-ch>
+      <motion-en>That this Committee should proceed with the motion proposed to be moved by a member under paragraph 31A of the Establishment Subcommittee Procedure (Motion No. 34)</motion-en>
+      <vote-separate-mechanism>No</vote-separate-mechanism>
+      <vote-summary>
+        <overall>
+          <present-count>13</present-count>
+          <vote-count>12</vote-count>
+          <yes-count>3</yes-count>
+          <no-count>9</no-count>
+          <abstain-count>0</abstain-count>
+          <result>Negatived</result>
+        </overall>
+      </vote-summary>
+      <individual-votes>
+        <member name-ch="葉劉淑儀" name-en="Mrs Regina IP" constituency="Geographical">
+          <vote>Present</vote>
+        </member>
+        <member name-ch="劉慧卿" name-en="Emily LAU" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="黃定光" name-en="WONG Ting-kwong" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="李慧琼" name-en="Starry LEE" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="黃國健" name-en="WONG Kwok-kin" constituency="Geographical">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁國雄" name-en="LEUNG Kwok-hung" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="何俊賢" name-en="Steven HO" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="姚思榮" name-en="YIU Si-wing" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁繼昌" name-en="Kenneth LEUNG" constituency="Functional">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="郭家麒" name-en="Dr KWOK Ka-ki" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="郭偉强" name-en="KWOK Wai-keung" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="張華峰" name-en="Christopher CHEUNG" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="單仲偕" name-en="SIN Chung-kai" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="葉建源" name-en="IP Kin-yuen" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="廖長江" name-en="Martin LIAO" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="潘兆平" name-en="POON Siu-ping" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鄧家彪" name-en="TANG Ka-piu" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鍾國斌" name-en="CHUNG Kwok-pan" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+      </individual-votes>
+    </vote>
+    <vote number="29">
+      <vote-date>09/06/2014</vote-date>
+      <vote-time>09:37:08</vote-time>
+      <motion-ch>本委員會同意處理議員根據《人事編制小組委員會會議程序》第31A段擬動議的議案（議案編號：35）</motion-ch>
+      <motion-en>That this Committee should proceed with the motion proposed to be moved by a member under paragraph 31A of the Establishment Subcommittee Procedure (Motion No. 35)</motion-en>
+      <vote-separate-mechanism>No</vote-separate-mechanism>
+      <vote-summary>
+        <overall>
+          <present-count>12</present-count>
+          <vote-count>11</vote-count>
+          <yes-count>3</yes-count>
+          <no-count>8</no-count>
+          <abstain-count>0</abstain-count>
+          <result>Negatived</result>
+        </overall>
+      </vote-summary>
+      <individual-votes>
+        <member name-ch="葉劉淑儀" name-en="Mrs Regina IP" constituency="Geographical">
+          <vote>Present</vote>
+        </member>
+        <member name-ch="劉慧卿" name-en="Emily LAU" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="黃定光" name-en="WONG Ting-kwong" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="李慧琼" name-en="Starry LEE" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="黃國健" name-en="WONG Kwok-kin" constituency="Geographical">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁國雄" name-en="LEUNG Kwok-hung" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="何俊賢" name-en="Steven HO" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="姚思榮" name-en="YIU Si-wing" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁繼昌" name-en="Kenneth LEUNG" constituency="Functional">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="郭家麒" name-en="Dr KWOK Ka-ki" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="郭偉强" name-en="KWOK Wai-keung" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="張華峰" name-en="Christopher CHEUNG" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="單仲偕" name-en="SIN Chung-kai" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="葉建源" name-en="IP Kin-yuen" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="廖長江" name-en="Martin LIAO" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="潘兆平" name-en="POON Siu-ping" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鄧家彪" name-en="TANG Ka-piu" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鍾國斌" name-en="CHUNG Kwok-pan" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+      </individual-votes>
+    </vote>
+    <vote number="30">
+      <vote-date>09/06/2014</vote-date>
+      <vote-time>09:38:40</vote-time>
+      <motion-ch>本委員會同意處理議員根據《人事編制小組委員會會議程序》第31A段擬動議的議案（議案編號：45）</motion-ch>
+      <motion-en>That this Committee should proceed with the motion proposed to be moved by a member under paragraph 31A of the Establishment Subcommittee Procedure (Motion No. 45)</motion-en>
+      <vote-separate-mechanism>No</vote-separate-mechanism>
+      <vote-summary>
+        <overall>
+          <present-count>14</present-count>
+          <vote-count>13</vote-count>
+          <yes-count>2</yes-count>
+          <no-count>11</no-count>
+          <abstain-count>0</abstain-count>
+          <result>Negatived</result>
+        </overall>
+      </vote-summary>
+      <individual-votes>
+        <member name-ch="葉劉淑儀" name-en="Mrs Regina IP" constituency="Geographical">
+          <vote>Present</vote>
+        </member>
+        <member name-ch="劉慧卿" name-en="Emily LAU" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="黃定光" name-en="WONG Ting-kwong" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="李慧琼" name-en="Starry LEE" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="黃國健" name-en="WONG Kwok-kin" constituency="Geographical">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁國雄" name-en="LEUNG Kwok-hung" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="何俊賢" name-en="Steven HO" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="姚思榮" name-en="YIU Si-wing" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁繼昌" name-en="Kenneth LEUNG" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="郭家麒" name-en="Dr KWOK Ka-ki" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="郭偉强" name-en="KWOK Wai-keung" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="張華峰" name-en="Christopher CHEUNG" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="單仲偕" name-en="SIN Chung-kai" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="葉建源" name-en="IP Kin-yuen" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="廖長江" name-en="Martin LIAO" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="潘兆平" name-en="POON Siu-ping" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鄧家彪" name-en="TANG Ka-piu" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鍾國斌" name-en="CHUNG Kwok-pan" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+      </individual-votes>
+    </vote>
+    <vote number="31">
+      <vote-date>09/06/2014</vote-date>
+      <vote-time>09:40:08</vote-time>
+      <motion-ch>本委員會同意處理議員根據《人事編制小組委員會會議程序》第31A段擬動議的議案（議案編號：46）</motion-ch>
+      <motion-en>That this Committee should proceed with the motion proposed to be moved by a member under paragraph 31A of the Establishment Subcommittee Procedure (Motion No. 46)</motion-en>
+      <vote-separate-mechanism>No</vote-separate-mechanism>
+      <vote-summary>
+        <overall>
+          <present-count>14</present-count>
+          <vote-count>13</vote-count>
+          <yes-count>2</yes-count>
+          <no-count>11</no-count>
+          <abstain-count>0</abstain-count>
+          <result>Negatived</result>
+        </overall>
+      </vote-summary>
+      <individual-votes>
+        <member name-ch="葉劉淑儀" name-en="Mrs Regina IP" constituency="Geographical">
+          <vote>Present</vote>
+        </member>
+        <member name-ch="劉慧卿" name-en="Emily LAU" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="黃定光" name-en="WONG Ting-kwong" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="李慧琼" name-en="Starry LEE" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="黃國健" name-en="WONG Kwok-kin" constituency="Geographical">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁國雄" name-en="LEUNG Kwok-hung" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="何俊賢" name-en="Steven HO" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="姚思榮" name-en="YIU Si-wing" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁繼昌" name-en="Kenneth LEUNG" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="郭家麒" name-en="Dr KWOK Ka-ki" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="郭偉强" name-en="KWOK Wai-keung" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="張華峰" name-en="Christopher CHEUNG" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="單仲偕" name-en="SIN Chung-kai" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="葉建源" name-en="IP Kin-yuen" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="廖長江" name-en="Martin LIAO" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="潘兆平" name-en="POON Siu-ping" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鄧家彪" name-en="TANG Ka-piu" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鍾國斌" name-en="CHUNG Kwok-pan" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+      </individual-votes>
+    </vote>
+    <vote number="32">
+      <vote-date>09/06/2014</vote-date>
+      <vote-time>09:41:35</vote-time>
+      <motion-ch>本委員會同意處理議員根據《人事編制小組委員會會議程序》第31A段擬動議的議案（議案編號：47）</motion-ch>
+      <motion-en>That this Committee should proceed with the motion proposed to be moved by a member under paragraph 31A of the Establishment Subcommittee Procedure (Motion No. 47)</motion-en>
+      <vote-separate-mechanism>No</vote-separate-mechanism>
+      <vote-summary>
+        <overall>
+          <present-count>14</present-count>
+          <vote-count>13</vote-count>
+          <yes-count>2</yes-count>
+          <no-count>11</no-count>
+          <abstain-count>0</abstain-count>
+          <result>Negatived</result>
+        </overall>
+      </vote-summary>
+      <individual-votes>
+        <member name-ch="葉劉淑儀" name-en="Mrs Regina IP" constituency="Geographical">
+          <vote>Present</vote>
+        </member>
+        <member name-ch="劉慧卿" name-en="Emily LAU" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="黃定光" name-en="WONG Ting-kwong" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="李慧琼" name-en="Starry LEE" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="黃國健" name-en="WONG Kwok-kin" constituency="Geographical">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁國雄" name-en="LEUNG Kwok-hung" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="何俊賢" name-en="Steven HO" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="姚思榮" name-en="YIU Si-wing" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁繼昌" name-en="Kenneth LEUNG" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="郭家麒" name-en="Dr KWOK Ka-ki" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="郭偉强" name-en="KWOK Wai-keung" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="張華峰" name-en="Christopher CHEUNG" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="單仲偕" name-en="SIN Chung-kai" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="葉建源" name-en="IP Kin-yuen" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="廖長江" name-en="Martin LIAO" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="潘兆平" name-en="POON Siu-ping" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鄧家彪" name-en="TANG Ka-piu" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鍾國斌" name-en="CHUNG Kwok-pan" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+      </individual-votes>
+    </vote>
+    <vote number="33">
+      <vote-date>09/06/2014</vote-date>
+      <vote-time>09:43:06</vote-time>
+      <motion-ch>本委員會同意處理議員根據《人事編制小組委員會會議程序》第31A段擬動議的議案（議案編號：48）</motion-ch>
+      <motion-en>That this Committee should proceed with the motion proposed to be moved by a member under paragraph 31A of the Establishment Subcommittee Procedure (Motion No. 48)</motion-en>
+      <vote-separate-mechanism>No</vote-separate-mechanism>
+      <vote-summary>
+        <overall>
+          <present-count>13</present-count>
+          <vote-count>12</vote-count>
+          <yes-count>1</yes-count>
+          <no-count>11</no-count>
+          <abstain-count>0</abstain-count>
+          <result>Negatived</result>
+        </overall>
+      </vote-summary>
+      <individual-votes>
+        <member name-ch="葉劉淑儀" name-en="Mrs Regina IP" constituency="Geographical">
+          <vote>Present</vote>
+        </member>
+        <member name-ch="劉慧卿" name-en="Emily LAU" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="黃定光" name-en="WONG Ting-kwong" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="李慧琼" name-en="Starry LEE" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="黃國健" name-en="WONG Kwok-kin" constituency="Geographical">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁國雄" name-en="LEUNG Kwok-hung" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="何俊賢" name-en="Steven HO" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="姚思榮" name-en="YIU Si-wing" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁繼昌" name-en="Kenneth LEUNG" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="郭家麒" name-en="Dr KWOK Ka-ki" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="郭偉强" name-en="KWOK Wai-keung" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="張華峰" name-en="Christopher CHEUNG" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="單仲偕" name-en="SIN Chung-kai" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="葉建源" name-en="IP Kin-yuen" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="廖長江" name-en="Martin LIAO" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="潘兆平" name-en="POON Siu-ping" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鄧家彪" name-en="TANG Ka-piu" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鍾國斌" name-en="CHUNG Kwok-pan" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+      </individual-votes>
+    </vote>
+    <vote number="34">
+      <vote-date>09/06/2014</vote-date>
+      <vote-time>09:44:48</vote-time>
+      <motion-ch>本委員會同意處理議員根據《人事編制小組委員會會議程序》第31A段擬動議的議案（議案編號：49）</motion-ch>
+      <motion-en>That this Committee should proceed with the motion proposed to be moved by a member under paragraph 31A of the Establishment Subcommittee Procedure (Motion No. 49)</motion-en>
+      <vote-separate-mechanism>No</vote-separate-mechanism>
+      <vote-summary>
+        <overall>
+          <present-count>13</present-count>
+          <vote-count>12</vote-count>
+          <yes-count>1</yes-count>
+          <no-count>11</no-count>
+          <abstain-count>0</abstain-count>
+          <result>Negatived</result>
+        </overall>
+      </vote-summary>
+      <individual-votes>
+        <member name-ch="葉劉淑儀" name-en="Mrs Regina IP" constituency="Geographical">
+          <vote>Present</vote>
+        </member>
+        <member name-ch="劉慧卿" name-en="Emily LAU" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="黃定光" name-en="WONG Ting-kwong" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="李慧琼" name-en="Starry LEE" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="黃國健" name-en="WONG Kwok-kin" constituency="Geographical">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁國雄" name-en="LEUNG Kwok-hung" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="何俊賢" name-en="Steven HO" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="姚思榮" name-en="YIU Si-wing" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁繼昌" name-en="Kenneth LEUNG" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="郭家麒" name-en="Dr KWOK Ka-ki" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="郭偉强" name-en="KWOK Wai-keung" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="張華峰" name-en="Christopher CHEUNG" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="單仲偕" name-en="SIN Chung-kai" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="葉建源" name-en="IP Kin-yuen" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="廖長江" name-en="Martin LIAO" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="潘兆平" name-en="POON Siu-ping" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鄧家彪" name-en="TANG Ka-piu" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鍾國斌" name-en="CHUNG Kwok-pan" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+      </individual-votes>
+    </vote>
+    <vote number="35">
+      <vote-date>09/06/2014</vote-date>
+      <vote-time>09:46:19</vote-time>
+      <motion-ch>本委員會同意處理議員根據《人事編制小組委員會會議程序》第31A段擬動議的議案（議案編號：50）</motion-ch>
+      <motion-en>That this Committee should proceed with the motion proposed to be moved by a member under paragraph 31A of the Establishment Subcommittee Procedure (Motion No. 50)</motion-en>
+      <vote-separate-mechanism>No</vote-separate-mechanism>
+      <vote-summary>
+        <overall>
+          <present-count>13</present-count>
+          <vote-count>12</vote-count>
+          <yes-count>1</yes-count>
+          <no-count>11</no-count>
+          <abstain-count>0</abstain-count>
+          <result>Negatived</result>
+        </overall>
+      </vote-summary>
+      <individual-votes>
+        <member name-ch="葉劉淑儀" name-en="Mrs Regina IP" constituency="Geographical">
+          <vote>Present</vote>
+        </member>
+        <member name-ch="劉慧卿" name-en="Emily LAU" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="黃定光" name-en="WONG Ting-kwong" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="李慧琼" name-en="Starry LEE" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="黃國健" name-en="WONG Kwok-kin" constituency="Geographical">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁國雄" name-en="LEUNG Kwok-hung" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="何俊賢" name-en="Steven HO" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="姚思榮" name-en="YIU Si-wing" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁繼昌" name-en="Kenneth LEUNG" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="郭家麒" name-en="Dr KWOK Ka-ki" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="郭偉强" name-en="KWOK Wai-keung" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="張華峰" name-en="Christopher CHEUNG" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="單仲偕" name-en="SIN Chung-kai" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="葉建源" name-en="IP Kin-yuen" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="廖長江" name-en="Martin LIAO" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="潘兆平" name-en="POON Siu-ping" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鄧家彪" name-en="TANG Ka-piu" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鍾國斌" name-en="CHUNG Kwok-pan" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+      </individual-votes>
+    </vote>
+    <vote number="36">
+      <vote-date>09/06/2014</vote-date>
+      <vote-time>09:47:56</vote-time>
+      <motion-ch>本委員會同意處理議員根據《人事編制小組委員會會議程序》第31A段擬動議的議案（議案編號：51）</motion-ch>
+      <motion-en>That this Committee should proceed with the motion proposed to be moved by a member under paragraph 31A of the Establishment Subcommittee Procedure (Motion No. 51)</motion-en>
+      <vote-separate-mechanism>No</vote-separate-mechanism>
+      <vote-summary>
+        <overall>
+          <present-count>12</present-count>
+          <vote-count>11</vote-count>
+          <yes-count>1</yes-count>
+          <no-count>10</no-count>
+          <abstain-count>0</abstain-count>
+          <result>Negatived</result>
+        </overall>
+      </vote-summary>
+      <individual-votes>
+        <member name-ch="葉劉淑儀" name-en="Mrs Regina IP" constituency="Geographical">
+          <vote>Present</vote>
+        </member>
+        <member name-ch="劉慧卿" name-en="Emily LAU" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="黃定光" name-en="WONG Ting-kwong" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="李慧琼" name-en="Starry LEE" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="黃國健" name-en="WONG Kwok-kin" constituency="Geographical">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁國雄" name-en="LEUNG Kwok-hung" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="何俊賢" name-en="Steven HO" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="姚思榮" name-en="YIU Si-wing" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁繼昌" name-en="Kenneth LEUNG" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="郭家麒" name-en="Dr KWOK Ka-ki" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="郭偉强" name-en="KWOK Wai-keung" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="張華峰" name-en="Christopher CHEUNG" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="單仲偕" name-en="SIN Chung-kai" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="葉建源" name-en="IP Kin-yuen" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="廖長江" name-en="Martin LIAO" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="潘兆平" name-en="POON Siu-ping" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鄧家彪" name-en="TANG Ka-piu" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鍾國斌" name-en="CHUNG Kwok-pan" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+      </individual-votes>
+    </vote>
+    <vote number="37">
+      <vote-date>09/06/2014</vote-date>
+      <vote-time>09:49:30</vote-time>
+      <motion-ch>本委員會同意處理議員根據《人事編制小組委員會會議程序》第31A段擬動議的議案（議案編號：52）</motion-ch>
+      <motion-en>That this Committee should proceed with the motion proposed to be moved by a member under paragraph 31A of the Establishment Subcommittee Procedure (Motion No. 52)</motion-en>
+      <vote-separate-mechanism>No</vote-separate-mechanism>
+      <vote-summary>
+        <overall>
+          <present-count>12</present-count>
+          <vote-count>11</vote-count>
+          <yes-count>1</yes-count>
+          <no-count>10</no-count>
+          <abstain-count>0</abstain-count>
+          <result>Negatived</result>
+        </overall>
+      </vote-summary>
+      <individual-votes>
+        <member name-ch="葉劉淑儀" name-en="Mrs Regina IP" constituency="Geographical">
+          <vote>Present</vote>
+        </member>
+        <member name-ch="劉慧卿" name-en="Emily LAU" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="黃定光" name-en="WONG Ting-kwong" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="李慧琼" name-en="Starry LEE" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="黃國健" name-en="WONG Kwok-kin" constituency="Geographical">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁國雄" name-en="LEUNG Kwok-hung" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="何俊賢" name-en="Steven HO" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="姚思榮" name-en="YIU Si-wing" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁繼昌" name-en="Kenneth LEUNG" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="郭家麒" name-en="Dr KWOK Ka-ki" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="郭偉强" name-en="KWOK Wai-keung" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="張華峰" name-en="Christopher CHEUNG" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="單仲偕" name-en="SIN Chung-kai" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="葉建源" name-en="IP Kin-yuen" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="廖長江" name-en="Martin LIAO" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="潘兆平" name-en="POON Siu-ping" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鄧家彪" name-en="TANG Ka-piu" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鍾國斌" name-en="CHUNG Kwok-pan" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+      </individual-votes>
+    </vote>
+    <vote number="38">
+      <vote-date>09/06/2014</vote-date>
+      <vote-time>09:51:12</vote-time>
+      <motion-ch>本委員會同意處理議員根據《人事編制小組委員會會議程序》第31A段擬動議的議案（議案編號：53）</motion-ch>
+      <motion-en>That this Committee should proceed with the motion proposed to be moved by a member under paragraph 31A of the Establishment Subcommittee Procedure (Motion No. 53)</motion-en>
+      <vote-separate-mechanism>No</vote-separate-mechanism>
+      <vote-summary>
+        <overall>
+          <present-count>13</present-count>
+          <vote-count>12</vote-count>
+          <yes-count>1</yes-count>
+          <no-count>11</no-count>
+          <abstain-count>0</abstain-count>
+          <result>Negatived</result>
+        </overall>
+      </vote-summary>
+      <individual-votes>
+        <member name-ch="葉劉淑儀" name-en="Mrs Regina IP" constituency="Geographical">
+          <vote>Present</vote>
+        </member>
+        <member name-ch="劉慧卿" name-en="Emily LAU" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="黃定光" name-en="WONG Ting-kwong" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="李慧琼" name-en="Starry LEE" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="黃國健" name-en="WONG Kwok-kin" constituency="Geographical">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁國雄" name-en="LEUNG Kwok-hung" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="何俊賢" name-en="Steven HO" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="姚思榮" name-en="YIU Si-wing" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁繼昌" name-en="Kenneth LEUNG" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="郭家麒" name-en="Dr KWOK Ka-ki" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="郭偉强" name-en="KWOK Wai-keung" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="張華峰" name-en="Christopher CHEUNG" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="單仲偕" name-en="SIN Chung-kai" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="葉建源" name-en="IP Kin-yuen" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="廖長江" name-en="Martin LIAO" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="潘兆平" name-en="POON Siu-ping" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鄧家彪" name-en="TANG Ka-piu" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鍾國斌" name-en="CHUNG Kwok-pan" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+      </individual-votes>
+    </vote>
+    <vote number="39">
+      <vote-date>09/06/2014</vote-date>
+      <vote-time>09:52:43</vote-time>
+      <motion-ch>本委員會同意處理議員根據《人事編制小組委員會會議程序》第31A段擬動議的議案（議案編號：54）</motion-ch>
+      <motion-en>That this Committee should proceed with the motion proposed to be moved by a member under paragraph 31A of the Establishment Subcommittee Procedure (Motion No. 54)</motion-en>
+      <vote-separate-mechanism>No</vote-separate-mechanism>
+      <vote-summary>
+        <overall>
+          <present-count>14</present-count>
+          <vote-count>13</vote-count>
+          <yes-count>2</yes-count>
+          <no-count>11</no-count>
+          <abstain-count>0</abstain-count>
+          <result>Negatived</result>
+        </overall>
+      </vote-summary>
+      <individual-votes>
+        <member name-ch="葉劉淑儀" name-en="Mrs Regina IP" constituency="Geographical">
+          <vote>Present</vote>
+        </member>
+        <member name-ch="劉慧卿" name-en="Emily LAU" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="黃定光" name-en="WONG Ting-kwong" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="李慧琼" name-en="Starry LEE" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="黃國健" name-en="WONG Kwok-kin" constituency="Geographical">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁國雄" name-en="LEUNG Kwok-hung" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="何俊賢" name-en="Steven HO" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="姚思榮" name-en="YIU Si-wing" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁繼昌" name-en="Kenneth LEUNG" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="郭家麒" name-en="Dr KWOK Ka-ki" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="郭偉强" name-en="KWOK Wai-keung" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="張華峰" name-en="Christopher CHEUNG" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="單仲偕" name-en="SIN Chung-kai" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="葉建源" name-en="IP Kin-yuen" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="廖長江" name-en="Martin LIAO" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="潘兆平" name-en="POON Siu-ping" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鄧家彪" name-en="TANG Ka-piu" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鍾國斌" name-en="CHUNG Kwok-pan" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+      </individual-votes>
+    </vote>
+    <vote number="40">
+      <vote-date>09/06/2014</vote-date>
+      <vote-time>09:54:14</vote-time>
+      <motion-ch>本委員會同意處理議員根據《人事編制小組委員會會議程序》第31A段擬動議的議案（議案編號：55）</motion-ch>
+      <motion-en>That this Committee should proceed with the motion proposed to be moved by a member under paragraph 31A of the Establishment Subcommittee Procedure (Motion No. 55)</motion-en>
+      <vote-separate-mechanism>No</vote-separate-mechanism>
+      <vote-summary>
+        <overall>
+          <present-count>14</present-count>
+          <vote-count>13</vote-count>
+          <yes-count>2</yes-count>
+          <no-count>11</no-count>
+          <abstain-count>0</abstain-count>
+          <result>Negatived</result>
+        </overall>
+      </vote-summary>
+      <individual-votes>
+        <member name-ch="葉劉淑儀" name-en="Mrs Regina IP" constituency="Geographical">
+          <vote>Present</vote>
+        </member>
+        <member name-ch="劉慧卿" name-en="Emily LAU" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="黃定光" name-en="WONG Ting-kwong" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="李慧琼" name-en="Starry LEE" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="黃國健" name-en="WONG Kwok-kin" constituency="Geographical">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁國雄" name-en="LEUNG Kwok-hung" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="何俊賢" name-en="Steven HO" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="姚思榮" name-en="YIU Si-wing" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁繼昌" name-en="Kenneth LEUNG" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="郭家麒" name-en="Dr KWOK Ka-ki" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="郭偉强" name-en="KWOK Wai-keung" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="張華峰" name-en="Christopher CHEUNG" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="單仲偕" name-en="SIN Chung-kai" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="葉建源" name-en="IP Kin-yuen" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="廖長江" name-en="Martin LIAO" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="潘兆平" name-en="POON Siu-ping" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鄧家彪" name-en="TANG Ka-piu" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鍾國斌" name-en="CHUNG Kwok-pan" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+      </individual-votes>
+    </vote>
+    <vote number="41">
+      <vote-date>09/06/2014</vote-date>
+      <vote-time>09:55:53</vote-time>
+      <motion-ch>本委員會同意處理議員根據《人事編制小組委員會會議程序》第31A段擬動議的議案（議案編號：56）</motion-ch>
+      <motion-en>That this Committee should proceed with the motion proposed to be moved by a member under paragraph 31A of the Establishment Subcommittee Procedure (Motion No. 56)</motion-en>
+      <vote-separate-mechanism>No</vote-separate-mechanism>
+      <vote-summary>
+        <overall>
+          <present-count>14</present-count>
+          <vote-count>13</vote-count>
+          <yes-count>1</yes-count>
+          <no-count>11</no-count>
+          <abstain-count>1</abstain-count>
+          <result>Negatived</result>
+        </overall>
+      </vote-summary>
+      <individual-votes>
+        <member name-ch="葉劉淑儀" name-en="Mrs Regina IP" constituency="Geographical">
+          <vote>Present</vote>
+        </member>
+        <member name-ch="劉慧卿" name-en="Emily LAU" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="黃定光" name-en="WONG Ting-kwong" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="李慧琼" name-en="Starry LEE" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="黃國健" name-en="WONG Kwok-kin" constituency="Geographical">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁國雄" name-en="LEUNG Kwok-hung" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="何俊賢" name-en="Steven HO" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="姚思榮" name-en="YIU Si-wing" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁繼昌" name-en="Kenneth LEUNG" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="郭家麒" name-en="Dr KWOK Ka-ki" constituency="Geographical">
+          <vote>Abstain</vote>
+        </member>
+        <member name-ch="郭偉强" name-en="KWOK Wai-keung" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="張華峰" name-en="Christopher CHEUNG" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="單仲偕" name-en="SIN Chung-kai" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="葉建源" name-en="IP Kin-yuen" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="廖長江" name-en="Martin LIAO" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="潘兆平" name-en="POON Siu-ping" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鄧家彪" name-en="TANG Ka-piu" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鍾國斌" name-en="CHUNG Kwok-pan" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+      </individual-votes>
+    </vote>
+    <vote number="42">
+      <vote-date>09/06/2014</vote-date>
+      <vote-time>09:57:29</vote-time>
+      <motion-ch>本委員會同意處理議員根據《人事編制小組委員會會議程序》第31A段擬動議的議案（議案編號：57）</motion-ch>
+      <motion-en>That this Committee should proceed with the motion proposed to be moved by a member under paragraph 31A of the Establishment Subcommittee Procedure (Motion No. 57)</motion-en>
+      <vote-separate-mechanism>No</vote-separate-mechanism>
+      <vote-summary>
+        <overall>
+          <present-count>13</present-count>
+          <vote-count>12</vote-count>
+          <yes-count>2</yes-count>
+          <no-count>10</no-count>
+          <abstain-count>0</abstain-count>
+          <result>Negatived</result>
+        </overall>
+      </vote-summary>
+      <individual-votes>
+        <member name-ch="葉劉淑儀" name-en="Mrs Regina IP" constituency="Geographical">
+          <vote>Present</vote>
+        </member>
+        <member name-ch="劉慧卿" name-en="Emily LAU" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="黃定光" name-en="WONG Ting-kwong" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="李慧琼" name-en="Starry LEE" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="黃國健" name-en="WONG Kwok-kin" constituency="Geographical">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁國雄" name-en="LEUNG Kwok-hung" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="何俊賢" name-en="Steven HO" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="姚思榮" name-en="YIU Si-wing" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁繼昌" name-en="Kenneth LEUNG" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="郭家麒" name-en="Dr KWOK Ka-ki" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="郭偉强" name-en="KWOK Wai-keung" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="張華峰" name-en="Christopher CHEUNG" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="單仲偕" name-en="SIN Chung-kai" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="葉建源" name-en="IP Kin-yuen" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="廖長江" name-en="Martin LIAO" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="潘兆平" name-en="POON Siu-ping" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鄧家彪" name-en="TANG Ka-piu" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鍾國斌" name-en="CHUNG Kwok-pan" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+      </individual-votes>
+    </vote>
+    <vote number="43">
+      <vote-date>09/06/2014</vote-date>
+      <vote-time>09:59:03</vote-time>
+      <motion-ch>本委員會同意處理議員根據《人事編制小組委員會會議程序》第31A段擬動議的議案（議案編號：58）</motion-ch>
+      <motion-en>That this Committee should proceed with the motion proposed to be moved by a member under paragraph 31A of the Establishment Subcommittee Procedure (Motion No. 58)</motion-en>
+      <vote-separate-mechanism>No</vote-separate-mechanism>
+      <vote-summary>
+        <overall>
+          <present-count>13</present-count>
+          <vote-count>12</vote-count>
+          <yes-count>3</yes-count>
+          <no-count>9</no-count>
+          <abstain-count>0</abstain-count>
+          <result>Negatived</result>
+        </overall>
+      </vote-summary>
+      <individual-votes>
+        <member name-ch="葉劉淑儀" name-en="Mrs Regina IP" constituency="Geographical">
+          <vote>Present</vote>
+        </member>
+        <member name-ch="劉慧卿" name-en="Emily LAU" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="黃定光" name-en="WONG Ting-kwong" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="李慧琼" name-en="Starry LEE" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="黃國健" name-en="WONG Kwok-kin" constituency="Geographical">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁國雄" name-en="LEUNG Kwok-hung" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="何俊賢" name-en="Steven HO" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="姚思榮" name-en="YIU Si-wing" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁繼昌" name-en="Kenneth LEUNG" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="郭家麒" name-en="Dr KWOK Ka-ki" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="郭偉强" name-en="KWOK Wai-keung" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="張華峰" name-en="Christopher CHEUNG" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="單仲偕" name-en="SIN Chung-kai" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="葉建源" name-en="IP Kin-yuen" constituency="Functional">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="廖長江" name-en="Martin LIAO" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="潘兆平" name-en="POON Siu-ping" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鄧家彪" name-en="TANG Ka-piu" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鍾國斌" name-en="CHUNG Kwok-pan" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+      </individual-votes>
+    </vote>
+    <vote number="44">
+      <vote-date>09/06/2014</vote-date>
+      <vote-time>10:00:41</vote-time>
+      <motion-ch>本委員會同意處理議員根據《人事編制小組委員會會議程序》第31A段擬動議的議案（議案編號：59）</motion-ch>
+      <motion-en>That this Committee should proceed with the motion proposed to be moved by a member under paragraph 31A of the Establishment Subcommittee Procedure (Motion No. 59)</motion-en>
+      <vote-separate-mechanism>No</vote-separate-mechanism>
+      <vote-summary>
+        <overall>
+          <present-count>14</present-count>
+          <vote-count>13</vote-count>
+          <yes-count>2</yes-count>
+          <no-count>11</no-count>
+          <abstain-count>0</abstain-count>
+          <result>Negatived</result>
+        </overall>
+      </vote-summary>
+      <individual-votes>
+        <member name-ch="葉劉淑儀" name-en="Mrs Regina IP" constituency="Geographical">
+          <vote>Present</vote>
+        </member>
+        <member name-ch="劉慧卿" name-en="Emily LAU" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="黃定光" name-en="WONG Ting-kwong" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="李慧琼" name-en="Starry LEE" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="黃國健" name-en="WONG Kwok-kin" constituency="Geographical">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁國雄" name-en="LEUNG Kwok-hung" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="何俊賢" name-en="Steven HO" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="姚思榮" name-en="YIU Si-wing" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁繼昌" name-en="Kenneth LEUNG" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="郭家麒" name-en="Dr KWOK Ka-ki" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="郭偉强" name-en="KWOK Wai-keung" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="張華峰" name-en="Christopher CHEUNG" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="單仲偕" name-en="SIN Chung-kai" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="葉建源" name-en="IP Kin-yuen" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="廖長江" name-en="Martin LIAO" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="潘兆平" name-en="POON Siu-ping" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鄧家彪" name-en="TANG Ka-piu" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鍾國斌" name-en="CHUNG Kwok-pan" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+      </individual-votes>
+    </vote>
+    <vote number="45">
+      <vote-date>09/06/2014</vote-date>
+      <vote-time>10:02:14</vote-time>
+      <motion-ch>本委員會同意處理議員根據《人事編制小組委員會會議程序》第31A段擬動議的議案（議案編號：62）</motion-ch>
+      <motion-en>That this Committee should proceed with the motion proposed to be moved by a member under paragraph 31A of the Establishment Subcommittee Procedure (Motion No. 62)</motion-en>
+      <vote-separate-mechanism>No</vote-separate-mechanism>
+      <vote-summary>
+        <overall>
+          <present-count>14</present-count>
+          <vote-count>13</vote-count>
+          <yes-count>5</yes-count>
+          <no-count>8</no-count>
+          <abstain-count>0</abstain-count>
+          <result>Negatived</result>
+        </overall>
+      </vote-summary>
+      <individual-votes>
+        <member name-ch="葉劉淑儀" name-en="Mrs Regina IP" constituency="Geographical">
+          <vote>Present</vote>
+        </member>
+        <member name-ch="劉慧卿" name-en="Emily LAU" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="黃定光" name-en="WONG Ting-kwong" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="李慧琼" name-en="Starry LEE" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="黃國健" name-en="WONG Kwok-kin" constituency="Geographical">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁國雄" name-en="LEUNG Kwok-hung" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="何俊賢" name-en="Steven HO" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="姚思榮" name-en="YIU Si-wing" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁繼昌" name-en="Kenneth LEUNG" constituency="Functional">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="郭家麒" name-en="Dr KWOK Ka-ki" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="郭偉强" name-en="KWOK Wai-keung" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="張華峰" name-en="Christopher CHEUNG" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="單仲偕" name-en="SIN Chung-kai" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="葉建源" name-en="IP Kin-yuen" constituency="Functional">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="廖長江" name-en="Martin LIAO" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="潘兆平" name-en="POON Siu-ping" constituency="Functional">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="鄧家彪" name-en="TANG Ka-piu" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鍾國斌" name-en="CHUNG Kwok-pan" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+      </individual-votes>
+    </vote>
+    <vote number="46">
+      <vote-date>09/06/2014</vote-date>
+      <vote-time>10:03:50</vote-time>
+      <motion-ch>本委員會同意處理議員根據《人事編制小組委員會會議程序》第31A段擬動議的議案（議案編號：63）</motion-ch>
+      <motion-en>That this Committee should proceed with the motion proposed to be moved by a member under paragraph 31A of the Establishment Subcommittee Procedure (Motion No. 63)</motion-en>
+      <vote-separate-mechanism>No</vote-separate-mechanism>
+      <vote-summary>
+        <overall>
+          <present-count>13</present-count>
+          <vote-count>12</vote-count>
+          <yes-count>3</yes-count>
+          <no-count>8</no-count>
+          <abstain-count>1</abstain-count>
+          <result>Negatived</result>
+        </overall>
+      </vote-summary>
+      <individual-votes>
+        <member name-ch="葉劉淑儀" name-en="Mrs Regina IP" constituency="Geographical">
+          <vote>Present</vote>
+        </member>
+        <member name-ch="劉慧卿" name-en="Emily LAU" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="黃定光" name-en="WONG Ting-kwong" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="李慧琼" name-en="Starry LEE" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="黃國健" name-en="WONG Kwok-kin" constituency="Geographical">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁國雄" name-en="LEUNG Kwok-hung" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="何俊賢" name-en="Steven HO" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="姚思榮" name-en="YIU Si-wing" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁繼昌" name-en="Kenneth LEUNG" constituency="Functional">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="郭家麒" name-en="Dr KWOK Ka-ki" constituency="Geographical">
+          <vote>Abstain</vote>
+        </member>
+        <member name-ch="郭偉强" name-en="KWOK Wai-keung" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="張華峰" name-en="Christopher CHEUNG" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="單仲偕" name-en="SIN Chung-kai" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="葉建源" name-en="IP Kin-yuen" constituency="Functional">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="廖長江" name-en="Martin LIAO" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="潘兆平" name-en="POON Siu-ping" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鄧家彪" name-en="TANG Ka-piu" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="鍾國斌" name-en="CHUNG Kwok-pan" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+      </individual-votes>
+    </vote>
+    <vote number="47">
+      <vote-date>09/06/2014</vote-date>
+      <vote-time>10:05:17</vote-time>
+      <motion-ch>本委員會同意處理議員根據《人事編制小組委員會會議程序》第31A段擬動議的議案（議案編號：64）</motion-ch>
+      <motion-en>That this Committee should proceed with the motion proposed to be moved by a member under paragraph 31A of the Establishment Subcommittee Procedure (Motion No. 64)</motion-en>
+      <vote-separate-mechanism>No</vote-separate-mechanism>
+      <vote-summary>
+        <overall>
+          <present-count>13</present-count>
+          <vote-count>12</vote-count>
+          <yes-count>3</yes-count>
+          <no-count>9</no-count>
+          <abstain-count>0</abstain-count>
+          <result>Negatived</result>
+        </overall>
+      </vote-summary>
+      <individual-votes>
+        <member name-ch="葉劉淑儀" name-en="Mrs Regina IP" constituency="Geographical">
+          <vote>Present</vote>
+        </member>
+        <member name-ch="劉慧卿" name-en="Emily LAU" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="黃定光" name-en="WONG Ting-kwong" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="李慧琼" name-en="Starry LEE" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="黃國健" name-en="WONG Kwok-kin" constituency="Geographical">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁國雄" name-en="LEUNG Kwok-hung" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="何俊賢" name-en="Steven HO" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="姚思榮" name-en="YIU Si-wing" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁繼昌" name-en="Kenneth LEUNG" constituency="Functional">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="郭家麒" name-en="Dr KWOK Ka-ki" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="郭偉强" name-en="KWOK Wai-keung" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="張華峰" name-en="Christopher CHEUNG" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="單仲偕" name-en="SIN Chung-kai" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="葉建源" name-en="IP Kin-yuen" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="廖長江" name-en="Martin LIAO" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="潘兆平" name-en="POON Siu-ping" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鄧家彪" name-en="TANG Ka-piu" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鍾國斌" name-en="CHUNG Kwok-pan" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+      </individual-votes>
+    </vote>
+    <vote number="48">
+      <vote-date>09/06/2014</vote-date>
+      <vote-time>10:06:44</vote-time>
+      <motion-ch>本委員會同意處理議員根據《人事編制小組委員會會議程序》第31A段擬動議的議案（議案編號：65）</motion-ch>
+      <motion-en>That this Committee should proceed with the motion proposed to be moved by a member under paragraph 31A of the Establishment Subcommittee Procedure (Motion No. 65)</motion-en>
+      <vote-separate-mechanism>No</vote-separate-mechanism>
+      <vote-summary>
+        <overall>
+          <present-count>13</present-count>
+          <vote-count>12</vote-count>
+          <yes-count>3</yes-count>
+          <no-count>9</no-count>
+          <abstain-count>0</abstain-count>
+          <result>Negatived</result>
+        </overall>
+      </vote-summary>
+      <individual-votes>
+        <member name-ch="葉劉淑儀" name-en="Mrs Regina IP" constituency="Geographical">
+          <vote>Present</vote>
+        </member>
+        <member name-ch="劉慧卿" name-en="Emily LAU" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="黃定光" name-en="WONG Ting-kwong" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="李慧琼" name-en="Starry LEE" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="黃國健" name-en="WONG Kwok-kin" constituency="Geographical">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁國雄" name-en="LEUNG Kwok-hung" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="何俊賢" name-en="Steven HO" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="姚思榮" name-en="YIU Si-wing" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁繼昌" name-en="Kenneth LEUNG" constituency="Functional">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="郭家麒" name-en="Dr KWOK Ka-ki" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="郭偉强" name-en="KWOK Wai-keung" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="張華峰" name-en="Christopher CHEUNG" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="單仲偕" name-en="SIN Chung-kai" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="葉建源" name-en="IP Kin-yuen" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="廖長江" name-en="Martin LIAO" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="潘兆平" name-en="POON Siu-ping" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鄧家彪" name-en="TANG Ka-piu" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鍾國斌" name-en="CHUNG Kwok-pan" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+      </individual-votes>
+    </vote>
+    <vote number="49">
+      <vote-date>09/06/2014</vote-date>
+      <vote-time>10:08:12</vote-time>
+      <motion-ch>本委員會同意處理議員根據《人事編制小組委員會會議程序》第31A段擬動議的議案（議案編號：66）</motion-ch>
+      <motion-en>That this Committee should proceed with the motion proposed to be moved by a member under paragraph 31A of the Establishment Subcommittee Procedure (Motion No. 66)</motion-en>
+      <vote-separate-mechanism>No</vote-separate-mechanism>
+      <vote-summary>
+        <overall>
+          <present-count>13</present-count>
+          <vote-count>12</vote-count>
+          <yes-count>3</yes-count>
+          <no-count>9</no-count>
+          <abstain-count>0</abstain-count>
+          <result>Negatived</result>
+        </overall>
+      </vote-summary>
+      <individual-votes>
+        <member name-ch="葉劉淑儀" name-en="Mrs Regina IP" constituency="Geographical">
+          <vote>Present</vote>
+        </member>
+        <member name-ch="劉慧卿" name-en="Emily LAU" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="黃定光" name-en="WONG Ting-kwong" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="李慧琼" name-en="Starry LEE" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="黃國健" name-en="WONG Kwok-kin" constituency="Geographical">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁國雄" name-en="LEUNG Kwok-hung" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="何俊賢" name-en="Steven HO" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="姚思榮" name-en="YIU Si-wing" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁繼昌" name-en="Kenneth LEUNG" constituency="Functional">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="郭家麒" name-en="Dr KWOK Ka-ki" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="郭偉强" name-en="KWOK Wai-keung" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="張華峰" name-en="Christopher CHEUNG" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="單仲偕" name-en="SIN Chung-kai" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="葉建源" name-en="IP Kin-yuen" constituency="Functional">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="廖長江" name-en="Martin LIAO" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="潘兆平" name-en="POON Siu-ping" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鄧家彪" name-en="TANG Ka-piu" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鍾國斌" name-en="CHUNG Kwok-pan" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+      </individual-votes>
+    </vote>
+    <vote number="50">
+      <vote-date>09/06/2014</vote-date>
+      <vote-time>10:09:45</vote-time>
+      <motion-ch>本委員會同意處理議員根據《人事編制小組委員會會議程序》第31A段擬動議的議案（議案編號：69）</motion-ch>
+      <motion-en>That this Committee should proceed with the motion proposed to be moved by a member under paragraph 31A of the Establishment Subcommittee Procedure (Motion No. 69)</motion-en>
+      <vote-separate-mechanism>No</vote-separate-mechanism>
+      <vote-summary>
+        <overall>
+          <present-count>13</present-count>
+          <vote-count>12</vote-count>
+          <yes-count>2</yes-count>
+          <no-count>10</no-count>
+          <abstain-count>0</abstain-count>
+          <result>Negatived</result>
+        </overall>
+      </vote-summary>
+      <individual-votes>
+        <member name-ch="葉劉淑儀" name-en="Mrs Regina IP" constituency="Geographical">
+          <vote>Present</vote>
+        </member>
+        <member name-ch="劉慧卿" name-en="Emily LAU" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="黃定光" name-en="WONG Ting-kwong" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="李慧琼" name-en="Starry LEE" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="黃國健" name-en="WONG Kwok-kin" constituency="Geographical">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁國雄" name-en="LEUNG Kwok-hung" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="何俊賢" name-en="Steven HO" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="姚思榮" name-en="YIU Si-wing" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁繼昌" name-en="Kenneth LEUNG" constituency="Functional">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="郭家麒" name-en="Dr KWOK Ka-ki" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="郭偉强" name-en="KWOK Wai-keung" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="張華峰" name-en="Christopher CHEUNG" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="單仲偕" name-en="SIN Chung-kai" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="葉建源" name-en="IP Kin-yuen" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="廖長江" name-en="Martin LIAO" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="潘兆平" name-en="POON Siu-ping" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鄧家彪" name-en="TANG Ka-piu" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鍾國斌" name-en="CHUNG Kwok-pan" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+      </individual-votes>
+    </vote>
+    <vote number="51">
+      <vote-date>09/06/2014</vote-date>
+      <vote-time>10:11:15</vote-time>
+      <motion-ch>本委員會同意處理議員根據《人事編制小組委員會會議程序》第31A段擬動議的議案（議案編號：70）</motion-ch>
+      <motion-en>That this Committee should proceed with the motion proposed to be moved by a member under paragraph 31A of the Establishment Subcommittee Procedure (Motion No. 70)</motion-en>
+      <vote-separate-mechanism>No</vote-separate-mechanism>
+      <vote-summary>
+        <overall>
+          <present-count>13</present-count>
+          <vote-count>12</vote-count>
+          <yes-count>1</yes-count>
+          <no-count>10</no-count>
+          <abstain-count>1</abstain-count>
+          <result>Negatived</result>
+        </overall>
+      </vote-summary>
+      <individual-votes>
+        <member name-ch="葉劉淑儀" name-en="Mrs Regina IP" constituency="Geographical">
+          <vote>Present</vote>
+        </member>
+        <member name-ch="劉慧卿" name-en="Emily LAU" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="黃定光" name-en="WONG Ting-kwong" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="李慧琼" name-en="Starry LEE" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="黃國健" name-en="WONG Kwok-kin" constituency="Geographical">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁國雄" name-en="LEUNG Kwok-hung" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="何俊賢" name-en="Steven HO" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="姚思榮" name-en="YIU Si-wing" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁繼昌" name-en="Kenneth LEUNG" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="郭家麒" name-en="Dr KWOK Ka-ki" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="郭偉强" name-en="KWOK Wai-keung" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="張華峰" name-en="Christopher CHEUNG" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="單仲偕" name-en="SIN Chung-kai" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="葉建源" name-en="IP Kin-yuen" constituency="Functional">
+          <vote>Abstain</vote>
+        </member>
+        <member name-ch="廖長江" name-en="Martin LIAO" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="潘兆平" name-en="POON Siu-ping" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鄧家彪" name-en="TANG Ka-piu" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鍾國斌" name-en="CHUNG Kwok-pan" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+      </individual-votes>
+    </vote>
+    <vote number="52">
+      <vote-date>09/06/2014</vote-date>
+      <vote-time>10:12:43</vote-time>
+      <motion-ch>本委員會同意處理議員根據《人事編制小組委員會會議程序》第31A段擬動議的議案（議案編號：71）</motion-ch>
+      <motion-en>That this Committee should proceed with the motion proposed to be moved by a member under paragraph 31A of the Establishment Subcommittee Procedure (Motion No. 71)</motion-en>
+      <vote-separate-mechanism>No</vote-separate-mechanism>
+      <vote-summary>
+        <overall>
+          <present-count>13</present-count>
+          <vote-count>12</vote-count>
+          <yes-count>3</yes-count>
+          <no-count>9</no-count>
+          <abstain-count>0</abstain-count>
+          <result>Negatived</result>
+        </overall>
+      </vote-summary>
+      <individual-votes>
+        <member name-ch="葉劉淑儀" name-en="Mrs Regina IP" constituency="Geographical">
+          <vote>Present</vote>
+        </member>
+        <member name-ch="劉慧卿" name-en="Emily LAU" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="黃定光" name-en="WONG Ting-kwong" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="李慧琼" name-en="Starry LEE" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="黃國健" name-en="WONG Kwok-kin" constituency="Geographical">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁國雄" name-en="LEUNG Kwok-hung" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="何俊賢" name-en="Steven HO" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="姚思榮" name-en="YIU Si-wing" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁繼昌" name-en="Kenneth LEUNG" constituency="Functional">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="郭家麒" name-en="Dr KWOK Ka-ki" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="郭偉强" name-en="KWOK Wai-keung" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="張華峰" name-en="Christopher CHEUNG" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="單仲偕" name-en="SIN Chung-kai" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="葉建源" name-en="IP Kin-yuen" constituency="Functional">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="廖長江" name-en="Martin LIAO" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="潘兆平" name-en="POON Siu-ping" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鄧家彪" name-en="TANG Ka-piu" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鍾國斌" name-en="CHUNG Kwok-pan" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+      </individual-votes>
+    </vote>
+    <vote number="53">
+      <vote-date>09/06/2014</vote-date>
+      <vote-time>10:14:12</vote-time>
+      <motion-ch>本委員會同意處理議員根據《人事編制小組委員會會議程序》第31A段擬動議的議案（議案編號：72）</motion-ch>
+      <motion-en>That this Committee should proceed with the motion proposed to be moved by a member under paragraph 31A of the Establishment Subcommittee Procedure (Motion No. 72)</motion-en>
+      <vote-separate-mechanism>No</vote-separate-mechanism>
+      <vote-summary>
+        <overall>
+          <present-count>14</present-count>
+          <vote-count>13</vote-count>
+          <yes-count>4</yes-count>
+          <no-count>9</no-count>
+          <abstain-count>0</abstain-count>
+          <result>Negatived</result>
+        </overall>
+      </vote-summary>
+      <individual-votes>
+        <member name-ch="葉劉淑儀" name-en="Mrs Regina IP" constituency="Geographical">
+          <vote>Present</vote>
+        </member>
+        <member name-ch="劉慧卿" name-en="Emily LAU" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="黃定光" name-en="WONG Ting-kwong" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="李慧琼" name-en="Starry LEE" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="黃國健" name-en="WONG Kwok-kin" constituency="Geographical">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁國雄" name-en="LEUNG Kwok-hung" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="何俊賢" name-en="Steven HO" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="姚思榮" name-en="YIU Si-wing" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁繼昌" name-en="Kenneth LEUNG" constituency="Functional">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="郭家麒" name-en="Dr KWOK Ka-ki" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="郭偉强" name-en="KWOK Wai-keung" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="張華峰" name-en="Christopher CHEUNG" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="單仲偕" name-en="SIN Chung-kai" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="葉建源" name-en="IP Kin-yuen" constituency="Functional">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="廖長江" name-en="Martin LIAO" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="潘兆平" name-en="POON Siu-ping" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鄧家彪" name-en="TANG Ka-piu" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鍾國斌" name-en="CHUNG Kwok-pan" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+      </individual-votes>
+    </vote>
+    <vote number="54">
+      <vote-date>09/06/2014</vote-date>
+      <vote-time>10:15:45</vote-time>
+      <motion-ch>本委員會同意處理議員根據《人事編制小組委員會會議程序》第31A段擬動議的議案（議案編號：73）</motion-ch>
+      <motion-en>That this Committee should proceed with the motion proposed to be moved by a member under paragraph 31A of the Establishment Subcommittee Procedure (Motion No. 73)</motion-en>
+      <vote-separate-mechanism>No</vote-separate-mechanism>
+      <vote-summary>
+        <overall>
+          <present-count>12</present-count>
+          <vote-count>11</vote-count>
+          <yes-count>4</yes-count>
+          <no-count>7</no-count>
+          <abstain-count>0</abstain-count>
+          <result>Negatived</result>
+        </overall>
+      </vote-summary>
+      <individual-votes>
+        <member name-ch="葉劉淑儀" name-en="Mrs Regina IP" constituency="Geographical">
+          <vote>Present</vote>
+        </member>
+        <member name-ch="劉慧卿" name-en="Emily LAU" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="黃定光" name-en="WONG Ting-kwong" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="李慧琼" name-en="Starry LEE" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="黃國健" name-en="WONG Kwok-kin" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="梁國雄" name-en="LEUNG Kwok-hung" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="何俊賢" name-en="Steven HO" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="姚思榮" name-en="YIU Si-wing" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁繼昌" name-en="Kenneth LEUNG" constituency="Functional">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="郭家麒" name-en="Dr KWOK Ka-ki" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="郭偉强" name-en="KWOK Wai-keung" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="張華峰" name-en="Christopher CHEUNG" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="單仲偕" name-en="SIN Chung-kai" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="葉建源" name-en="IP Kin-yuen" constituency="Functional">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="廖長江" name-en="Martin LIAO" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="潘兆平" name-en="POON Siu-ping" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鄧家彪" name-en="TANG Ka-piu" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鍾國斌" name-en="CHUNG Kwok-pan" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+      </individual-votes>
+    </vote>
+    <vote number="55">
+      <vote-date>09/06/2014</vote-date>
+      <vote-time>10:17:11</vote-time>
+      <motion-ch>本委員會同意處理議員根據《人事編制小組委員會會議程序》第31A段擬動議的議案（議案編號：74）</motion-ch>
+      <motion-en>That this Committee should proceed with the motion proposed to be moved by a member under paragraph 31A of the Establishment Subcommittee Procedure (Motion No. 74)</motion-en>
+      <vote-separate-mechanism>No</vote-separate-mechanism>
+      <vote-summary>
+        <overall>
+          <present-count>13</present-count>
+          <vote-count>12</vote-count>
+          <yes-count>4</yes-count>
+          <no-count>8</no-count>
+          <abstain-count>0</abstain-count>
+          <result>Negatived</result>
+        </overall>
+      </vote-summary>
+      <individual-votes>
+        <member name-ch="葉劉淑儀" name-en="Mrs Regina IP" constituency="Geographical">
+          <vote>Present</vote>
+        </member>
+        <member name-ch="劉慧卿" name-en="Emily LAU" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="黃定光" name-en="WONG Ting-kwong" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="李慧琼" name-en="Starry LEE" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="黃國健" name-en="WONG Kwok-kin" constituency="Geographical">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁國雄" name-en="LEUNG Kwok-hung" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="何俊賢" name-en="Steven HO" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="姚思榮" name-en="YIU Si-wing" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁繼昌" name-en="Kenneth LEUNG" constituency="Functional">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="郭家麒" name-en="Dr KWOK Ka-ki" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="郭偉强" name-en="KWOK Wai-keung" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="張華峰" name-en="Christopher CHEUNG" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="單仲偕" name-en="SIN Chung-kai" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="葉建源" name-en="IP Kin-yuen" constituency="Functional">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="廖長江" name-en="Martin LIAO" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="潘兆平" name-en="POON Siu-ping" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鄧家彪" name-en="TANG Ka-piu" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鍾國斌" name-en="CHUNG Kwok-pan" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+      </individual-votes>
+    </vote>
+    <vote number="56">
+      <vote-date>09/06/2014</vote-date>
+      <vote-time>10:18:56</vote-time>
+      <motion-ch>本委員會同意處理議員根據《人事編制小組委員會會議程序》第31A段擬動議的議案（議案編號：75）</motion-ch>
+      <motion-en>That this Committee should proceed with the motion proposed to be moved by a member under paragraph 31A of the Establishment Subcommittee Procedure (Motion No. 75)</motion-en>
+      <vote-separate-mechanism>No</vote-separate-mechanism>
+      <vote-summary>
+        <overall>
+          <present-count>12</present-count>
+          <vote-count>11</vote-count>
+          <yes-count>1</yes-count>
+          <no-count>9</no-count>
+          <abstain-count>1</abstain-count>
+          <result>Negatived</result>
+        </overall>
+      </vote-summary>
+      <individual-votes>
+        <member name-ch="葉劉淑儀" name-en="Mrs Regina IP" constituency="Geographical">
+          <vote>Present</vote>
+        </member>
+        <member name-ch="劉慧卿" name-en="Emily LAU" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="黃定光" name-en="WONG Ting-kwong" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="李慧琼" name-en="Starry LEE" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="黃國健" name-en="WONG Kwok-kin" constituency="Geographical">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁國雄" name-en="LEUNG Kwok-hung" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="何俊賢" name-en="Steven HO" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="姚思榮" name-en="YIU Si-wing" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁繼昌" name-en="Kenneth LEUNG" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="郭家麒" name-en="Dr KWOK Ka-ki" constituency="Geographical">
+          <vote>Abstain</vote>
+        </member>
+        <member name-ch="郭偉强" name-en="KWOK Wai-keung" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="張華峰" name-en="Christopher CHEUNG" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="單仲偕" name-en="SIN Chung-kai" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="葉建源" name-en="IP Kin-yuen" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="廖長江" name-en="Martin LIAO" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="潘兆平" name-en="POON Siu-ping" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鄧家彪" name-en="TANG Ka-piu" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="鍾國斌" name-en="CHUNG Kwok-pan" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+      </individual-votes>
+    </vote>
+    <vote number="57">
+      <vote-date>09/06/2014</vote-date>
+      <vote-time>10:20:20</vote-time>
+      <motion-ch>本委員會同意處理議員根據《人事編制小組委員會會議程序》第31A段擬動議的議案（議案編號：76）</motion-ch>
+      <motion-en>That this Committee should proceed with the motion proposed to be moved by a member under paragraph 31A of the Establishment Subcommittee Procedure (Motion No. 76)</motion-en>
+      <vote-separate-mechanism>No</vote-separate-mechanism>
+      <vote-summary>
+        <overall>
+          <present-count>12</present-count>
+          <vote-count>11</vote-count>
+          <yes-count>1</yes-count>
+          <no-count>9</no-count>
+          <abstain-count>1</abstain-count>
+          <result>Negatived</result>
+        </overall>
+      </vote-summary>
+      <individual-votes>
+        <member name-ch="葉劉淑儀" name-en="Mrs Regina IP" constituency="Geographical">
+          <vote>Present</vote>
+        </member>
+        <member name-ch="劉慧卿" name-en="Emily LAU" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="黃定光" name-en="WONG Ting-kwong" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="李慧琼" name-en="Starry LEE" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="黃國健" name-en="WONG Kwok-kin" constituency="Geographical">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁國雄" name-en="LEUNG Kwok-hung" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="何俊賢" name-en="Steven HO" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="姚思榮" name-en="YIU Si-wing" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁繼昌" name-en="Kenneth LEUNG" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="郭家麒" name-en="Dr KWOK Ka-ki" constituency="Geographical">
+          <vote>Abstain</vote>
+        </member>
+        <member name-ch="郭偉强" name-en="KWOK Wai-keung" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="張華峰" name-en="Christopher CHEUNG" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="單仲偕" name-en="SIN Chung-kai" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="葉建源" name-en="IP Kin-yuen" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="廖長江" name-en="Martin LIAO" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="潘兆平" name-en="POON Siu-ping" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鄧家彪" name-en="TANG Ka-piu" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="鍾國斌" name-en="CHUNG Kwok-pan" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+      </individual-votes>
+    </vote>
+    <vote number="58">
+      <vote-date>09/06/2014</vote-date>
+      <vote-time>10:21:46</vote-time>
+      <motion-ch>本委員會同意處理議員根據《人事編制小組委員會會議程序》第31A段擬動議的議案（議案編號：77）</motion-ch>
+      <motion-en>That this Committee should proceed with the motion proposed to be moved by a member under paragraph 31A of the Establishment Subcommittee Procedure (Motion No. 77)</motion-en>
+      <vote-separate-mechanism>No</vote-separate-mechanism>
+      <vote-summary>
+        <overall>
+          <present-count>12</present-count>
+          <vote-count>11</vote-count>
+          <yes-count>1</yes-count>
+          <no-count>9</no-count>
+          <abstain-count>1</abstain-count>
+          <result>Negatived</result>
+        </overall>
+      </vote-summary>
+      <individual-votes>
+        <member name-ch="葉劉淑儀" name-en="Mrs Regina IP" constituency="Geographical">
+          <vote>Present</vote>
+        </member>
+        <member name-ch="劉慧卿" name-en="Emily LAU" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="黃定光" name-en="WONG Ting-kwong" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="李慧琼" name-en="Starry LEE" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="黃國健" name-en="WONG Kwok-kin" constituency="Geographical">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁國雄" name-en="LEUNG Kwok-hung" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="何俊賢" name-en="Steven HO" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="姚思榮" name-en="YIU Si-wing" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁繼昌" name-en="Kenneth LEUNG" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="郭家麒" name-en="Dr KWOK Ka-ki" constituency="Geographical">
+          <vote>Abstain</vote>
+        </member>
+        <member name-ch="郭偉强" name-en="KWOK Wai-keung" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="張華峰" name-en="Christopher CHEUNG" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="單仲偕" name-en="SIN Chung-kai" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="葉建源" name-en="IP Kin-yuen" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="廖長江" name-en="Martin LIAO" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="潘兆平" name-en="POON Siu-ping" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鄧家彪" name-en="TANG Ka-piu" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="鍾國斌" name-en="CHUNG Kwok-pan" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+      </individual-votes>
+    </vote>
+    <vote number="59">
+      <vote-date>09/06/2014</vote-date>
+      <vote-time>10:23:10</vote-time>
+      <motion-ch>本委員會同意處理議員根據《人事編制小組委員會會議程序》第31A段擬動議的議案（議案編號：78）</motion-ch>
+      <motion-en>That this Committee should proceed with the motion proposed to be moved by a member under paragraph 31A of the Establishment Subcommittee Procedure  (Motion No. 78)</motion-en>
+      <vote-separate-mechanism>No</vote-separate-mechanism>
+      <vote-summary>
+        <overall>
+          <present-count>11</present-count>
+          <vote-count>10</vote-count>
+          <yes-count>2</yes-count>
+          <no-count>7</no-count>
+          <abstain-count>1</abstain-count>
+          <result>Negatived</result>
+        </overall>
+      </vote-summary>
+      <individual-votes>
+        <member name-ch="葉劉淑儀" name-en="Mrs Regina IP" constituency="Geographical">
+          <vote>Present</vote>
+        </member>
+        <member name-ch="劉慧卿" name-en="Emily LAU" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="黃定光" name-en="WONG Ting-kwong" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="李慧琼" name-en="Starry LEE" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="黃國健" name-en="WONG Kwok-kin" constituency="Geographical">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁國雄" name-en="LEUNG Kwok-hung" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="何俊賢" name-en="Steven HO" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="姚思榮" name-en="YIU Si-wing" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="梁繼昌" name-en="Kenneth LEUNG" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="郭家麒" name-en="Dr KWOK Ka-ki" constituency="Geographical">
+          <vote>Abstain</vote>
+        </member>
+        <member name-ch="郭偉强" name-en="KWOK Wai-keung" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="張華峰" name-en="Christopher CHEUNG" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="單仲偕" name-en="SIN Chung-kai" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="葉建源" name-en="IP Kin-yuen" constituency="Functional">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="廖長江" name-en="Martin LIAO" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="潘兆平" name-en="POON Siu-ping" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鄧家彪" name-en="TANG Ka-piu" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="鍾國斌" name-en="CHUNG Kwok-pan" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+      </individual-votes>
+    </vote>
+    <vote number="60">
+      <vote-date>09/06/2014</vote-date>
+      <vote-time>10:25:06</vote-time>
+      <motion-ch>本委員會同意處理議員根據《人事編制小組委員會會議程序》第31A段擬動議的議案（議案編號：79）</motion-ch>
+      <motion-en>That this Committee should proceed with the motion proposed to be moved by a member under paragraph 31A of the Establishment Subcommittee Procedure (Motion No. 79)</motion-en>
+      <vote-separate-mechanism>No</vote-separate-mechanism>
+      <vote-summary>
+        <overall>
+          <present-count>11</present-count>
+          <vote-count>10</vote-count>
+          <yes-count>1</yes-count>
+          <no-count>8</no-count>
+          <abstain-count>1</abstain-count>
+          <result>Negatived</result>
+        </overall>
+      </vote-summary>
+      <individual-votes>
+        <member name-ch="葉劉淑儀" name-en="Mrs Regina IP" constituency="Geographical">
+          <vote>Present</vote>
+        </member>
+        <member name-ch="劉慧卿" name-en="Emily LAU" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="黃定光" name-en="WONG Ting-kwong" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="李慧琼" name-en="Starry LEE" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="黃國健" name-en="WONG Kwok-kin" constituency="Geographical">
+          <vote>No</vote>
+        </member>
+        <member name-ch="梁國雄" name-en="LEUNG Kwok-hung" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="何俊賢" name-en="Steven HO" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="姚思榮" name-en="YIU Si-wing" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="梁繼昌" name-en="Kenneth LEUNG" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="郭家麒" name-en="Dr KWOK Ka-ki" constituency="Geographical">
+          <vote>Abstain</vote>
+        </member>
+        <member name-ch="郭偉强" name-en="KWOK Wai-keung" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="張華峰" name-en="Christopher CHEUNG" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="單仲偕" name-en="SIN Chung-kai" constituency="Geographical">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="葉建源" name-en="IP Kin-yuen" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="廖長江" name-en="Martin LIAO" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="潘兆平" name-en="POON Siu-ping" constituency="Functional">
+          <vote>No</vote>
+        </member>
+        <member name-ch="鄧家彪" name-en="TANG Ka-piu" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+        <member name-ch="鍾國斌" name-en="CHUNG Kwok-pan" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+      </individual-votes>
+    </vote>
+  </meeting>
+</legcohk-vote>

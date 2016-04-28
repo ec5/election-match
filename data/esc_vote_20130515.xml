@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<legcohk-vote xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="/schema/legcohk-vote-schema.xsd">
+  <meeting start-date="15/05/2013" type="Establishment Subcommittee">
+    <vote number="1">
+      <vote-date>15/05/2013</vote-date>
+      <vote-time>10:36:09</vote-time>
+      <motion-ch>EC(2013-14)2 - 建議把政制及內地事務局1個首長級乙級政務官職位轉為常額職位，以及保留1個首長級丙級政務官編外職位，為期3年，以全面落實2013年《施政報告》提出有關加強「內交」的重點措施，以及深化香港與內地的區域合作</motion-ch>
+      <motion-en>EC(2013-14)2 - Proposed making permanent of a post of AOSGB in CMAB and retention of a supernumerary post of AOSGC for a period of 3 years to implement the key initiatives to strengthen “homeland relationship” set out in 2013 Policy Address and to deepen regional co-operation between HK and the Mainland</motion-en>
+      <vote-separate-mechanism>No</vote-separate-mechanism>
+      <vote-summary>
+        <overall>
+          <present-count>15</present-count>
+          <vote-count>14</vote-count>
+          <yes-count>9</yes-count>
+          <no-count>0</no-count>
+          <abstain-count>5</abstain-count>
+          <result>Passed</result>
+        </overall>
+      </vote-summary>
+      <individual-votes>
+        <member name-ch="黃定光" name-en="WONG Ting-kwong" constituency="Functional">
+          <vote>Present</vote>
+        </member>
+        <member name-ch="劉慧卿" name-en="Emily LAU" constituency="Geographical">
+          <vote>Abstain</vote>
+        </member>
+        <member name-ch="李慧琼" name-en="Starry LEE" constituency="Functional">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="黃國健" name-en="WONG Kwok-kin" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="葉劉淑儀" name-en="Mrs Regina IP" constituency="Geographical">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="何俊賢" name-en="Steven HO" constituency="Functional">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="姚思榮" name-en="YIU Si-wing" constituency="Functional">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="梁繼昌" name-en="Kenneth LEUNG" constituency="Functional">
+          <vote>Abstain</vote>
+        </member>
+        <member name-ch="郭家麒" name-en="Dr KWOK Ka-ki" constituency="Geographical">
+          <vote>Abstain</vote>
+        </member>
+        <member name-ch="郭偉强" name-en="KWOK Wai-keung" constituency="Functional">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="黃碧雲" name-en="Dr Helena WONG" constituency="Geographical">
+          <vote>Abstain</vote>
+        </member>
+        <member name-ch="葉建源" name-en="IP Kin-yuen" constituency="Functional">
+          <vote>Abstain</vote>
+        </member>
+        <member name-ch="廖長江" name-en="Martin LIAO" constituency="Functional">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="潘兆平" name-en="POON Siu-ping" constituency="Functional">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="鄧家彪" name-en="TANG Ka-piu" constituency="Functional">
+          <vote>Yes</vote>
+        </member>
+        <member name-ch="鍾國斌" name-en="CHUNG Kwok-pan" constituency="Functional">
+          <vote>Absent</vote>
+        </member>
+      </individual-votes>
+    </vote>
+  </meeting>
+</legcohk-vote>
