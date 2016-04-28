@@ -14,6 +14,7 @@ module.exports = {
   plugins: {
     babel: {
       presets: ['es2015', 'stage-0', 'react'],
+      plugins: ['dev-expression'],
     },
     less: {},
     sass: {
@@ -22,7 +23,7 @@ module.exports = {
           'node_modules/bootstrap/scss',
           'node_modules/select2/src/scss',
           'node_modules/select2-bootstrap-theme/src',
-        ]
+        ],
       },
     },
     uglify: {
