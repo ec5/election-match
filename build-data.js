@@ -18,6 +18,23 @@ const parseString = (s) => {
   })
 }
 
+const convertDateString = (s) => {
+  return s.split('/').reverse().join('')
+}
+
+const buildMotionId = ({meeting, vote, meetingIndex}) => {
+  assert(vote['vote-date'].length === 1)
+  assert(vote['vote-time'].length === 1)
+  const meetingTypeCode = meeting.$.type.replace(/\W*(\w)\w*/g, '$1').toLowerCase()
+  return _.join([
+    meetingTypeCode,
+    convertDateString(meeting.$['start-date']),
+    meetingIndex,
+    vote.$.number,
+    convertDateString(vote['vote-date'][0]) + vote['vote-time'][0].replace(/:/g, ''),
+  ], '_')
+}
+
 async function main() {
   const motions = {}
   const members = {}
@@ -33,14 +50,13 @@ async function main() {
     _.each(obj['legcohk-vote']['meeting'], (meeting, i) => {
       _.each(meeting.vote, (vote) => {
         assert(vote['individual-votes'].length === 1, 'individual-votes > 2')
-        assert(vote['vote-date'].length === 1)
         assert(vote['motion-ch'].length === 1)
         // assert(meeting.$['start-date'] === vote['vote-date'][0], [meeting.$['start-date'], vote['vote-date']])
 
+        const motionId = buildMotionId({meeting, vote, meetingIndex: i})
+        assert(!motions[motionId], `motion ${motionId} duplicated`)
         const meetingType = meeting.$.type
         const voteDate = vote['vote-date'][0]
-        const motionId = `${meetingType}_${meeting.$['start-date']}_${i}_${vote.$.number}_${voteDate}_${vote['vote-time']}`
-        assert(!motions[motionId], `motion ${motionId} duplicated`)
         motions[motionId] = {
           meetingType,
           voteDate,
@@ -48,7 +64,9 @@ async function main() {
         }
         _.each(vote['individual-votes'][0].member, (member) => {
           assert(member.vote.length === 1, member.vote)
-          members[member.$['name-ch']] = member.vote[0]
+          const keyPath = [member.$['name-ch'], 'votes', motionId]
+          assert(!_.get(member, keyPath))
+          _.set(members, keyPath, member.vote[0].toLowerCase())
         })
       })
     })

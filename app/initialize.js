@@ -19,7 +19,7 @@ const onSelectChange = (rootNode, $motionSelect) => (event) => {
       {_.map(selectedMotionIds, (motionId, i) => {
         const motion = _data.motions[motionId]
         return (
-          <div key={i} className="form-group list-group-item">
+          <div key={i} className="form-group list-group-item lead">
             <h4 className="list-group-item-heading">{motion.title}</h4>
             <label className="radio-inline">
               <input type="radio" name={motionId} value="yes" /> 贊成

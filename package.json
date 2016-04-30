@@ -14,8 +14,8 @@
     "jquery": "^2.2.3",
     "jsonfile": "^2.3.0",
     "lodash": "^4.11.1",
-    "react": "^15.0.1",
-    "react-dom": "^15.0.1",
+    "react": "^15.0.2",
+    "react-dom": "^15.0.2",
     "select2": "^4.0.2",
     "select2-bootstrap-theme": "0.1.0-beta.4",
     "xml2js": "^0.4.16"
