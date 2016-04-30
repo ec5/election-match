@@ -6,8 +6,12 @@ import $ from 'jquery'
 import 'select2'
 
 let _data = {}
-const motions = {}
-const memberVotes = {}
+const scoreAdjustment = {
+  yes: 1,
+  no: 1,
+  opposite: -1,
+  novote: 0,
+}
 
 const onSelectChange = (rootNode, $motionSelect) => (event) => {
   const selectedMotionIds = $motionSelect.val()
@@ -27,9 +31,6 @@ const onSelectChange = (rootNode, $motionSelect) => (event) => {
             <label className="radio-inline">
               <input type="radio" name={motionId} value="no" /> 反對
             </label>
-            <label className="radio-inline">
-              <input type="radio" name={motionId} value="abs" /> 棄權
-            </label>
           </div>
         )
       })}
@@ -38,16 +39,81 @@ const onSelectChange = (rootNode, $motionSelect) => (event) => {
   ), rootNode)
 }
 
+const getOppositeVote = (vote) => {
+  return {
+    'yes': 'no',
+    'no': 'yes',
+  }[vote]
+}
+
 const onVoteChange = (rootNode) => (event) => {
   const $form = $(event.target).closest('form')
   const voted = $form.serializeArray()
   // console.log(voted)
 
+  const members = _.sortBy(_.map(_data.members, (member, memberName) => {
+    const matching = _.reduce(voted, (r, {name: motionId, value: vote}) => {
+      const memberVote = member.votes[motionId]
+      if (memberVote === vote) {
+        r.score += scoreAdjustment[vote]
+        r[vote] += 1
+      } else if (memberVote === getOppositeVote(vote)) {
+        r.score += scoreAdjustment['opposite']
+        r['opposite'] += 1
+      } else {
+        r.score += scoreAdjustment['novote']
+        r['novote'] += 1
+        r[memberVote] += 1
+      }
+      return r
+    }, {
+      yes: 0,
+      no: 0,
+      opposite: 0,
+      novote: 0,
+      absent: 0,
+      present: 0,
+      abstain: 0,
+      score: 0,
+    })
+    return {
+      name: memberName,
+      matching,
+    }
+  }), (x) => x.matching.score * -1)
+
   render((
     <div>
       <h3>結果</h3>
-      <div className="list-group">
-
+      <div className="table-responsive">
+        <table className="table table-striped table-hover table-condensed">
+          <thead>
+            <tr>
+              <th>議員</th>
+              <th>相似分數</th>
+              <th>相同投票</th>
+              <th>相反投票</th>
+              <th>相同贊成</th>
+              <th>相同反對</th>
+              <th>沒有表態</th>
+            </tr>
+          </thead>
+          <tbody>
+            {_.map(members, (member, i) => {
+              return (
+                <tr key={i}>
+                  <td>{member.name}</td>
+                  <td>{member.matching.score}</td>
+                  <td>{member.matching.yes + member.matching.no}</td>
+                  <td>{member.matching.opposite}</td>
+                  <td>{member.matching.yes}</td>
+                  <td>{member.matching.no}</td>
+                  <td>{member.matching.novote}</td>
+                </tr>
+              )
+            })}
+          </tbody>
+        </table>
       </div>
     </div>
   ), rootNode)
@@ -94,7 +160,7 @@ document.addEventListener('DOMContentLoaded', () => {
     $result.appendTo($app)
 
     if (__DEV__) {
-      $motionSelect.val('Council Meeting_17/10/2012_0_1_17/10/2012_19:37:53').trigger('change')
+      $motionSelect.val($motionSelect.find('option').eq(0).attr('value')).trigger('change')
     }
   })
 })
