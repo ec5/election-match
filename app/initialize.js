@@ -60,7 +60,7 @@ const onVoteChange = (rootNode) => (event) => {
       } else if (memberVote === getOppositeVote(vote)) {
         r.score += scoreAdjustment['opposite']
         r['opposite'] += 1
-      } else {
+      } else if (memberVote) {
         r.score += scoreAdjustment['novote']
         r['novote'] += 1
         r[memberVote] += 1
@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     _.each(data.motions, (motion, motionId) => {
       motion.id = motionId
-      motion.group = `${motion.meetingType}_${motion.voteDate}`
+      motion.group = `${motion.meetingType} - ${motion.voteDate}`
     })
 
     const groups = _.groupBy(data.motions, 'group')
