@@ -1,6 +1,9 @@
 import _ from 'lodash'
+
+import { render } from 'react-dom'
 import React from 'react'
-import {render} from 'react-dom'
+
+import moment from 'moment'
 
 import $ from 'jquery'
 import 'select2'
@@ -136,6 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
     _.each(data.motions, (motion, motionId) => {
       motion.id = motionId
       motion.group = `${motion.meetingType} - ${motion.voteDate}`
+      motion.voteDateMoment = moment(motion.voteDate, 'DD/MM/YYYY')
     })
 
     const groups = _.groupBy(data.motions, 'group')
@@ -155,7 +159,8 @@ document.addEventListener('DOMContentLoaded', () => {
       theme: 'bootstrap',
     })
 
-    $motionCount.text(`共 ${_.size(data.motions)} 個議案`)
+    const latestMotion = _.maxBy(_.values(data.motions), (motion) => motion.voteDateMoment)
+    $motionCount.text(`共 ${_.size(data.motions)} 個議案，最近更新：${latestMotion.voteDateMoment.format('DD/MM/YYYY')}。`)
     $votes.appendTo($app)
     $result.appendTo($app)
 
