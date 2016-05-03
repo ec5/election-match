@@ -1,0 +1,18 @@
+{
+  "name": "election-match",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.3",
+    "select2": "^4.0.2",
+    "bootstrap": "^3.3.6",
+    "select2-bootstrap-theme": "^0.1.0-beta.4",
+    "moment": "^2.13.0"
+  }
+}

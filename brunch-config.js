@@ -14,17 +14,10 @@ module.exports = {
   plugins: {
     babel: {
       presets: ['es2015', 'stage-0', 'react'],
-      plugins: ['dev-expression'],
-    },
-    less: {},
-    sass: {
-      options: {
-        includePaths: [
-          'node_modules/bootstrap/scss',
-          'node_modules/select2/src/scss',
-          'node_modules/select2-bootstrap-theme/src',
-        ],
-      },
+      plugins: [
+        'dev-expression',
+        'lodash',
+      ],
     },
     uglify: {
       compress: {
@@ -37,7 +30,7 @@ module.exports = {
     production: {
       optimize: true,
       sourceMaps: false,
-      plugins: {autoReload: {enabled: false}},
+      plugins: { autoReload: { enabled: false } },
     },
   },
 }

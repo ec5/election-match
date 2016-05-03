@@ -1,12 +1,8 @@
+/* globals $,moment */
 import _ from 'lodash'
 
 import { render } from 'react-dom'
 import React from 'react'
-
-import moment from 'moment'
-
-import $ from 'jquery'
-import 'select2'
 
 let _data = {}
 const scoreAdjustment = {
@@ -160,9 +156,9 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
     const latestMotion = _.maxBy(_.values(data.motions), (motion) => motion.voteDateMoment)
-    $motionCount.text(`共 ${_.size(data.motions)} 個議案，最近更新：${latestMotion.voteDateMoment.format('DD/MM/YYYY')}。`)
-    $votes.appendTo($app)
-    $result.appendTo($app)
+    const lastUpdated = latestMotion.voteDateMoment.format('DD/MM/YYYY')
+    $motionCount.text(`共 ${_.size(data.motions)} 個議案，最近更新：${lastUpdated}。`)
+    $app.append($votes, $result)
 
     if (__DEV__) {
       $motionSelect.val($motionSelect.find('option').eq(0).attr('value')).trigger('change')
