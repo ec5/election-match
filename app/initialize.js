@@ -118,12 +118,32 @@ const onVoteChange = (rootNode) => (event) => {
   ), rootNode)
 }
 
+const DATE_FORMAT = 'DD/MM/YYYY'
+
 document.addEventListener('DOMContentLoaded', () => {
   const $app = $('#app').html('')
   const $motionCount = $('<div>載入議案資料中⋯⋯</div>').appendTo($app)
   const $motionSelect = $('<select name="select-items" multiple style="width: 100%" />')
+  const $dateRangeForm = $('<form class="panel panel-default" />')
+  const $dateRangeInput = $('<input type="text" name="datefilter" value="" class="form-control" />')
+    .appendTo($('<div class="panel-body" />').appendTo($dateRangeForm))
   const $votes = $('<div />')
   const $result = $('<div />')
+
+  $dateRangeInput.daterangepicker({
+    autoUpdateInput: false,
+    locale: {
+      applyLabel: '篩選',
+      cancelLabel: '清除',
+      format: DATE_FORMAT,
+    },
+  })
+  .on('apply.daterangepicker', function(ev, picker) {
+    $(this).val(picker.startDate.format(DATE_FORMAT) + ' - ' + picker.endDate.format(DATE_FORMAT))
+  })
+  .on('cancel.daterangepicker', function(ev, picker) {
+    $(this).val('')
+  });
 
   $motionSelect.on('change', onSelectChange($votes.get(0), $motionSelect))
   $votes.on('change', 'input', onVoteChange($result.get(0)))
@@ -135,7 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
     _.each(data.motions, (motion, motionId) => {
       motion.id = motionId
       motion.group = `${motion.meetingType} - ${motion.voteDate}`
-      motion.voteDateMoment = moment(motion.voteDate, 'DD/MM/YYYY')
+      motion.voteDateMoment = moment(motion.voteDate, DATE_FORMAT)
     })
 
     const groups = _.groupBy(data.motions, 'group')
@@ -156,9 +176,9 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
     const latestMotion = _.maxBy(_.values(data.motions), (motion) => motion.voteDateMoment)
-    const lastUpdated = latestMotion.voteDateMoment.format('DD/MM/YYYY')
+    const lastUpdated = latestMotion.voteDateMoment.format(DATE_FORMAT)
     $motionCount.text(`共 ${_.size(data.motions)} 個議案，最近更新：${lastUpdated}。`)
-    $app.append($votes, $result)
+    $app.append($dateRangeForm, $votes, $result)
 
     if (__DEV__) {
       $motionSelect.val($motionSelect.find('option').eq(0).attr('value')).trigger('change')
