@@ -3,7 +3,7 @@ module.exports = {
     javascripts: {
       joinTo: {
         'vendor.js': /^(?!app)/,
-        'app.js': /^app/
+        'app.js': /^app/,
       }
     },
     stylesheets: {
@@ -18,6 +18,7 @@ module.exports = {
         'dev-expression',
         'lodash',
       ],
+      ignore: ['**/node_modules/**', '**/bower_components/**'],
     },
     uglify: {
       compress: {
