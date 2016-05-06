@@ -6,12 +6,15 @@ import { render } from 'react-dom'
 import React, { Component } from 'react'
 
 import Badge from 'react-bootstrap/lib/Badge'
+import FormControl from 'react-bootstrap/lib/FormControl'
 import Nav from 'react-bootstrap/lib/Nav'
 import NavItem from 'react-bootstrap/lib/NavItem'
 
 import { AutoSizer, VirtualScroll } from 'react-virtualized'
 import ReactList from 'react-list'
 import ScrollToTop from 'react-scroll-up'
+
+import Fuse from 'fuse.js'
 
 const DATE_FORMAT = 'DD/MM/YYYY'
 const scoreAdjustment = {
@@ -21,12 +24,22 @@ const scoreAdjustment = {
   novote: 0,
 }
 
+const fuseSelector = createSelector(
+  state => state.data.motions,
+  (motions) => {
+    return new Fuse(_.values(motions), { keys: ['title'] })
+  }
+)
+
 const filterMotionsSelector = createSelector(
   state => state.data.motions,
   state => state.startDate,
   state => state.endDate,
-  (motions, startDate, endDate) => {
-    const filteredMotions = _.filter(motions, (motion) => {
+  state => state.filterText,
+  fuseSelector,
+  (motions, startDate, endDate, filterText, fuse) => {
+    const searchResult = _.isEmpty(filterText) ? motions : fuse.search(filterText)
+    const filteredMotions = _.filter(searchResult, (motion) => {
       return motion.voteDateMoment.isBetween(startDate, endDate)
     })
     return filteredMotions
@@ -162,6 +175,7 @@ class ElectionMatch extends React.Component {
 
     this.state = {
       activeTab: 1,
+      filterText: '',
     }
   }
 
@@ -230,7 +244,13 @@ class ElectionMatch extends React.Component {
             })
           }}
         />
-        {_.isEmpty(motions) ? <p className="text-warning">沒有議案可選</p> : (
+        <FormControl
+          type="text"
+          placeholder="輸入關鍵字篩選"
+          value={this.state.filterText}
+          onChange={(event) => this.setState({ filterText: event.target.value })}
+        />
+        {_.isEmpty(motions) ? <p className="text-warning">沒有議案可投票</p> : (
           <ReactList
             itemRenderer={renderMotionVote({
               motions,
