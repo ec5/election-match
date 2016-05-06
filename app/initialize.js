@@ -9,6 +9,7 @@ import Badge from 'react-bootstrap/lib/Badge'
 import FormControl from 'react-bootstrap/lib/FormControl'
 import Nav from 'react-bootstrap/lib/Nav'
 import NavItem from 'react-bootstrap/lib/NavItem'
+import Panel from 'react-bootstrap/lib/Panel'
 
 import { AutoSizer, VirtualScroll } from 'react-virtualized'
 import ReactList from 'react-list'
@@ -97,6 +98,21 @@ const matchResultSelector = createSelector(
       }
     }), (x) => x.matching.score * -1)
   }
+)
+
+const motionDatesSelector = createSelector(
+  state => state.data.motions,
+  (motions) => _.map(motions, 'voteDateMoment')
+)
+
+const maxDateSelector = createSelector(
+  motionDatesSelector,
+  motionDates => _.max(motionDates)
+)
+
+const minDateSelector = createSelector(
+  motionDatesSelector,
+  motionDates => _.min(motionDates)
 )
 
 class DateRangeFilter extends Component {
@@ -192,16 +208,10 @@ class ElectionMatch extends React.Component {
         motion.voteDateMoment = moment(motion.voteDate, DATE_FORMAT)
       })
 
-      const motionDates = _.map(data.motions, 'voteDateMoment')
-      const maxDate = _.max(motionDates)
-      const minDate = _.min(motionDates)
-
       this.setState({
         data,
-        maxDate,
-        minDate,
-        startDate: minDate,
-        endDate: maxDate,
+        startDate: minDateSelector({ data }),
+        endDate: maxDateSelector({ data }),
       })
     })
   }
@@ -233,13 +243,14 @@ class ElectionMatch extends React.Component {
   }
 
   renderFilterVotesTab() {
-    const { data, voted, minDate, maxDate, startDate, endDate } = this.state
+    const { data, voted, startDate, endDate } = this.state
     const motions = filterMotionsSelector(this.state)
     return (
-      <div>
+      <Panel>
+        <p className="lead">共 {_.size(data.motions)} 個議案，最近更新：{maxDateSelector(this.state).format(DATE_FORMAT)}。</p>
         <DateRangeFilter
-          minDate={minDate}
-          maxDate={maxDate}
+          minDate={minDateSelector(this.state)}
+          maxDate={maxDateSelector(this.state)}
           startDate={startDate}
           endDate={endDate}
           onApply={(ev, picker) => {
@@ -267,7 +278,7 @@ class ElectionMatch extends React.Component {
             type='simple'
           />
         )}
-      </div>
+      </Panel>
     )
   }
 
