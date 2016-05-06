@@ -130,7 +130,12 @@ const renderMotionVote = ({ motions, voted, onVoteYes, onVoteNo }) => (i) => {
   const motion = motions[i]
   return (
     <div key={i} className="form-group list-group-item lead">
-      <h4 className="list-group-item-heading">{motion.title}</h4>
+      <h4 className="list-group-item-heading">
+        {motion.title}
+        <div style={{textAlign: 'right'}}>
+          <small>投票日期：{motion.voteDate}</small>
+        </div>
+      </h4>
       <label className="radio-inline">
         <input
           type="radio"
