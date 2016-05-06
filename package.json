@@ -14,7 +14,12 @@
     "lodash": "^4.11.2",
     "moment": "^2.13.0",
     "react": "^15.0.2",
-    "react-dom": "^15.0.2"
+    "react-addons-shallow-compare": "^15.0.2",
+    "react-bootstrap": "^0.29.3",
+    "react-dom": "^15.0.2",
+    "react-list": "^0.7.18",
+    "react-scroll-up": "^1.1.4",
+    "reselect": "^2.5.1"
   },
   "devDependencies": {
     "auto-reload-brunch": "^2.7.1",

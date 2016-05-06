@@ -1,10 +1,19 @@
 /* globals $,moment */
 import _ from 'lodash'
 
+import { createSelector } from 'reselect'
 import { render } from 'react-dom'
-import React from 'react'
+import React, { Component } from 'react'
 
-let _data = {}
+import Badge from 'react-bootstrap/lib/Badge'
+import Nav from 'react-bootstrap/lib/Nav'
+import NavItem from 'react-bootstrap/lib/NavItem'
+
+import { AutoSizer, VirtualScroll } from 'react-virtualized'
+import ReactList from 'react-list'
+import ScrollToTop from 'react-scroll-up'
+
+const DATE_FORMAT = 'DD/MM/YYYY'
 const scoreAdjustment = {
   yes: 1,
   no: 1,
@@ -12,31 +21,25 @@ const scoreAdjustment = {
   novote: 0,
 }
 
-const onSelectChange = (rootNode, $motionSelect) => (event) => {
-  const selectedMotionIds = $motionSelect.val()
-  render((
-    <form>
-      <h2>議案投票</h2>
-      <p className="lead">假如你是立法會議員，你會如何投票？</p>
-      <div className="list-group">
-      {_.map(selectedMotionIds, (motionId, i) => {
-        const motion = _data.motions[motionId]
-        return (
-          <div key={i} className="form-group list-group-item lead">
-            <h4 className="list-group-item-heading">{motion.title}</h4>
-            <label className="radio-inline">
-              <input type="radio" name={motionId} value="yes" /> 贊成
-            </label>
-            <label className="radio-inline">
-              <input type="radio" name={motionId} value="no" /> 反對
-            </label>
-          </div>
-        )
-      })}
-      </div>
-    </form>
-  ), rootNode)
-}
+const filterMotionsSelector = createSelector(
+  state => state.data.motions,
+  state => state.startDate,
+  state => state.endDate,
+  (motions, startDate, endDate) => {
+    const filteredMotions = _.filter(motions, (motion) => {
+      return motion.voteDateMoment.isBetween(startDate, endDate)
+    })
+    return filteredMotions
+  }
+)
+
+const votedMotionsSelector = createSelector(
+  state => state.data.motions,
+  state => state.voted,
+  (motions, voted) => _.filter(motions, (motion) => {
+    return _.get(voted, [motion.id])
+  })
+)
 
 const getOppositeVote = (vote) => {
   return {
@@ -45,45 +48,228 @@ const getOppositeVote = (vote) => {
   }[vote]
 }
 
-const onVoteChange = (rootNode) => (event) => {
-  const $form = $(event.target).closest('form')
-  const voted = $form.serializeArray()
-  // console.log(voted)
-
-  const members = _.sortBy(_.map(_data.members, (member, memberName) => {
-    const matching = _.reduce(voted, (r, {name: motionId, value: vote}) => {
-      const memberVote = member.votes[motionId]
-      if (memberVote === vote) {
-        r.score += scoreAdjustment[vote]
-        r[vote] += 1
-      } else if (memberVote === getOppositeVote(vote)) {
-        r.score += scoreAdjustment['opposite']
-        r['opposite'] += 1
-      } else if (memberVote) {
-        r.score += scoreAdjustment['novote']
-        r['novote'] += 1
-        r[memberVote] += 1
+const matchResultSelector = createSelector(
+  state => state.data.motions,
+  state => state.voted,
+  state => state.data.members,
+  (motions, voted, members) => {
+    return _.sortBy(_.map(members, (member, memberName) => {
+      const matching = _.reduce(voted, (r, vote, motionId) => {
+        const memberVote = member.votes[motionId]
+        if (memberVote === vote) {
+          r.score += scoreAdjustment[vote]
+          r[vote] += 1
+        } else if (memberVote === getOppositeVote(vote)) {
+          r.score += scoreAdjustment['opposite']
+          r['opposite'] += 1
+        } else if (memberVote) {
+          r.score += scoreAdjustment['novote']
+          r['novote'] += 1
+          r[memberVote] += 1
+        }
+        return r
+      }, {
+        yes: 0,
+        no: 0,
+        opposite: 0,
+        novote: 0,
+        absent: 0,
+        present: 0,
+        abstain: 0,
+        score: 0,
+      })
+      return {
+        name: memberName,
+        matching,
       }
-      return r
-    }, {
-      yes: 0,
-      no: 0,
-      opposite: 0,
-      novote: 0,
-      absent: 0,
-      present: 0,
-      abstain: 0,
-      score: 0,
-    })
-    return {
-      name: memberName,
-      matching,
-    }
-  }), (x) => x.matching.score * -1)
+    }), (x) => x.matching.score * -1)
+  }
+)
 
-  render((
-    <div>
-      <h3>結果</h3>
+class DateRangeFilter extends Component {
+  componentDidMount() {
+    $(this._input).daterangepicker({
+      autoApply: true,
+      locale: {
+        format: DATE_FORMAT,
+      },
+      ..._.pick(this.props, [
+        'startDate', 'endDate',
+        'minDate', 'maxDate',
+      ])
+    })
+    .on('apply.daterangepicker', this.props.onApply)
+  }
+
+  render() {
+    return (
+      <input
+        ref={(c) => this._input = c}
+        type="text"
+        name="datefilter"
+        className="form-control"
+      />
+    )
+  }
+}
+
+const renderMotionVote = ({ motions, voted, onVoteYes, onVoteNo }) => (i) => {
+  const motion = motions[i]
+  return (
+    <div key={i} className="form-group list-group-item lead">
+      <h4 className="list-group-item-heading">{motion.title}</h4>
+      <label className="radio-inline">
+        <input
+          type="radio"
+          name={motion.id}
+          value="yes"
+          onChange={() => onVoteYes(motion)}
+          checked={_.get(voted, motion.id) === 'yes'}
+        /> 贊成
+      </label>
+      <label className="radio-inline">
+        <input
+          type="radio"
+          name={motion.id}
+          value="no"
+          onChange={() => onVoteNo(motion)}
+          checked={_.get(voted, motion.id) === 'no'}
+        /> 反對
+      </label>
+    </div>
+  )
+}
+
+const VoteSectionHeader = ({ activeTab, onSelectTab, votedCount }) => {
+  return (
+    <header>
+      <h2>議案投票</h2>
+      <p className="lead">假如你是立法會議員，你會如何投票？</p>
+      <Nav bsStyle="tabs" activeKey={activeTab} onSelect={onSelectTab}>
+        <NavItem eventKey={1}>選取議案</NavItem>
+        {votedCount > 0 && [
+          <NavItem key={2} eventKey={2}>你的投票 <Badge>{votedCount}</Badge></NavItem>,
+          <NavItem key={3} eventKey={3}>配對結果</NavItem>,
+        ]}
+      </Nav>
+    </header>
+  )
+}
+
+class ElectionMatch extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      activeTab: 1,
+    }
+  }
+
+  componentDidMount() {
+    $.getJSON('data.json', (data) => {
+      _.each(data.motions, (motion, motionId) => {
+        motion.id = motionId
+        motion.group = `${motion.meetingType} - ${motion.voteDate}`
+        motion.voteDateMoment = moment(motion.voteDate, DATE_FORMAT)
+      })
+
+      const motionDates = _.map(data.motions, 'voteDateMoment')
+      const maxDate = _.max(motionDates)
+      const minDate = _.min(motionDates)
+
+      this.setState({
+        data,
+        maxDate,
+        minDate,
+        startDate: minDate,
+        endDate: maxDate,
+      })
+    })
+  }
+
+  render() {
+    const { data, activeTab, voted } = this.state
+    if (!data) {
+      return <div>載入議案資料中⋯⋯</div>
+    }
+    return (
+      <div>
+        <section>
+          <VoteSectionHeader
+            activeTab={activeTab}
+            onSelectTab={(eventKey) => this.setState({ activeTab: eventKey })}
+            votedCount={_.size(voted)}
+          />
+          {[
+            this.renderFilterVotesTab(),
+            this.renderSelectedVotesTab(),
+            this.renderResultTab(),
+          ][activeTab - 1]}
+        </section>
+        <ScrollToTop showUnder={160}>
+          <span>移至頂部</span>
+        </ScrollToTop>
+      </div>
+    )
+  }
+
+  renderFilterVotesTab() {
+    const { data, voted, minDate, maxDate, startDate, endDate } = this.state
+    const motions = filterMotionsSelector(this.state)
+    return (
+      <div>
+        <DateRangeFilter
+          minDate={minDate}
+          maxDate={maxDate}
+          startDate={startDate}
+          endDate={endDate}
+          onApply={(ev, picker) => {
+            this.setState({
+              startDate: picker.startDate,
+              endDate: picker.endDate,
+            })
+          }}
+        />
+        {_.isEmpty(motions) ? <p className="text-warning">沒有議案可選</p> : (
+          <ReactList
+            itemRenderer={renderMotionVote({
+              motions,
+              voted,
+              onVoteYes: this.onVote('yes'),
+              onVoteNo: this.onVote('no'),
+            })}
+            length={motions.length}
+            type='simple'
+          />
+        )}
+      </div>
+    )
+  }
+
+  renderSelectedVotesTab() {
+    const { voted } = this.state
+    const motions = votedMotionsSelector(this.state)
+    return (
+      <div>
+        {_.isEmpty(motions) ? <p className="text-warning">未有投票</p> : (
+          <ReactList
+            itemRenderer={renderMotionVote({
+              motions,
+              voted,
+              onVoteYes: this.onVote('yes'),
+              onVoteNo: this.onVote('no'),
+            })}
+            length={motions.length}
+            type='simple'
+          />
+        )}
+      </div>
+    )
+  }
+
+  renderResultTab() {
+    const matchResult = matchResultSelector(this.state)
+    return (
       <div className="table-responsive">
         <table className="table table-striped table-hover table-condensed">
           <thead>
@@ -98,7 +284,7 @@ const onVoteChange = (rootNode) => (event) => {
             </tr>
           </thead>
           <tbody>
-            {_.map(members, (member, i) => {
+            {_.map(matchResult, (member, i) => {
               return (
                 <tr key={i}>
                   <td>{member.name}</td>
@@ -114,74 +300,20 @@ const onVoteChange = (rootNode) => (event) => {
           </tbody>
         </table>
       </div>
-    </div>
-  ), rootNode)
+    )
+  }
+
+  onVote(vote) {
+    return (motion) => {
+      const { voted } = this.state
+      this.setState({ voted: {
+          ...voted,
+          [motion.id]: vote,
+      }})
+    }
+  }
 }
 
-const DATE_FORMAT = 'DD/MM/YYYY'
-
 document.addEventListener('DOMContentLoaded', () => {
-  const $app = $('#app').html('')
-  const $motionCount = $('<div>載入議案資料中⋯⋯</div>').appendTo($app)
-  const $motionSelect = $('<select name="select-items" multiple style="width: 100%" />')
-  const $dateRangeForm = $('<form class="panel panel-default" />')
-  const $dateRangeInput = $('<input type="text" name="datefilter" value="" class="form-control" />')
-    .appendTo($('<div class="panel-body" />').appendTo($dateRangeForm))
-  const $votes = $('<div />')
-  const $result = $('<div />')
-
-  $dateRangeInput.daterangepicker({
-    autoUpdateInput: false,
-    locale: {
-      applyLabel: '篩選',
-      cancelLabel: '清除',
-      format: DATE_FORMAT,
-    },
-  })
-  .on('apply.daterangepicker', function(ev, picker) {
-    $(this).val(picker.startDate.format(DATE_FORMAT) + ' - ' + picker.endDate.format(DATE_FORMAT))
-  })
-  .on('cancel.daterangepicker', function(ev, picker) {
-    $(this).val('')
-  });
-
-  $motionSelect.on('change', onSelectChange($votes.get(0), $motionSelect))
-  $votes.on('change', 'input', onVoteChange($result.get(0)))
-
-  $.getJSON('data.json', (data) => {
-    // console.log(data)
-    _data = data
-
-    _.each(data.motions, (motion, motionId) => {
-      motion.id = motionId
-      motion.group = `${motion.meetingType} - ${motion.voteDate}`
-      motion.voteDateMoment = moment(motion.voteDate, DATE_FORMAT)
-    })
-
-    const groups = _.groupBy(data.motions, 'group')
-    $motionSelect.appendTo($app).select2({
-      data: _.map(groups, (motions, text) => {
-        const children = _.map(motions, (motion) => {
-          return {
-            id: motion.id,
-            text: motion.title,
-          }
-        })
-        return {
-          text,
-          children,
-        }
-      }),
-      theme: 'bootstrap',
-    })
-
-    const latestMotion = _.maxBy(_.values(data.motions), (motion) => motion.voteDateMoment)
-    const lastUpdated = latestMotion.voteDateMoment.format(DATE_FORMAT)
-    $motionCount.text(`共 ${_.size(data.motions)} 個議案，最近更新：${lastUpdated}。`)
-    $app.append($dateRangeForm, $votes, $result)
-
-    if (__DEV__) {
-      $motionSelect.val($motionSelect.find('option').eq(0).attr('value')).trigger('change')
-    }
-  })
+  render(<ElectionMatch />, document.getElementById('app'))
 })
