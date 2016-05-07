@@ -56,18 +56,26 @@ const buildUrl = (query) => {
   return url.format(urlObj)
 }
 
-const votedFromUrl = () => {
+const initialStateFromUrl = () => {
     const { v, m } = queryString.parse(window.location.search)
     if (v) {
-      return _.get(decompress(v), 'data')
+      return {
+        activeTab: 3,
+        voted: _.get(decompress(v), 'data')
+      }
     }
     if (m) {
       const motionIds = _.get(decompress(m), 'data')
-      return _.reduce(motionIds, (r, motionId) => {
+      const voted = _.reduce(motionIds, (r, motionId) => {
         r[motionId] = null
         return r
       }, {})
+      return {
+        activeTab: 2,
+        voted,
+      }
     }
+    return {}
 }
 
 const getShortUrl = (longUrl, shortUrls) => _.get(shortUrls, [longUrl])
@@ -308,7 +316,7 @@ class ElectionMatch extends React.Component {
       isGoogleClientLoaded: false,
       activeTab: 1,
       filterText: '',
-      voted: votedFromUrl(),
+      ...initialStateFromUrl(),
     }
   }
 
