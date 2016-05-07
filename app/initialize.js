@@ -1,4 +1,4 @@
-/* globals $,moment */
+/* globals $,gapi,moment */
 import url from 'url'
 
 import _ from 'lodash'
@@ -12,7 +12,10 @@ import { render } from 'react-dom'
 import React, { Component } from 'react'
 
 import Badge from 'react-bootstrap/lib/Badge'
+import Button from 'react-bootstrap/lib/Button'
 import FormControl from 'react-bootstrap/lib/FormControl'
+import FormGroup from 'react-bootstrap/lib/FormGroup'
+import InputGroup from 'react-bootstrap/lib/InputGroup'
 import Nav from 'react-bootstrap/lib/Nav'
 import NavItem from 'react-bootstrap/lib/NavItem'
 import Panel from 'react-bootstrap/lib/Panel'
@@ -21,6 +24,7 @@ import ReactList from 'react-list'
 import ScrollToTop from 'react-scroll-up'
 
 const DATE_FORMAT = 'DD/MM/YYYY'
+const GOOGLE_CLIENT_LOADED_EVENT = 'googleClientLoaded'
 const scoreAdjustment = {
   yes: 1,
   no: 1,
@@ -66,24 +70,41 @@ const votedFromUrl = () => {
     }
 }
 
+const getShortUrl = (longUrl, shortUrls) => _.get(shortUrls, [longUrl])
+
 const votedSelector = state => state.voted
+const shortUrlsSelector = state => state.shortUrls
 
 const motionsShareUrlSelector = createSelector(
   votedSelector,
-  (voted) => {
+  shortUrlsSelector,
+  (voted, shortUrls) => {
     return buildUrl({
       m: compress(_.keys(voted)),
     })
   }
 )
 
+const motionsShortUrlSelector = createSelector(
+  motionsShareUrlSelector,
+  shortUrlsSelector,
+  getShortUrl
+)
+
 const votedShareUrlSelector = createSelector(
   votedSelector,
-  (voted) => {
+  shortUrlsSelector,
+  (voted, shortUrls) => {
     return buildUrl({
       v: compress(voted),
     })
   }
+)
+
+const votedShortUrlSelector = createSelector(
+  votedShareUrlSelector,
+  shortUrlsSelector,
+  getShortUrl
 )
 
 const canShareSelector = createSelector(
@@ -259,11 +280,32 @@ const VoteSectionHeader = ({ activeTab, onSelectTab, votedCount }) => {
   )
 }
 
+const GenerateShareUrl = ({ url, shortUrl, onGenerateShortUrl }) => {
+  return (
+    <form onSubmit={(event) => {
+        event.preventDefault()
+        if (!shortUrl) {
+          onGenerateShortUrl(url)
+        }
+      }}>
+      <FormGroup>
+        <InputGroup>
+          <FormControl type="text" value={shortUrl || url} readOnly={true} />
+          <InputGroup.Button>
+            <Button type="submit">獲取短網址</Button>
+          </InputGroup.Button>
+        </InputGroup>
+      </FormGroup>
+    </form>
+  )
+}
+
 class ElectionMatch extends React.Component {
   constructor(props) {
     super(props)
 
     this.state = {
+      isGoogleClientLoaded: false,
       activeTab: 1,
       filterText: '',
       voted: votedFromUrl(),
@@ -271,6 +313,11 @@ class ElectionMatch extends React.Component {
   }
 
   componentDidMount() {
+    $('body').on(GOOGLE_CLIENT_LOADED_EVENT, () => {
+      this.setState({
+        isGoogleClientLoaded: true,
+      })
+    })
     $.getJSON('data.json', (data) => {
       _.each(data.motions, (motion, motionId) => {
         motion.id = motionId
@@ -355,9 +402,15 @@ class ElectionMatch extends React.Component {
   renderSelectedVotesTab = () => {
     const { voted } = this.state
     const motions = votedMotionsSelector(this.state)
-    console.log('Motions Share URL', motionsShareUrlSelector(this.state))
     return (
       <div>
+        {canShareSelector(this.state) && (
+          <GenerateShareUrl
+            url={motionsShareUrlSelector(this.state)}
+            shortUrl={motionsShortUrlSelector(this.state)}
+            onGenerateShortUrl={this.onGenerateShortUrl}
+          />
+        )}
         {_.isEmpty(motions) ? <p className="text-warning">未有投票</p> : (
           <ReactList
             itemRenderer={renderMotionVote({
@@ -376,9 +429,15 @@ class ElectionMatch extends React.Component {
 
   renderResultTab = () => {
     const matchResult = matchResultSelector(this.state)
-    console.log('Voted Share URL', votedShareUrlSelector(this.state))
     return (
       <div className="table-responsive">
+        {canShareSelector(this.state) && (
+          <GenerateShareUrl
+            url={votedShareUrlSelector(this.state)}
+            shortUrl={votedShortUrlSelector(this.state)}
+            onGenerateShortUrl={this.onGenerateShortUrl}
+          />
+        )}
         <table className="table table-striped table-hover table-condensed">
           <thead>
             <tr>
@@ -420,7 +479,34 @@ class ElectionMatch extends React.Component {
       }})
     }
   }
+
+  onGenerateShortUrl = (longUrl) => {
+    gapi.client.urlshortener.url.insert({
+      resource: { longUrl },
+    })
+    .execute((response) => {
+      const shortUrl = response.id
+      if (shortUrl) {
+        const { shortUrls } = this.state
+        this.setState({
+          shortUrls: {
+            ...shortUrls,
+            [longUrl]: shortUrl,
+          }
+        })
+      }
+    })
+  }
 }
+
+const initGoogleClient = () => {
+  const apiKey = 'AIzaSyA8f91lvLDPchAInQKcjWX4LXjAiJbDEHo'
+  gapi.client.setApiKey(apiKey)
+  gapi.client.load('urlshortener', 'v1', () => {
+    $('body').trigger(GOOGLE_CLIENT_LOADED_EVENT)
+  })
+}
+window.initGoogleClient = initGoogleClient
 
 document.addEventListener('DOMContentLoaded', () => {
   render(<ElectionMatch />, document.getElementById('app'))
