@@ -11,7 +11,6 @@ import Nav from 'react-bootstrap/lib/Nav'
 import NavItem from 'react-bootstrap/lib/NavItem'
 import Panel from 'react-bootstrap/lib/Panel'
 
-import { AutoSizer, VirtualScroll } from 'react-virtualized'
 import ReactList from 'react-list'
 import ScrollToTop from 'react-scroll-up'
 
