@@ -1,5 +1,11 @@
 /* globals $,moment */
+import url from 'url'
+
 import _ from 'lodash'
+import base64 from 'base64-js'
+import Fuse from 'fuse.js'
+import pako from 'pako'
+import queryString from 'query-string'
 
 import { createSelector } from 'reselect'
 import { render } from 'react-dom'
@@ -14,8 +20,6 @@ import Panel from 'react-bootstrap/lib/Panel'
 import ReactList from 'react-list'
 import ScrollToTop from 'react-scroll-up'
 
-import Fuse from 'fuse.js'
-
 const DATE_FORMAT = 'DD/MM/YYYY'
 const scoreAdjustment = {
   yes: 1,
@@ -23,6 +27,72 @@ const scoreAdjustment = {
   opposite: -1,
   novote: 0,
 }
+
+const compress = (obj) => base64.fromByteArray(pako.deflate(JSON.stringify({
+  _v: 1,
+  data: obj,
+}), {
+  level: 9,
+  memLevel: 9,
+}))
+
+const decompress = (s) => {
+  try {
+    return JSON.parse(pako.inflate(base64.toByteArray(s), { to: 'string' }))
+  } catch (err) {
+    console.error(err)
+    return null
+  }
+}
+
+const buildUrl = (query) => {
+  const urlObj = url.parse(window.location.href)
+  delete urlObj.search
+  urlObj.query = query
+  return url.format(urlObj)
+}
+
+const votedFromUrl = () => {
+    const { v, m } = queryString.parse(window.location.search)
+    if (v) {
+      return _.get(decompress(v), 'data')
+    }
+    if (m) {
+      const motionIds = _.get(decompress(m), 'data')
+      return _.reduce(motionIds, (r, motionId) => {
+        r[motionId] = null
+        return r
+      }, {})
+    }
+}
+
+const votedSelector = state => state.voted
+
+const motionsShareUrlSelector = createSelector(
+  votedSelector,
+  (voted) => {
+    return buildUrl({
+      m: compress(_.keys(voted)),
+    })
+  }
+)
+
+const votedShareUrlSelector = createSelector(
+  votedSelector,
+  (voted) => {
+    return buildUrl({
+      v: compress(voted),
+    })
+  }
+)
+
+const canShareSelector = createSelector(
+  votedSelector,
+  votedShareUrlSelector,
+  (voted, url) => {
+    return !_.isEmpty(voted) && _.size(url) < 2048
+  }
+)
 
 const fuseSelector = createSelector(
   state => state.data.motions,
@@ -48,9 +118,9 @@ const filterMotionsSelector = createSelector(
 
 const votedMotionsSelector = createSelector(
   state => state.data.motions,
-  state => state.voted,
+  votedSelector,
   (motions, voted) => _.filter(motions, (motion) => {
-    return _.get(voted, [motion.id])
+    return !_.isUndefined(_.get(voted, [motion.id]))
   })
 )
 
@@ -63,7 +133,7 @@ const getOppositeVote = (vote) => {
 
 const matchResultSelector = createSelector(
   state => state.data.motions,
-  state => state.voted,
+  votedSelector,
   state => state.data.members,
   (motions, voted, members) => {
     return _.sortBy(_.map(members, (member, memberName) => {
@@ -178,7 +248,7 @@ const VoteSectionHeader = ({ activeTab, onSelectTab, votedCount }) => {
     <header>
       <h2>議案投票</h2>
       <p className="lead">假如你是立法會議員，你會如何投票？</p>
-      <Nav bsStyle="tabs" activeKey={activeTab} onSelect={onSelectTab}>
+      <Nav bsStyle="tabs" activeKey={activeTab} onSelect={onSelectTab} justified={true}>
         <NavItem eventKey={1}>選取議案</NavItem>
         {votedCount > 0 && [
           <NavItem key={2} eventKey={2}>你的投票 <Badge>{votedCount}</Badge></NavItem>,
@@ -196,6 +266,7 @@ class ElectionMatch extends React.Component {
     this.state = {
       activeTab: 1,
       filterText: '',
+      voted: votedFromUrl(),
     }
   }
 
@@ -229,10 +300,10 @@ class ElectionMatch extends React.Component {
             votedCount={_.size(voted)}
           />
           {[
-            this.renderFilterVotesTab(),
-            this.renderSelectedVotesTab(),
-            this.renderResultTab(),
-          ][activeTab - 1]}
+            this.renderFilterVotesTab,
+            this.renderSelectedVotesTab,
+            this.renderResultTab,
+          ][activeTab - 1]()}
         </section>
         <ScrollToTop showUnder={160}>
           <span>移至頂部</span>
@@ -241,7 +312,7 @@ class ElectionMatch extends React.Component {
     )
   }
 
-  renderFilterVotesTab() {
+  renderFilterVotesTab = () => {
     const { data, voted, startDate, endDate } = this.state
     const motions = filterMotionsSelector(this.state)
     return (
@@ -281,9 +352,10 @@ class ElectionMatch extends React.Component {
     )
   }
 
-  renderSelectedVotesTab() {
+  renderSelectedVotesTab = () => {
     const { voted } = this.state
     const motions = votedMotionsSelector(this.state)
+    console.log('Motions Share URL', motionsShareUrlSelector(this.state))
     return (
       <div>
         {_.isEmpty(motions) ? <p className="text-warning">未有投票</p> : (
@@ -302,8 +374,9 @@ class ElectionMatch extends React.Component {
     )
   }
 
-  renderResultTab() {
+  renderResultTab = () => {
     const matchResult = matchResultSelector(this.state)
+    console.log('Voted Share URL', votedShareUrlSelector(this.state))
     return (
       <div className="table-responsive">
         <table className="table table-striped table-hover table-condensed">

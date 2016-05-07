@@ -10,11 +10,14 @@
     "build-data": "babel-node build-data"
   },
   "dependencies": {
+    "base64-js": "^1.1.2",
     "fuse.js": "^2.2.0",
     "glob": "^7.0.3",
     "jsonfile": "^2.3.0",
     "lodash": "^4.11.2",
     "moment": "^2.13.0",
+    "pako": "^1.0.1",
+    "query-string": "^4.1.0",
     "react": "^15.0.2",
     "react-addons-shallow-compare": "^15.0.2",
     "react-bootstrap": "^0.29.3",
