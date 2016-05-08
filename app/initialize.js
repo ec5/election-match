@@ -14,6 +14,7 @@ import React, { Component } from 'react'
 
 import Badge from 'react-bootstrap/lib/Badge'
 import Button from 'react-bootstrap/lib/Button'
+import Clearfix from 'react-bootstrap/lib/Clearfix'
 import FormControl from 'react-bootstrap/lib/FormControl'
 import FormGroup from 'react-bootstrap/lib/FormGroup'
 import InputGroup from 'react-bootstrap/lib/InputGroup'
@@ -253,15 +254,29 @@ class DateRangeFilter extends Component {
   }
 }
 
-const renderMotionVote = ({ motions, voted, onVoteYes, onVoteNo }) => (i) => {
+const CloseButton = ({ onClick }) => {
+  return (
+    <button
+      type="button"
+      className="close pull-right"
+      ariaLabel="Close"
+      onClick={onClick}
+    >
+      <span ariaHidden="true">&times;</span>
+    </button>
+  )
+}
+
+const renderMotionVote = ({ motions, voted, onVoteYes, onVoteNo, onRemoveMotion }) => (i) => {
   const motion = motions[i]
   return (
     <div key={i} className="form-group list-group-item lead">
       <h4 className="list-group-item-heading">
+        <Clearfix style={{margin: '0.5rem 0 1.5rem'}}>
+          {_.has(voted, motion.id) && <CloseButton onClick={() => onRemoveMotion(motion.id)} />}
+          <small style={{lineHeight: '1.9rem'}}>{motion.voteDate}</small>
+        </Clearfix>
         {motion.title}
-        <div style={{textAlign: 'right'}}>
-          <small>投票日期：{motion.voteDate}</small>
-        </div>
       </h4>
       <label className="radio-inline">
         <input
@@ -286,18 +301,18 @@ const renderMotionVote = ({ motions, voted, onVoteYes, onVoteNo }) => (i) => {
 }
 
 const VoteSectionHeader = ({ activeTab, onSelectTab, votedCount, isAllVoted }) => {
+  const showResult = votedCount > 0 && isAllVoted
   return (
     <header>
       <h2>議案投票</h2>
       <p className="lead">假如你是立法會議員，你會如何投票？</p>
       <Nav bsStyle="tabs" activeKey={activeTab} onSelect={onSelectTab} justified={true}>
         <NavItem eventKey={1}>選取議案</NavItem>
-        {votedCount > 0 && (
-          <NavItem eventKey={2}>
-            你的投票{' '}
-            <Badge className={isAllVoted ? 'alert-success' : ''}>{votedCount}</Badge>
-          </NavItem>)}
-        {isAllVoted && <NavItem eventKey={3}>配對結果</NavItem>}
+        <NavItem eventKey={2} disabled={votedCount === 0}>
+          你的投票{' '}
+          <Badge className={showResult ? 'alert-success' : ''}>{votedCount}</Badge>
+        </NavItem>
+        <NavItem eventKey={3} disabled={!showResult}>配對結果</NavItem>
       </Nav>
     </header>
   )
@@ -430,6 +445,7 @@ class ElectionMatch extends React.Component {
               voted,
               onVoteYes: this.onVote('yes'),
               onVoteNo: this.onVote('no'),
+              onRemoveMotion: this.onRemoveMotion,
             })}
             length={motions.length}
             type='simple'
@@ -458,6 +474,7 @@ class ElectionMatch extends React.Component {
               voted,
               onVoteYes: this.onVote('yes'),
               onVoteNo: this.onVote('no'),
+              onRemoveMotion: this.onRemoveMotion,
             })}
             length={motions.length}
             type='simple'
@@ -538,6 +555,14 @@ class ElectionMatch extends React.Component {
           callback({ shortUrl })
         }
       }
+    })
+  }
+
+  onRemoveMotion = (motionId) => {
+    const voted = _.omit(this.state.voted, motionId)
+    this.setState({
+      voted,
+      activeTab: _.isEmpty(voted) ? 1 : this.state.activeTab,
     })
   }
 }
