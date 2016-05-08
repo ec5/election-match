@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "base64-js": "^1.1.2",
+    "copy-to-clipboard": "^2.0.0",
     "fuse.js": "^2.2.0",
     "glob": "^7.0.3",
     "jsonfile": "^2.3.0",

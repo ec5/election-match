@@ -6,6 +6,7 @@ import base64 from 'base64-js'
 import Fuse from 'fuse.js'
 import pako from 'pako'
 import queryString from 'query-string'
+import copyToClipboard from 'copy-to-clipboard'
 
 import { createSelector } from 'reselect'
 import { render } from 'react-dom'
@@ -292,8 +293,12 @@ const GenerateShareUrl = ({ url, shortUrl, onGenerateShortUrl }) => {
   return (
     <form onSubmit={(event) => {
         event.preventDefault()
-        if (!shortUrl) {
-          onGenerateShortUrl(url)
+        if (shortUrl) {
+          copyToClipboard(shortUrl)
+        } else {
+          onGenerateShortUrl(url, (res) => {
+            copyToClipboard(res.shortUrl)
+          })
         }
       }}>
       <FormGroup>
@@ -305,7 +310,7 @@ const GenerateShareUrl = ({ url, shortUrl, onGenerateShortUrl }) => {
             style={{textOverflow: 'ellipsis'}}
           />
           <InputGroup.Button>
-            <Button type="submit">獲取短網址</Button>
+            <Button type="submit">複製短網址</Button>
           </InputGroup.Button>
         </InputGroup>
       </FormGroup>
@@ -493,7 +498,7 @@ class ElectionMatch extends React.Component {
     }
   }
 
-  onGenerateShortUrl = (longUrl) => {
+  onGenerateShortUrl = (longUrl, callback) => {
     gapi.client.urlshortener.url.insert({
       resource: { longUrl },
     })
@@ -507,6 +512,9 @@ class ElectionMatch extends React.Component {
             [longUrl]: shortUrl,
           }
         })
+        if (_.isFunction(callback)) {
+          callback({ shortUrl })
+        }
       }
     })
   }
