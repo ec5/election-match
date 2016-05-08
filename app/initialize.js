@@ -57,23 +57,25 @@ const buildUrl = (query) => {
   return url.format(urlObj)
 }
 
+const convertMotionIdsToVoted = () => _.reduce(motionIds, (r, motionId) => {
+  r[motionId] = null
+  return r
+}, {})
+
 const initialStateFromUrl = () => {
     const { v, m } = queryString.parse(window.location.search)
     if (v) {
+      const voted = _.get(decompress(v), 'data')
       return {
-        activeTab: 3,
-        voted: _.get(decompress(v), 'data')
+        activeTab: isAllVotedSelector({ voted }) ? 3 : 2,
+        voted,
       }
     }
     if (m) {
       const motionIds = _.get(decompress(m), 'data')
-      const voted = _.reduce(motionIds, (r, motionId) => {
-        r[motionId] = null
-        return r
-      }, {})
       return {
         activeTab: 2,
-        voted,
+        voted: convertMotionIdsToVoted(motionIds),
       }
     }
     return {}
@@ -214,6 +216,16 @@ const minDateSelector = createSelector(
   motionDates => _.min(motionDates)
 )
 
+const votedCountSelector = createSelector(
+  votedSelector,
+  (voted) => _.size(voted)
+)
+
+const isAllVotedSelector = createSelector(
+  votedSelector,
+  (voted) => _.every(voted, Boolean)
+)
+
 class DateRangeFilter extends Component {
   componentDidMount() {
     $(this._input).daterangepicker({
@@ -273,17 +285,19 @@ const renderMotionVote = ({ motions, voted, onVoteYes, onVoteNo }) => (i) => {
   )
 }
 
-const VoteSectionHeader = ({ activeTab, onSelectTab, votedCount }) => {
+const VoteSectionHeader = ({ activeTab, onSelectTab, votedCount, isAllVoted }) => {
   return (
     <header>
       <h2>議案投票</h2>
       <p className="lead">假如你是立法會議員，你會如何投票？</p>
       <Nav bsStyle="tabs" activeKey={activeTab} onSelect={onSelectTab} justified={true}>
         <NavItem eventKey={1}>選取議案</NavItem>
-        {votedCount > 0 && [
-          <NavItem key={2} eventKey={2}>你的投票 <Badge>{votedCount}</Badge></NavItem>,
-          <NavItem key={3} eventKey={3}>配對結果</NavItem>,
-        ]}
+        {votedCount > 0 && (
+          <NavItem eventKey={2}>
+            你的投票{' '}
+            <Badge className={isAllVoted ? 'alert-success' : ''}>{votedCount}</Badge>
+          </NavItem>)}
+        {isAllVoted && <NavItem eventKey={3}>配對結果</NavItem>}
       </Nav>
     </header>
   )
@@ -369,7 +383,8 @@ class ElectionMatch extends React.Component {
           <VoteSectionHeader
             activeTab={activeTab}
             onSelectTab={(eventKey) => this.setState({ activeTab: eventKey })}
-            votedCount={_.size(voted)}
+            votedCount={votedCountSelector(this.state)}
+            isAllVoted={isAllVotedSelector(this.state)}
           />
           {[
             this.renderFilterVotesTab,
