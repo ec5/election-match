@@ -298,7 +298,12 @@ const GenerateShareUrl = ({ url, shortUrl, onGenerateShortUrl }) => {
       }}>
       <FormGroup>
         <InputGroup>
-          <FormControl type="text" value={shortUrl || url} readOnly={true} />
+          <FormControl
+            type="text"
+            value={shortUrl || url}
+            readOnly={true}
+            style={{textOverflow: 'ellipsis'}}
+          />
           <InputGroup.Button>
             <Button type="submit">獲取短網址</Button>
           </InputGroup.Button>
