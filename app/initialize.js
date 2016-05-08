@@ -289,15 +289,22 @@ const VoteSectionHeader = ({ activeTab, onSelectTab, votedCount }) => {
   )
 }
 
+const copyToClipboardSafely = (shortUrl) => {
+  try {
+    copyToClipboard(shortUrl)
+  } catch (ex) {
+  }
+}
+
 const GenerateShareUrl = ({ url, shortUrl, onGenerateShortUrl }) => {
   return (
     <form onSubmit={(event) => {
         event.preventDefault()
         if (shortUrl) {
-          copyToClipboard(shortUrl)
+          copyToClipboardSafely(shortUrl)
         } else {
           onGenerateShortUrl(url, (res) => {
-            copyToClipboard(res.shortUrl)
+            copyToClipboardSafely(res.shortUrl)
           })
         }
       }}>
