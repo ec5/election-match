@@ -17,6 +17,7 @@ import Button from 'react-bootstrap/lib/Button'
 import Clearfix from 'react-bootstrap/lib/Clearfix'
 import FormControl from 'react-bootstrap/lib/FormControl'
 import FormGroup from 'react-bootstrap/lib/FormGroup'
+import Grid from 'react-bootstrap/lib/Grid'
 import InputGroup from 'react-bootstrap/lib/InputGroup'
 import Nav from 'react-bootstrap/lib/Nav'
 import Navbar from 'react-bootstrap/lib/Navbar'
@@ -64,23 +65,32 @@ const convertMotionIdsToVoted = () => _.reduce(motionIds, (r, motionId) => {
   return r
 }, {})
 
+const getCurrentNav = () => {
+  const hash = _.trimStart(window.location.hash, '#')
+  switch (hash) {
+    case 'about':
+    case 'stats':
+      return hash
+    default:
+      return 'vote'
+  }
+}
+
 const initialStateFromUrl = () => {
     const { v, m } = queryString.parse(window.location.search)
+    const state = {}
     if (v) {
-      const voted = _.get(decompress(v), 'data')
-      return {
-        activeTab: isAllVotedSelector({ voted }) ? 3 : 2,
-        voted,
-      }
-    }
-    if (m) {
+      state.voted = _.get(decompress(v), 'data')
+      state.activeTab = isAllVotedSelector(state) ? 3 : 2
+    } else if (m) {
       const motionIds = _.get(decompress(m), 'data')
-      return {
-        activeTab: 2,
-        voted: convertMotionIdsToVoted(motionIds),
-      }
+      state.voted = convertMotionIdsToVoted(motionIds)
+      state.activeTab = 2
     }
-    return {}
+    return {
+      ...state,
+      currentNav: getCurrentNav(),
+    }
 }
 
 const getShortUrl = (longUrl, shortUrls) => _.get(shortUrls, [longUrl])
@@ -355,22 +365,48 @@ const GenerateShareUrl = ({ url, shortUrl, onGenerateShortUrl }) => {
   )
 }
 
-const PageNavbar = () => {
+const PageNavbar = ({ currentNav }) => {
   return (
-    <Navbar fixedTop>
+    <Navbar staticTop>
       <Navbar.Header>
-        <Navbar.Brand>
+        <Navbar.Brand active>
           <a href="#">立法會投票傾向配對</a>
         </Navbar.Brand>
         <Navbar.Toggle />
       </Navbar.Header>
       <Navbar.Collapse>
         <Nav>
-          <NavItem eventKey="stats" href="#stats">數據統計</NavItem>
-          <NavItem eventKey="vote" href="#about">關於</NavItem>
+          {_.map([
+            ['vote', '議案投票'],
+            // ['stats', '數據統計'],
+            ['about', '關於本網'],
+          ], ([hash, title], i) => {
+            return (
+              <NavItem
+                key={i}
+                eventKey={hash}
+                href={`#${hash}`}
+                active={currentNav === hash}
+              >{title}</NavItem>
+            )
+          })}
         </Nav>
       </Navbar.Collapse>
     </Navbar>
+  )
+}
+
+const AboutSection = () => {
+  return (
+    <div className="container">
+      <h2>關於本網</h2>
+      <p className="lead">
+        本網頁所用之投票資料來自
+        <a href="http://www.legco.gov.hk/general/chinese/open-legco/open-data.html" rel="nofollow" target="_blank">立法會網站</a>，
+        數據及源碼皆於 <a href="https://github.com/ec5/election-match/" rel="nofollow" target="_blank">Github 上公開</a>，
+        歡迎指正錯漏或提出意見。
+      </p>
+    </div>
   )
 }
 
@@ -380,7 +416,6 @@ class ElectionMatch extends React.Component {
 
     this.state = {
       activeTab: 1,
-      currentNav: '',
       filterText: '',
       isGoogleClientLoaded: false,
       ...initialStateFromUrl(),
@@ -395,7 +430,7 @@ class ElectionMatch extends React.Component {
     })
     .on('hashchange', (event) => {
       this.setState({
-        currentNav: _.trimStart(window.location.hash, '#')
+        currentNav: getCurrentNav(),
       })
     })
     $.getJSON('data.json', (data) => {
@@ -414,15 +449,15 @@ class ElectionMatch extends React.Component {
   }
 
   render() {
-    const { currentNav, data, activeTab, voted } = this.state
+    const { currentNav, data } = this.state
     if (!data) {
       return <div>載入議案資料中⋯⋯</div>
     }
     return (
-      <div style={{paddingTop: 50}}>
-        <PageNavbar />
+      <div>
+        <PageNavbar currentNav={currentNav} />
           {{
-            '': this.renderMainSection,
+            'vote': this.renderMainSection,
             'stats': this.renderStatsSection,
             'about': this.renderAboutSection,
           }[currentNav].call(this)}
@@ -436,7 +471,7 @@ class ElectionMatch extends React.Component {
   renderMainSection() {
     const { data, activeTab, voted } = this.state
     return (
-      <section>
+      <Grid>
         <VoteSectionHeader
           activeTab={activeTab}
           onSelectTab={(eventKey) => this.setState({ activeTab: eventKey })}
@@ -448,7 +483,7 @@ class ElectionMatch extends React.Component {
           this.renderSelectedVotesTab,
           this.renderResultTab,
         ][activeTab - 1].call(this)}
-      </section>
+      </Grid>
     )
   }
 
@@ -459,9 +494,7 @@ class ElectionMatch extends React.Component {
   }
 
   renderAboutSection() {
-    return (
-      <div>about</div>
-    )
+    return <AboutSection />
   }
 
   renderFilterVotesTab = () => {
