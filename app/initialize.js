@@ -19,6 +19,7 @@ import FormControl from 'react-bootstrap/lib/FormControl'
 import FormGroup from 'react-bootstrap/lib/FormGroup'
 import InputGroup from 'react-bootstrap/lib/InputGroup'
 import Nav from 'react-bootstrap/lib/Nav'
+import Navbar from 'react-bootstrap/lib/Navbar'
 import NavItem from 'react-bootstrap/lib/NavItem'
 import Panel from 'react-bootstrap/lib/Panel'
 
@@ -354,22 +355,47 @@ const GenerateShareUrl = ({ url, shortUrl, onGenerateShortUrl }) => {
   )
 }
 
+const PageNavbar = () => {
+  return (
+    <Navbar fixedTop>
+      <Navbar.Header>
+        <Navbar.Brand>
+          <a href="#">立法會投票傾向配對</a>
+        </Navbar.Brand>
+        <Navbar.Toggle />
+      </Navbar.Header>
+      <Navbar.Collapse>
+        <Nav>
+          <NavItem eventKey="stats" href="#stats">數據統計</NavItem>
+          <NavItem eventKey="vote" href="#about">關於</NavItem>
+        </Nav>
+      </Navbar.Collapse>
+    </Navbar>
+  )
+}
+
 class ElectionMatch extends React.Component {
   constructor(props) {
     super(props)
 
     this.state = {
-      isGoogleClientLoaded: false,
       activeTab: 1,
+      currentNav: '',
       filterText: '',
+      isGoogleClientLoaded: false,
       ...initialStateFromUrl(),
     }
   }
 
   componentDidMount() {
-    $('body').on(GOOGLE_CLIENT_LOADED_EVENT, () => {
+    $(window).on(GOOGLE_CLIENT_LOADED_EVENT, () => {
       this.setState({
         isGoogleClientLoaded: true,
+      })
+    })
+    .on('hashchange', (event) => {
+      this.setState({
+        currentNav: _.trimStart(window.location.hash, '#')
       })
     })
     $.getJSON('data.json', (data) => {
@@ -388,29 +414,53 @@ class ElectionMatch extends React.Component {
   }
 
   render() {
-    const { data, activeTab, voted } = this.state
+    const { currentNav, data, activeTab, voted } = this.state
     if (!data) {
       return <div>載入議案資料中⋯⋯</div>
     }
     return (
-      <div>
-        <section>
-          <VoteSectionHeader
-            activeTab={activeTab}
-            onSelectTab={(eventKey) => this.setState({ activeTab: eventKey })}
-            votedCount={votedCountSelector(this.state)}
-            isAllVoted={isAllVotedSelector(this.state)}
-          />
-          {[
-            this.renderFilterVotesTab,
-            this.renderSelectedVotesTab,
-            this.renderResultTab,
-          ][activeTab - 1]()}
-        </section>
+      <div style={{paddingTop: 50}}>
+        <PageNavbar />
+          {{
+            '': this.renderMainSection,
+            'stats': this.renderStatsSection,
+            'about': this.renderAboutSection,
+          }[currentNav].call(this)}
         <ScrollToTop showUnder={160}>
           <span>移至頂部</span>
         </ScrollToTop>
       </div>
+    )
+  }
+
+  renderMainSection() {
+    const { data, activeTab, voted } = this.state
+    return (
+      <section>
+        <VoteSectionHeader
+          activeTab={activeTab}
+          onSelectTab={(eventKey) => this.setState({ activeTab: eventKey })}
+          votedCount={votedCountSelector(this.state)}
+          isAllVoted={isAllVotedSelector(this.state)}
+        />
+        {[
+          this.renderFilterVotesTab,
+          this.renderSelectedVotesTab,
+          this.renderResultTab,
+        ][activeTab - 1].call(this)}
+      </section>
+    )
+  }
+
+  renderStatsSection() {
+    return (
+      <div>stats</div>
+    )
+  }
+
+  renderAboutSection() {
+    return (
+      <div>about</div>
     )
   }
 
@@ -571,7 +621,7 @@ const initGoogleClient = () => {
   const apiKey = 'AIzaSyA8f91lvLDPchAInQKcjWX4LXjAiJbDEHo'
   gapi.client.setApiKey(apiKey)
   gapi.client.load('urlshortener', 'v1', () => {
-    $('body').trigger(GOOGLE_CLIENT_LOADED_EVENT)
+    $(window).trigger(GOOGLE_CLIENT_LOADED_EVENT)
   })
 }
 window.initGoogleClient = initGoogleClient
