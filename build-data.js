@@ -4,7 +4,10 @@ import fs from 'fs'
 import _ from 'lodash'
 import glob from 'glob'
 import jsonfile from 'jsonfile'
+import moment from 'moment'
 import xml2js from 'xml2js'
+
+import { DATE_FORMAT, getUrls } from './app/motion'
 
 const parseString = (s) => {
   return new Promise((resolve, reject) => {
@@ -22,7 +25,7 @@ const convertDateString = (s) => {
   return s.split('/').reverse().join('')
 }
 
-const buildMotionId = ({meeting, vote, meetingIndex}) => {
+const buildMotionId = ({ meeting, vote, meetingIndex }) => {
   assert(vote['vote-date'].length === 1)
   assert(vote['vote-time'].length === 1)
   const meetingTypeCode = meeting.$.type.replace(/\W*(\w)\w*/g, '$1').toLowerCase()
@@ -35,10 +38,18 @@ const buildMotionId = ({meeting, vote, meetingIndex}) => {
   ], '_')
 }
 
+const checkUrls = (motion) => {
+  console.log(getUrls({
+    ...motion,
+    voteDateMoment: moment(motion.voteDate, DATE_FORMAT),
+  }))
+  return motion
+}
+
 async function main() {
   const motions = {}
   const members = {}
-  const data = {motions, members}
+  const data = { motions, members }
 
   const files = glob.sync('data/*.xml')
   await files.reduce(async (p, file) => {
@@ -56,10 +67,12 @@ async function main() {
         const motionId = buildMotionId({meeting, vote, meetingIndex: i})
         assert(!motions[motionId], `motion ${motionId} duplicated`)
         const meetingType = meeting.$.type
+        const startDate = meeting.$['start-date']
         const voteDate = vote['vote-date'][0]
         motions[motionId] = {
           meetingType,
           voteDate,
+          startDate,
           title: vote['motion-ch'][0],
         }
         _.each(vote['individual-votes'][0].member, (member) => {

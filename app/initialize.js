@@ -15,10 +15,13 @@ import React, { Component } from 'react'
 import Badge from 'react-bootstrap/lib/Badge'
 import Button from 'react-bootstrap/lib/Button'
 import Clearfix from 'react-bootstrap/lib/Clearfix'
+import Collapse from 'react-bootstrap/lib/Collapse'
+import DropdownButton from 'react-bootstrap/lib/DropdownButton'
 import FormControl from 'react-bootstrap/lib/FormControl'
 import FormGroup from 'react-bootstrap/lib/FormGroup'
 import Grid from 'react-bootstrap/lib/Grid'
 import InputGroup from 'react-bootstrap/lib/InputGroup'
+import MenuItem from 'react-bootstrap/lib/MenuItem'
 import Nav from 'react-bootstrap/lib/Nav'
 import Navbar from 'react-bootstrap/lib/Navbar'
 import NavItem from 'react-bootstrap/lib/NavItem'
@@ -27,7 +30,8 @@ import Panel from 'react-bootstrap/lib/Panel'
 import ReactList from 'react-list'
 import ScrollToTop from 'react-scroll-up'
 
-const DATE_FORMAT = 'DD/MM/YYYY'
+import { DATE_FORMAT, getUrls } from 'motion'
+
 const GOOGLE_CLIENT_LOADED_EVENT = 'googleClientLoaded'
 const scoreAdjustment = {
   yes: 1,
@@ -279,6 +283,35 @@ const CloseButton = ({ onClick }) => {
   )
 }
 
+const VoteDateDropdown = ({ motion }) => {
+  const urls = getUrls(motion)
+  return (
+    <DropdownButton
+      bsStyle="link"
+      title={motion.voteDate}
+      id={`vote-date-dropdown-${motion.id}`}
+      style={{paddingLeft: 0, paddingRight: 0}}
+    >
+      {_.reduce([
+        ['agenda', '會議議程'],
+        ['rundown', '會議過程正式紀錄'],
+        ['minutesPdf', '會議紀要 PDF'],
+        ['results', '決定的紀錄'],
+        ['votingPdf', '投票結果 PDF'],
+        ['votingResults', '投票結果'],
+      ], (r, [k, title], i) => {
+        const url = urls[k]
+        if (url) {
+          r.push(<MenuItem key={i} href={url} rel="nofollow" target="_blank">{title}</MenuItem>)
+        }
+        return r
+      }, [])}
+      <MenuItem divider />
+      <MenuItem href={urls.index} rel="nofollow" target="_blank">會議</MenuItem>
+    </DropdownButton>
+  )
+}
+
 const renderMotionVote = ({ motions, voted, onVoteYes, onVoteNo, onRemoveMotion }) => (i) => {
   const motion = motions[i]
   return (
@@ -286,7 +319,7 @@ const renderMotionVote = ({ motions, voted, onVoteYes, onVoteNo, onRemoveMotion 
       <h4 className="list-group-item-heading">
         <Clearfix style={{margin: '0.5rem 0 1.5rem'}}>
           {_.has(voted, motion.id) && <CloseButton onClick={() => onRemoveMotion(motion.id)} />}
-          <small style={{lineHeight: '1.9rem'}}>{motion.voteDate}</small>
+          <VoteDateDropdown motion={motion} />
         </Clearfix>
         {motion.title}
       </h4>
