@@ -250,12 +250,13 @@ class DateRangeFilter extends Component {
       locale: {
         format: DATE_FORMAT,
       },
+      showDropdowns: true,
       ..._.pick(this.props, [
         'startDate', 'endDate',
         'minDate', 'maxDate',
       ])
     })
-    .on('apply.daterangepicker', this.props.onApply)
+    .on('change', this.props.onChange)
   }
 
   render() {
@@ -542,10 +543,11 @@ class ElectionMatch extends React.Component {
           maxDate={maxDateSelector(this.state)}
           startDate={startDate}
           endDate={endDate}
-          onApply={(ev, picker) => {
+          onChange={(event, picker) => {
+            const [startDate, endDate] = _.map(_.split(event.target.value, ' - '), (x) => moment(x, DATE_FORMAT))
             this.setState({
-              startDate: picker.startDate,
-              endDate: picker.endDate,
+              startDate,
+              endDate,
             })
           }}
         />

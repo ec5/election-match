@@ -3,7 +3,7 @@ import _ from 'lodash'
 
 export const DATE_FORMAT = 'DD/MM/YYYY'
 
-export const getUrls = ({ meetingType, startDate }) => {
+export const getUrls = ({ meetingType, startDate, voteDateMoment }) => {
   const m = moment(startDate, DATE_FORMAT)
   const startYear = (m.month() >= 9 ? m.year() : m.year() - 1) % 100
   const yr = `${startYear}-${startYear + 1}`
@@ -16,7 +16,7 @@ export const getUrls = ({ meetingType, startDate }) => {
         agenda: `${prefix}counmtg/agenda/cm${dateStr}.htm`,
         minutesPdf: `${prefix}counmtg/minutes/cm${dateStr}.pdf`,
         votingPdf: `${prefix}counmtg/voting/v${dateStr}.pdf`,
-        rundown: `http://www.legco.gov.hk/php/hansard/chinese/rundown.php?date=${m.format('YYYY-MM-DD')}&lang=1`,
+        rundown: `http://www.legco.gov.hk/php/hansard/chinese/rundown.php?date=${voteDateMoment.format('YYYY-MM-DD')}&lang=1`,
       },
     },
     'Establishment Subcommittee': {
