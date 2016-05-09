@@ -56,6 +56,7 @@ const decompress = (s) => {
 const buildUrl = (query) => {
   const urlObj = url.parse(window.location.href)
   delete urlObj.search
+  urlObj.hash = ''
   urlObj.query = query
   return url.format(urlObj)
 }
