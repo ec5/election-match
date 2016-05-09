@@ -16,7 +16,7 @@ module.exports = {
       presets: ['es2015', 'stage-0', 'react'],
       plugins: [
         'dev-expression',
-        'lodash',
+        // 'lodash',
       ],
       ignore: ['**/node_modules/**', '**/bower_components/**'],
     },

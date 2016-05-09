@@ -74,6 +74,7 @@ const getCurrentNav = () => {
   const hash = _.trimStart(window.location.hash, '#')
   switch (hash) {
     case 'about':
+    case 'limitation':
     case 'stats':
       return hash
     default:
@@ -414,6 +415,7 @@ const PageNavbar = ({ currentNav }) => {
           {_.map([
             ['vote', '議案投票'],
             // ['stats', '數據統計'],
+            ['limitation', '注意事項'],
             ['about', '關於本網'],
           ], ([hash, title], i) => {
             return (
@@ -431,17 +433,41 @@ const PageNavbar = ({ currentNav }) => {
   )
 }
 
+const LimitationSection = () => {
+  return (
+    <section className="container">
+      <h2>注意事項</h2>
+      <p className="lead">
+        一如所有的評分機制很難做到全面客觀，依賴一至數項的數據分析結果，不宜作為<strong>唯一</strong>的投票依據。本網雖已儘量做得客觀，始終也有局限，在閱讀結果時應多加留意，不要盲目接受。
+      </p>
+      <ul>
+        <li>由於本網只有 2012 年至今的投票結果，對於2012 年以前的議員或新進的參選人無法作出分析。</li>
+        <li>
+          議員可能因為一些原因沒有投票，因此在投票數量比其他人少的情況下，「配對結果」的排序或會因而降低。例如：
+          <ul>
+            <li>立法會主席或會議主持人很少會投票。</li>
+            <li>未完成任期或補選的議員。</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+  )
+}
+
 const AboutSection = () => {
   return (
-    <div className="container">
+    <section className="container">
       <h2>關於本網</h2>
       <p className="lead">
-        本網頁所用之投票資料來自
+        本網旨在透過數據分析，為選民提供多一項投票時的參考指標，從而希望選出最具代表性的議員。
+      </p>
+      <p className="lead">
+        本網所用之投票資料來自
         <a href="http://www.legco.gov.hk/general/chinese/open-legco/open-data.html" rel="nofollow" target="_blank">立法會網站</a>，
         數據及源碼皆於 <a href="https://github.com/ec5/election-match/" rel="nofollow" target="_blank">Github 上公開</a>，
         歡迎指正錯漏或提出意見。
       </p>
-    </div>
+    </section>
   )
 }
 
@@ -488,12 +514,14 @@ class ElectionMatch extends React.Component {
     if (!data) {
       return <div>載入議案資料中⋯⋯</div>
     }
+    console.log(currentNav)
     return (
       <div>
         <PageNavbar currentNav={currentNav} />
           {{
             'vote': this.renderMainSection,
             'stats': this.renderStatsSection,
+            'limitation': this.renderLimitationSection,
             'about': this.renderAboutSection,
           }[currentNav].call(this)}
         <ScrollToTop showUnder={160}>
@@ -525,6 +553,12 @@ class ElectionMatch extends React.Component {
   renderStatsSection() {
     return (
       <div>stats</div>
+    )
+  }
+
+  renderLimitationSection() {
+    return (
+      <LimitationSection />
     )
   }
 
