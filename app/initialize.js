@@ -33,16 +33,10 @@ import ScrollToTop from 'react-scroll-up'
 import { DATE_FORMAT, getUrls } from 'motion'
 
 const GOOGLE_CLIENT_LOADED_EVENT = 'googleClientLoaded'
-const scoreAdjustment = {
-  yes: 1,
-  no: 1,
-  opposite: -1,
-  novote: 0,
-}
 
 const compress = (obj) => base64.fromByteArray(pako.deflate(JSON.stringify({
-  _v: 1,
-  data: obj,
+  ...obj,
+  _v: 2,
 }), {
   level: 9,
   memLevel: 9,
@@ -65,7 +59,13 @@ const buildUrl = (query) => {
   return url.format(urlObj)
 }
 
-const convertMotionIdsToVoted = () => _.reduce(motionIds, (r, motionId) => {
+const buildShareUrl = (obj) => {
+  return buildUrl({
+    s: compress(obj),
+  })
+}
+
+const convertMotionIdsToVoted = (motionIds) => _.reduce(motionIds, (r, motionId) => {
   r[motionId] = null
   return r
 }, {})
@@ -83,24 +83,25 @@ const getCurrentNav = () => {
 }
 
 const initialStateFromUrl = () => {
-    const { v, m } = queryString.parse(window.location.search)
-    const state = {}
-    if (v) {
-      state.voted = _.get(decompress(v), 'data')
-      state.activeTab = isAllVotedSelector(state) ? 3 : 2
-    } else if (m) {
-      const motionIds = _.get(decompress(m), 'data')
+    const { s } = queryString.parse(window.location.search)
+    const state = s ? decompress(s) : {}
+    console.log('state', state)
+    const motionIds = _.get(state, 'motionIds')
+    if (motionIds) {
       state.voted = convertMotionIdsToVoted(motionIds)
-      state.activeTab = 2
+    }
+    if (!_.isEmpty(state)) {
+      state.activeTab = isAllVotedSelector(state) ? 3 : 2
     }
     return {
-      ...state,
+      ..._.omit(state, ['_v', 'motionIds']),
       currentNav: getCurrentNav(),
     }
 }
 
 const getShortUrl = (longUrl, shortUrls) => _.get(shortUrls, [longUrl])
 
+const scoreVarsSelector = state => state.scoreVars
 const votedSelector = state => state.voted
 const shortUrlsSelector = state => state.shortUrls
 
@@ -108,8 +109,8 @@ const motionsShareUrlSelector = createSelector(
   votedSelector,
   shortUrlsSelector,
   (voted, shortUrls) => {
-    return buildUrl({
-      m: compress(_.keys(voted)),
+    return buildShareUrl({
+      motionIds: _.keys(voted),
     })
   }
 )
@@ -123,9 +124,11 @@ const motionsShortUrlSelector = createSelector(
 const votedShareUrlSelector = createSelector(
   votedSelector,
   shortUrlsSelector,
-  (voted, shortUrls) => {
-    return buildUrl({
-      v: compress(voted),
+  scoreVarsSelector,
+  (voted, shortUrls, scoreVars) => {
+    return buildShareUrl({
+      scoreVars,
+      voted,
     })
   }
 )
@@ -185,18 +188,19 @@ const matchResultSelector = createSelector(
   state => state.data.motions,
   votedSelector,
   state => state.data.members,
-  (motions, voted, members) => {
+  state => state.scoreVars,
+  (motions, voted, members, scoreVars) => {
     return _.sortBy(_.map(members, (member, memberName) => {
       const matching = _.reduce(voted, (r, vote, motionId) => {
         const memberVote = member.votes[motionId]
         if (memberVote === vote) {
-          r.score += scoreAdjustment[vote]
+          r.score += scoreVars[vote]
           r[vote] += 1
         } else if (memberVote === getOppositeVote(vote)) {
-          r.score += scoreAdjustment['opposite']
+          r.score += scoreVars['opposite']
           r['opposite'] += 1
         } else if (memberVote) {
-          r.score += scoreAdjustment['novote']
+          r.score += scoreVars['novote']
           r['novote'] += 1
           r[memberVote] += 1
         }
@@ -496,9 +500,15 @@ class ElectionMatch extends React.Component {
 
     this.state = {
       activeTab: 1,
+      scoreVars: {
+        yes: 1,
+        no: 1,
+        opposite: -1,
+        novote: 0,
+      },
+      ...initialStateFromUrl(),
       filterText: '',
       isGoogleClientLoaded: false,
-      ...initialStateFromUrl(),
     }
   }
 
