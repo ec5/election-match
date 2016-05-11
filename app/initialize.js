@@ -15,7 +15,7 @@ import React, { Component } from 'react'
 import Badge from 'react-bootstrap/lib/Badge'
 import Button from 'react-bootstrap/lib/Button'
 import Clearfix from 'react-bootstrap/lib/Clearfix'
-import Collapse from 'react-bootstrap/lib/Collapse'
+import ControlLabel from 'react-bootstrap/lib/ControlLabel'
 import DropdownButton from 'react-bootstrap/lib/DropdownButton'
 import FormControl from 'react-bootstrap/lib/FormControl'
 import FormGroup from 'react-bootstrap/lib/FormGroup'
@@ -494,6 +494,28 @@ const AboutSection = () => {
   )
 }
 
+const ScoreForm = ({ children }) => {
+  const title = <h3>計分方法</h3>
+  return (
+    <Panel header={title} collapsible defaultExpanded={false}>
+      <form className="form-horizontal">
+        {children}
+      </form>
+    </Panel>
+  )
+}
+
+const ScoreFormGroup = ({ title, ...props }) => {
+  return (
+    <FormGroup>
+      <ControlLabel className="col-sm-2">{title}</ControlLabel>
+      <div className="col-sm-10">
+        <FormControl type="number" {...props} />
+      </div>
+    </FormGroup>
+  )
+}
+
 class ElectionMatch extends React.Component {
   constructor(props) {
     super(props)
@@ -667,9 +689,10 @@ class ElectionMatch extends React.Component {
   }
 
   renderResultTab = () => {
+    const { scoreVars } = this.state
     const matchResult = matchResultSelector(this.state)
     return (
-      <div className="table-responsive">
+      <div>
         {canShareSelector(this.state) && (
           <GenerateShareUrl
             url={votedShareUrlSelector(this.state)}
@@ -677,36 +700,54 @@ class ElectionMatch extends React.Component {
             onGenerateShortUrl={this.onGenerateShortUrl}
           />
         )}
-        <table className="table table-striped table-hover table-condensed">
-          <thead>
-            <tr>
-              <th>議員</th>
-              <th>相似分數</th>
-              <th>相同投票</th>
-              <th>相反投票</th>
-              <th>相同贊成</th>
-              <th>相同反對</th>
-              <th>沒有表態</th>
-            </tr>
-          </thead>
-          <tbody>
-            {_.map(matchResult, (member, i) => {
-              return (
-                <tr key={i}>
-                  <td>{member.name}</td>
-                  <td>{member.matching.score}</td>
-                  <td>{member.matching.yes + member.matching.no}</td>
-                  <td>{member.matching.opposite}</td>
-                  <td>{member.matching.yes}</td>
-                  <td>{member.matching.no}</td>
-                  <td>{member.matching.novote}</td>
-                </tr>
-              )
-            })}
-          </tbody>
-        </table>
+        <ScoreForm>
+          <ScoreFormGroup title="相同贊成" value={scoreVars.yes} onChange={this.onScoreVarsChange('yes')} />
+          <ScoreFormGroup title="相同反對" value={scoreVars.no} onChange={this.onScoreVarsChange('no')} />
+          <ScoreFormGroup title="相反投票" value={scoreVars.opposite} onChange={this.onScoreVarsChange('opposite')} />
+          <ScoreFormGroup title="沒有表態" value={scoreVars.novote} onChange={this.onScoreVarsChange('novote')} />
+        </ScoreForm>
+        <div className="table-responsive">
+          <table className="table table-striped table-hover table-condensed">
+            <thead>
+              <tr>
+                <th>議員</th>
+                <th>相似分數</th>
+                <th>相同投票</th>
+                <th>相反投票</th>
+                <th>相同贊成</th>
+                <th>相同反對</th>
+                <th>沒有表態</th>
+              </tr>
+            </thead>
+            <tbody>
+              {_.map(matchResult, (member, i) => {
+                return (
+                  <tr key={i}>
+                    <td>{member.name}</td>
+                    <td>{member.matching.score}</td>
+                    <td>{member.matching.yes + member.matching.no}</td>
+                    <td>{member.matching.opposite}</td>
+                    <td>{member.matching.yes}</td>
+                    <td>{member.matching.no}</td>
+                    <td>{member.matching.novote}</td>
+                  </tr>
+                )
+              })}
+            </tbody>
+          </table>
+        </div>
       </div>
     )
+  }
+
+  onScoreVarsChange(key) {
+    return (event) => {
+      const { scoreVars } = this.state
+      this.setState({ scoreVars: {
+          ...scoreVars,
+          [key]: _.toSafeInteger(event.target.value),
+      }})
+    }
   }
 
   onVote(vote) {
