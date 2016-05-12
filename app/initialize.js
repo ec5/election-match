@@ -495,9 +495,9 @@ const AboutSection = () => {
   )
 }
 
-const ScoreForm = ({ title, children }) => {
+const ScoreForm = ({ defaultExpanded, title, children }) => {
   return (
-    <Panel header={title} collapsible defaultExpanded={false} bsStyle="info">
+    <Panel header={title} collapsible defaultExpanded={defaultExpanded} bsStyle="info">
       <form className="form-horizontal">
         {children}
       </form>
@@ -516,18 +516,20 @@ const ScoreFormGroup = ({ title, ...props }) => {
   )
 }
 
+const defaultScoreVars = {
+  yes: 1,
+  no: 1,
+  opposite: -1,
+  novote: 0,
+}
+
 class ElectionMatch extends React.Component {
   constructor(props) {
     super(props)
 
     this.state = {
       activeTab: 1,
-      scoreVars: {
-        yes: 1,
-        no: 1,
-        opposite: -1,
-        novote: 0,
-      },
+      scoreVars: defaultScoreVars,
       ...initialStateFromUrl(),
       filterText: '',
       isGoogleClientLoaded: false,
@@ -687,9 +689,10 @@ class ElectionMatch extends React.Component {
     const { scoreVars } = this.state
     const matchResult = matchResultSelector(this.state)
     const title = <h3>計分方法</h3>
+    const defaultExpanded = !_.isEqual(scoreVars, defaultScoreVars)
     return (
       <div>
-        <ScoreForm title={title}>
+        <ScoreForm title={title} defaultExpanded={defaultExpanded}>
           <ScoreFormGroup title="相同贊成" value={scoreVars.yes} onChange={this.onScoreVarsChange('yes')} />
           <ScoreFormGroup title="相同反對" value={scoreVars.no} onChange={this.onScoreVarsChange('no')} />
           <ScoreFormGroup title="相反投票" value={scoreVars.opposite} onChange={this.onScoreVarsChange('opposite')} />
