@@ -351,7 +351,7 @@ const renderMotionVote = ({ motions, voted, onVoteYes, onVoteNo, onRemoveMotion 
   )
 }
 
-const VoteSectionHeader = ({ activeTab, onSelectTab, votedCount, isAllVoted }) => {
+const VoteSectionHeader = ({ activeTab, onSelectTab, votedCount, isAllVoted, canShare }) => {
   const showResult = votedCount > 0 && isAllVoted
   return (
     <header>
@@ -364,6 +364,7 @@ const VoteSectionHeader = ({ activeTab, onSelectTab, votedCount, isAllVoted }) =
           <Badge className={showResult ? 'alert-success' : ''}>{votedCount}</Badge>
         </NavItem>
         <NavItem eventKey={3} disabled={!showResult}>配對結果</NavItem>
+        <NavItem eventKey={4} disabled={!canShare}>分享</NavItem>
       </Nav>
     </header>
   )
@@ -494,10 +495,9 @@ const AboutSection = () => {
   )
 }
 
-const ScoreForm = ({ children }) => {
-  const title = <h3>計分方法</h3>
+const ScoreForm = ({ title, children }) => {
   return (
-    <Panel header={title} collapsible defaultExpanded={false}>
+    <Panel header={title} collapsible defaultExpanded={false} bsStyle="info">
       <form className="form-horizontal">
         {children}
       </form>
@@ -591,11 +591,13 @@ class ElectionMatch extends React.Component {
           onSelectTab={(eventKey) => this.setState({ activeTab: eventKey })}
           votedCount={votedCountSelector(this.state)}
           isAllVoted={isAllVotedSelector(this.state)}
+          canShare={canShareSelector(this.state)}
         />
         {[
           this.renderFilterVotesTab,
           this.renderSelectedVotesTab,
           this.renderResultTab,
+          this.renderShareTab,
         ][activeTab - 1].call(this)}
       </Grid>
     )
@@ -664,13 +666,6 @@ class ElectionMatch extends React.Component {
     const motions = votedMotionsSelector(this.state)
     return (
       <div>
-        {canShareSelector(this.state) && (
-          <GenerateShareUrl
-            url={motionsShareUrlSelector(this.state)}
-            shortUrl={motionsShortUrlSelector(this.state)}
-            onGenerateShortUrl={this.onGenerateShortUrl}
-          />
-        )}
         {_.isEmpty(motions) ? <p className="text-warning">未有投票</p> : (
           <ReactList
             itemRenderer={renderMotionVote({
@@ -691,20 +686,14 @@ class ElectionMatch extends React.Component {
   renderResultTab = () => {
     const { scoreVars } = this.state
     const matchResult = matchResultSelector(this.state)
+    const title = <h3>計分方法</h3>
     return (
       <div>
-        {canShareSelector(this.state) && (
-          <GenerateShareUrl
-            url={votedShareUrlSelector(this.state)}
-            shortUrl={votedShortUrlSelector(this.state)}
-            onGenerateShortUrl={this.onGenerateShortUrl}
-          />
-        )}
-        <ScoreForm>
+        <ScoreForm title={title}>
           <ScoreFormGroup title="相同贊成" value={scoreVars.yes} onChange={this.onScoreVarsChange('yes')} />
           <ScoreFormGroup title="相同反對" value={scoreVars.no} onChange={this.onScoreVarsChange('no')} />
           <ScoreFormGroup title="相反投票" value={scoreVars.opposite} onChange={this.onScoreVarsChange('opposite')} />
-          <ScoreFormGroup title="沒有表態" value={scoreVars.novote} onChange={this.onScoreVarsChange('novote')} />
+          <ScoreFormGroup title="沒有投票" value={scoreVars.novote} onChange={this.onScoreVarsChange('novote')} />
         </ScoreForm>
         <div className="table-responsive">
           <table className="table table-striped table-hover table-condensed">
@@ -716,7 +705,7 @@ class ElectionMatch extends React.Component {
                 <th>相反投票</th>
                 <th>相同贊成</th>
                 <th>相同反對</th>
-                <th>沒有表態</th>
+                <th>沒有投票</th>
               </tr>
             </thead>
             <tbody>
@@ -736,6 +725,27 @@ class ElectionMatch extends React.Component {
             </tbody>
           </table>
         </div>
+      </div>
+    )
+  }
+
+  renderShareTab() {
+    return (
+      <div>
+        <Panel>
+          <p className="lead">分享你已選取的議案</p>
+          <GenerateShareUrl
+            url={motionsShareUrlSelector(this.state)}
+            shortUrl={motionsShortUrlSelector(this.state)}
+            onGenerateShortUrl={this.onGenerateShortUrl}
+          /><br />
+          <p className="lead">分享你的配對結果</p>
+          <GenerateShareUrl
+            url={votedShareUrlSelector(this.state)}
+            shortUrl={votedShortUrlSelector(this.state)}
+            onGenerateShortUrl={this.onGenerateShortUrl}
+          />
+        </Panel>
       </div>
     )
   }
