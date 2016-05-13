@@ -121,6 +121,14 @@ const motionsShortUrlSelector = createSelector(
   getShortUrl
 )
 
+const canShareMotionsSelector = createSelector(
+  votedSelector,
+  motionsShareUrlSelector,
+  (voted, url) => {
+    return !_.isEmpty(voted) && _.size(url) < 2048
+  }
+)
+
 const votedShareUrlSelector = createSelector(
   votedSelector,
   shortUrlsSelector,
@@ -139,11 +147,25 @@ const votedShortUrlSelector = createSelector(
   getShortUrl
 )
 
-const canShareSelector = createSelector(
+const isAllVotedSelector = createSelector(
+  votedSelector,
+  (voted) => _.every(voted, Boolean)
+)
+
+const canShareVotedSelector = createSelector(
   votedSelector,
   votedShareUrlSelector,
-  (voted, url) => {
-    return !_.isEmpty(voted) && _.size(url) < 2048
+  isAllVotedSelector,
+  (voted, url, isAllVoted) => {
+    return isAllVoted && !_.isEmpty(voted) && _.size(url) < 2048
+  }
+)
+
+const canShareSelector = createSelector(
+  canShareMotionsSelector,
+  canShareVotedSelector,
+  (canShareMotions, canShareVoted) => {
+    return canShareMotions || canShareVoted
   }
 )
 
@@ -241,11 +263,6 @@ const minDateSelector = createSelector(
 const votedCountSelector = createSelector(
   votedSelector,
   (voted) => _.size(voted)
-)
-
-const isAllVotedSelector = createSelector(
-  votedSelector,
-  (voted) => _.every(voted, Boolean)
 )
 
 class DateRangeFilter extends Component {
@@ -736,18 +753,26 @@ class ElectionMatch extends React.Component {
     return (
       <div>
         <Panel>
-          <p className="lead">分享你已選取的議案</p>
-          <GenerateShareUrl
-            url={motionsShareUrlSelector(this.state)}
-            shortUrl={motionsShortUrlSelector(this.state)}
-            onGenerateShortUrl={this.onGenerateShortUrl}
-          /><br />
-          <p className="lead">分享你的配對結果</p>
-          <GenerateShareUrl
-            url={votedShareUrlSelector(this.state)}
-            shortUrl={votedShortUrlSelector(this.state)}
-            onGenerateShortUrl={this.onGenerateShortUrl}
-          />
+          {canShareMotionsSelector(this.state) && (
+            <div>
+              <p className="lead">分享你已選取的議案</p>
+              <GenerateShareUrl
+                url={motionsShareUrlSelector(this.state)}
+                shortUrl={motionsShortUrlSelector(this.state)}
+                onGenerateShortUrl={this.onGenerateShortUrl}
+              /><br />
+            </div>
+          )}
+          {canShareVotedSelector(this.state) && (
+            <div>
+              <p className="lead">分享你的配對結果</p>
+              <GenerateShareUrl
+                url={votedShareUrlSelector(this.state)}
+                shortUrl={votedShortUrlSelector(this.state)}
+                onGenerateShortUrl={this.onGenerateShortUrl}
+              />
+            </div>
+          )}
         </Panel>
       </div>
     )
