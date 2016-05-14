@@ -744,6 +744,9 @@ class ElectionMatch extends React.Component {
               })}
             </tbody>
           </table>
+          <p>
+            註：作為負責任的選民，不要只靠單一資訊投票，請參閱<a href="#limitation">注意事項</a>瞭解本網的限制。
+          </p>
         </div>
       </div>
     )
