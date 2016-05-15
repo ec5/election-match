@@ -14,6 +14,7 @@ import React, { Component } from 'react'
 
 import Badge from 'react-bootstrap/lib/Badge'
 import Button from 'react-bootstrap/lib/Button'
+import ButtonToolbar from 'react-bootstrap/lib/ButtonToolbar'
 import Clearfix from 'react-bootstrap/lib/Clearfix'
 import ControlLabel from 'react-bootstrap/lib/ControlLabel'
 import DropdownButton from 'react-bootstrap/lib/DropdownButton'
@@ -147,9 +148,14 @@ const votedShortUrlSelector = createSelector(
   getShortUrl
 )
 
-const isAllVotedSelector = createSelector(
+const votedStatsSelector = createSelector(
   votedSelector,
-  (voted) => _.every(voted, Boolean)
+  (voted) => _.countBy(voted, (voted) => voted ? voted : null)
+)
+
+const isAllVotedSelector = createSelector(
+  votedStatsSelector,
+  (stats) => !stats[null]
 )
 
 const canShareVotedSelector = createSelector(
@@ -197,6 +203,12 @@ const votedMotionsSelector = createSelector(
   (motions, voted) => _.filter(motions, (motion) => {
     return !_.isUndefined(_.get(voted, [motion.id]))
   })
+)
+
+const activeTabSelector = createSelector(
+  state => state.activeTab,
+  votedSelector,
+  (activeTab, voted) => _.isEmpty(voted) ? 1 : activeTab
 )
 
 const getOppositeVote = (vote) => {
@@ -586,7 +598,7 @@ class ElectionMatch extends React.Component {
     }
     console.log(currentNav)
     return (
-      <div>
+      <div style={{paddingBottom: 20}}>
         <PageNavbar currentNav={currentNav} />
           {{
             'vote': this.renderMainSection,
@@ -602,7 +614,8 @@ class ElectionMatch extends React.Component {
   }
 
   renderMainSection() {
-    const { data, activeTab, voted } = this.state
+    const { data, voted } = this.state
+    const activeTab = activeTabSelector(this.state)
     return (
       <Grid>
         <VoteSectionHeader
@@ -683,6 +696,7 @@ class ElectionMatch extends React.Component {
   renderSelectedVotesTab = () => {
     const { voted } = this.state
     const motions = votedMotionsSelector(this.state)
+    const votedStats = votedStatsSelector(this.state)
     return (
       <div>
         {_.isEmpty(motions) ? <p className="text-warning">未有投票</p> : (
@@ -698,6 +712,21 @@ class ElectionMatch extends React.Component {
             type='simple'
           />
         )}
+        <ButtonToolbar style={{ padding: '16px 0' }}>
+          {votedStats[null] ? (
+            <Button onClick={this.onRemoveEmptyMotions} className="pull-right">
+              移除 {votedStats[null]} 個未投票議案
+            </Button>
+          ) : (
+            <Button
+              bsStyle="primary"
+              onClick={() => this.setState({ activeTab: 3 })}
+              className="pull-right"
+            >
+              看「配對結果」
+            </Button>
+          )}
+        </ButtonToolbar>
       </div>
     )
   }
@@ -743,10 +772,25 @@ class ElectionMatch extends React.Component {
                 )
               })}
             </tbody>
+            <tfoot>
+              <tr>
+                <td colSpan={7} style={{ padding: 16 }}>
+                  <p>
+                    註：作為負責任的選民，不應只靠單一資訊投票，請參閱「<a href="#limitation">注意事項</a>」瞭解本網的一些限制。
+                  </p>
+                </td>
+              </tr>
+            </tfoot>
           </table>
-          <p>
-            註：作為負責任的選民，不要只靠單一資訊投票，請參閱<a href="#limitation">注意事項</a>瞭解本網的限制。
-          </p>
+          <ButtonToolbar style={{ padding: '16px 0' }}>
+            <Button
+              bsStyle="primary"
+              onClick={() => this.setState({ activeTab: 4 })}
+              className="pull-right"
+            >
+              複製分享連結
+            </Button>
+          </ButtonToolbar>
         </div>
       </div>
     )
@@ -826,7 +870,13 @@ class ElectionMatch extends React.Component {
     const voted = _.omit(this.state.voted, motionId)
     this.setState({
       voted,
-      activeTab: _.isEmpty(voted) ? 1 : this.state.activeTab,
+    })
+  }
+
+  onRemoveEmptyMotions = () => {
+    const voted = _.omitBy(this.state.voted, _.isEmpty)
+    this.setState({
+      voted,
     })
   }
 }
