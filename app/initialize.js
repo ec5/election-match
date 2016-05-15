@@ -805,12 +805,16 @@ class ElectionMatch extends React.Component {
   }
 
   renderShareTab() {
+    const titleStyle = {
+      marginBottom: 10,
+    }
     return (
       <div>
         <Panel>
           {canShareMotionsSelector(this.state) && (
             <div>
-              <p className="lead">分享你已選取的議案</p>
+              <p className="lead" style={titleStyle}>分享你已選取的議案</p>
+              <p>對方只會看到議案表格，看不到你的投票，適合讓你的朋友就你關心的議題分享看法。</p>
               <GenerateShareUrl
                 url={motionsShareUrlSelector(this.state)}
                 shortUrl={motionsShortUrlSelector(this.state)}
@@ -820,7 +824,8 @@ class ElectionMatch extends React.Component {
           )}
           {canShareVotedSelector(this.state) && (
             <div>
-              <p className="lead">分享你的配對結果</p>
+              <p className="lead" style={titleStyle}>分享你的配對結果</p>
+              <p>對方會看到你的投票及配對結果，適合讓你的朋友知道你對一些議題的看法。</p>
               <GenerateShareUrl
                 url={votedShareUrlSelector(this.state)}
                 shortUrl={votedShortUrlSelector(this.state)}
