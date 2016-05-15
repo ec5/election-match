@@ -596,7 +596,15 @@ class ElectionMatch extends React.Component {
     if (!data) {
       return <div>載入議案資料中⋯⋯</div>
     }
-    console.log(currentNav)
+    const upStyle = {
+      position: 'fixed',
+      bottom: 120,
+      right: 30,
+      cursor: 'pointer',
+      transitionDuration: '0.2s',
+      transitionTimingFunction: 'linear',
+      transitionDelay: '0s',
+    }
     return (
       <div style={{paddingBottom: 20}}>
         <PageNavbar currentNav={currentNav} />
@@ -606,8 +614,8 @@ class ElectionMatch extends React.Component {
             'limitation': this.renderLimitationSection,
             'about': this.renderAboutSection,
           }[currentNav].call(this)}
-        <ScrollToTop showUnder={160}>
-          <span>移至頂部</span>
+        <ScrollToTop showUnder={160} style={upStyle}>
+          <img src="/images/up.png" alt="移至頂部" />
         </ScrollToTop>
       </div>
     )
