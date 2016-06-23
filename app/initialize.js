@@ -32,8 +32,14 @@ import ReactList from 'react-list'
 import ScrollToTop from 'react-scroll-up'
 
 import { DATE_FORMAT, getUrls } from './motion'
+
 import AboutSection from './components/AboutSection'
+import CloseButton from './components/CloseButton'
+import DateRangeFilter from './components/DateRangeFilter'
 import LimitationSection from './components/LimitationSection'
+import ScoreFormGroup from './components/ScoreFormGroup'
+import VoteDateDropdown from './components/VoteDateDropdown'
+import VoteSectionHeader from './components/VoteSectionHeader'
 
 const GOOGLE_CLIENT_LOADED_EVENT = 'googleClientLoaded'
 
@@ -279,75 +285,6 @@ const votedCountSelector = createSelector(
   (voted) => _.size(voted)
 )
 
-class DateRangeFilter extends Component {
-  componentDidMount() {
-    $(this._input).daterangepicker({
-      autoApply: true,
-      locale: {
-        format: DATE_FORMAT,
-      },
-      showDropdowns: true,
-      ..._.pick(this.props, [
-        'startDate', 'endDate',
-        'minDate', 'maxDate',
-      ])
-    })
-    .on('change', this.props.onChange)
-  }
-
-  render() {
-    return (
-      <input
-        ref={(c) => this._input = c}
-        type="text"
-        name="datefilter"
-        className="form-control"
-      />
-    )
-  }
-}
-
-const CloseButton = ({ onClick }) => {
-  return (
-    <button
-      type="button"
-      className="close pull-right"
-      ariaLabel="Close"
-      onClick={onClick}
-    >
-      <span ariaHidden="true">&times;</span>
-    </button>
-  )
-}
-
-const VoteDateDropdown = ({ motion }) => {
-  const urls = getUrls(motion)
-  return (
-    <DropdownButton
-      bsStyle="link"
-      title={motion.voteDate}
-      id={`vote-date-dropdown-${motion.id}`}
-      style={{paddingLeft: 0, paddingRight: 0}}
-    >
-      {_.reduce([
-        ['agenda', '會議議程'],
-        ['rundown', '會議過程正式紀錄'],
-        ['minutesPdf', '會議紀要 PDF'],
-        ['results', '決定的紀錄'],
-        ['votingPdf', '投票結果 PDF'],
-        ['votingResults', '投票結果'],
-      ], (r, [k, title], i) => {
-        const url = urls[k]
-        if (url) {
-          r.push(<MenuItem key={i} href={url} rel="nofollow" target="_blank">{title}</MenuItem>)
-        }
-        return r
-      }, [])}
-      <MenuItem divider />
-      <MenuItem href={urls.index} rel="nofollow" target="_blank">會議</MenuItem>
-    </DropdownButton>
-  )
-}
 
 const renderMotionVote = ({ motions, voted, onVoteYes, onVoteNo, onRemoveMotion }) => (i) => {
   const motion = motions[i]
@@ -382,24 +319,6 @@ const renderMotionVote = ({ motions, voted, onVoteYes, onVoteNo, onRemoveMotion 
   )
 }
 
-const VoteSectionHeader = ({ activeTab, onSelectTab, votedCount, isAllVoted, canShare }) => {
-  const showResult = votedCount > 0 && isAllVoted
-  return (
-    <header>
-      <h2>議案投票</h2>
-      <p className="lead">假如你是立法會議員，你會如何投票？</p>
-      <Nav bsStyle="tabs" activeKey={activeTab} onSelect={onSelectTab} justified={true}>
-        <NavItem eventKey={1}>選取議案</NavItem>
-        <NavItem eventKey={2} disabled={votedCount === 0}>
-          你的投票{' '}
-          <Badge className={showResult ? 'alert-success' : ''}>{votedCount}</Badge>
-        </NavItem>
-        <NavItem eventKey={3} disabled={!showResult}>配對結果</NavItem>
-        <NavItem eventKey={4} disabled={!canShare}>分享</NavItem>
-      </Nav>
-    </header>
-  )
-}
 
 const copyToClipboardSafely = (shortUrl) => {
   try {
@@ -479,16 +398,6 @@ const ScoreForm = ({ defaultExpanded, title, children }) => {
   )
 }
 
-const ScoreFormGroup = ({ title, ...props }) => {
-  return (
-    <FormGroup>
-      <ControlLabel className="col-sm-2">{title}</ControlLabel>
-      <div className="col-sm-10">
-        <FormControl type="number" {...props} />
-      </div>
-    </FormGroup>
-  )
-}
 
 const defaultScoreVars = {
   yes: 1,
