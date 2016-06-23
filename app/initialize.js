@@ -36,7 +36,11 @@ import { DATE_FORMAT, getUrls } from './motion'
 import AboutSection from './components/AboutSection'
 import CloseButton from './components/CloseButton'
 import DateRangeFilter from './components/DateRangeFilter'
+import GenerateShareUrl from './components/GenerateShareUrl'
 import LimitationSection from './components/LimitationSection'
+import PageNavbar from './components/PageNavbar'
+import renderMotionVote from './components/renderMotionVote'
+import ScoreForm from './components/ScoreForm'
 import ScoreFormGroup from './components/ScoreFormGroup'
 import VoteDateDropdown from './components/VoteDateDropdown'
 import VoteSectionHeader from './components/VoteSectionHeader'
@@ -286,118 +290,12 @@ const votedCountSelector = createSelector(
 )
 
 
-const renderMotionVote = ({ motions, voted, onVoteYes, onVoteNo, onRemoveMotion }) => (i) => {
-  const motion = motions[i]
-  return (
-    <div key={i} className="form-group list-group-item lead">
-      <h4 className="list-group-item-heading">
-        <Clearfix style={{margin: '0.5rem 0 1.5rem'}}>
-          {_.has(voted, motion.id) && <CloseButton onClick={() => onRemoveMotion(motion.id)} />}
-          <VoteDateDropdown motion={motion} />
-        </Clearfix>
-        {motion.title}
-      </h4>
-      <label className="radio-inline">
-        <input
-          type="radio"
-          name={motion.id}
-          value="yes"
-          onChange={() => onVoteYes(motion)}
-          checked={_.get(voted, motion.id) === 'yes'}
-        /> 贊成
-      </label>
-      <label className="radio-inline">
-        <input
-          type="radio"
-          name={motion.id}
-          value="no"
-          onChange={() => onVoteNo(motion)}
-          checked={_.get(voted, motion.id) === 'no'}
-        /> 反對
-      </label>
-    </div>
-  )
-}
-
-
 const copyToClipboardSafely = (shortUrl) => {
   try {
     copyToClipboard(shortUrl)
   } catch (ex) {
   }
 }
-
-const GenerateShareUrl = ({ url, shortUrl, onGenerateShortUrl }) => {
-  return (
-    <form onSubmit={(event) => {
-        event.preventDefault()
-        if (shortUrl) {
-          copyToClipboardSafely(shortUrl)
-        } else {
-          onGenerateShortUrl(url, (res) => {
-            copyToClipboardSafely(res.shortUrl)
-          })
-        }
-      }}>
-      <FormGroup>
-        <InputGroup>
-          <FormControl
-            type="text"
-            value={shortUrl || url}
-            readOnly={true}
-            style={{textOverflow: 'ellipsis'}}
-          />
-          <InputGroup.Button>
-            <Button type="submit">複製短網址</Button>
-          </InputGroup.Button>
-        </InputGroup>
-      </FormGroup>
-    </form>
-  )
-}
-
-const PageNavbar = ({ currentNav }) => {
-  return (
-    <Navbar staticTop>
-      <Navbar.Header>
-        <Navbar.Brand active>
-          <a href="#">立法會投票傾向配對</a>
-        </Navbar.Brand>
-        <Navbar.Toggle />
-      </Navbar.Header>
-      <Navbar.Collapse>
-        <Nav>
-          {_.map([
-            ['vote', '議案投票'],
-            // ['stats', '數據統計'],
-            ['limitation', '注意事項'],
-            ['about', '關於本網'],
-          ], ([hash, title], i) => {
-            return (
-              <NavItem
-                key={i}
-                eventKey={hash}
-                href={`#${hash}`}
-                active={currentNav === hash}
-              >{title}</NavItem>
-            )
-          })}
-        </Nav>
-      </Navbar.Collapse>
-    </Navbar>
-  )
-}
-
-const ScoreForm = ({ defaultExpanded, title, children }) => {
-  return (
-    <Panel header={title} collapsible defaultExpanded={defaultExpanded} bsStyle="info">
-      <form className="form-horizontal">
-        {children}
-      </form>
-    </Panel>
-  )
-}
-
 
 const defaultScoreVars = {
   yes: 1,
