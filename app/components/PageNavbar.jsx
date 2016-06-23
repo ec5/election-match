@@ -1,3 +1,4 @@
+import _ from 'lodash'
 import React from 'react'
 
 import Navbar from 'react-bootstrap/lib/Navbar'

@@ -1,3 +1,4 @@
+/* globals $ */
 import _ from 'lodash'
 import React from 'react'
 import { DATE_FORMAT } from '../motion'
@@ -21,7 +22,7 @@ class DateRangeFilter extends React.Component {
   render() {
     return (
       <input
-        ref={(c) => this._input = c}
+        ref={(c) => { this._input = c }}
         type="text"
         name="datefilter"
         className="form-control"
