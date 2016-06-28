@@ -1,39 +1,34 @@
-import _ from 'lodash'
 import React from 'react'
-
 import Navbar from 'react-bootstrap/lib/Navbar'
 import Nav from 'react-bootstrap/lib/Nav'
 import NavItem from 'react-bootstrap/lib/NavItem'
+import Badge from 'react-bootstrap/lib/Badge'
 
-const PageNavbar = ({ currentNav }) => {
+const PageNavbar = ({ activeTab, onSelectTab, votedCount, showResult, canShare }) => {
   return (
-    <Navbar staticTop>
-      <Navbar.Header>
-        <Navbar.Brand active>
-          <a href="#">立法會投票傾向配對</a>
-        </Navbar.Brand>
-        <Navbar.Toggle />
-      </Navbar.Header>
-      <Navbar.Collapse>
-        <Nav>
-          {_.map([
-            ['vote', '議案投票'],
-            // ['stats', '數據統計'],
-            ['limitation', '注意事項'],
-            ['about', '關於本網'],
-          ], ([hash, title], i) => {
-            return (
-              <NavItem
-                key={i}
-                eventKey={hash}
-                href={`#${hash}`}
-                active={currentNav === hash}
-              >{title}</NavItem>
-            )
-          })}
+    <div style={{height: 60}}>
+      <Navbar fixedTop>
+        <Nav
+          bsStyle="pills"
+          activeKey={1}
+          activeKey={activeTab}
+          onSelect={onSelectTab}
+          style={{marginLeft: 0}}
+          >
+          <NavItem eventKey={1}>選議案</NavItem>
+          <NavItem eventKey={2} disabled={votedCount === 0}>
+            投票
+            <Badge className={showResult ? 'alert-success' : ''}>{votedCount}</Badge>
+          </NavItem>
+          <NavItem eventKey={3} disabled={!showResult}>結果</NavItem>
+          <NavItem eventKey={4} disabled={!canShare}>分享</NavItem>
+          <NavItem eventKey={5}>
+            注意
+            <Badge className="alert-danger">!</Badge>
+          </NavItem>
         </Nav>
-      </Navbar.Collapse>
-    </Navbar>
+      </Navbar>
+    </div>
   )
 }
 

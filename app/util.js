@@ -44,7 +44,6 @@ export const getCurrentNav = () => {
   switch (hash) {
     case 'about':
     case 'limitation':
-    case 'stats':
       return hash
     default:
       return 'vote'

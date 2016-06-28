@@ -34,10 +34,10 @@ import {
 import AboutSection from './components/AboutSection'
 import DateRangeFilter from './components/DateRangeFilter'
 import GenerateShareUrl from './components/GenerateShareUrl'
+import PageNavbar from './components/PageNavbar'
 import renderMotionVote from './components/renderMotionVote'
 import ScoreForm from './components/ScoreForm'
 import ScoreFormGroup from './components/ScoreFormGroup'
-import VoteSectionHeader from './components/VoteSectionHeader'
 
 const GOOGLE_CLIENT_LOADED_EVENT = 'googleClientLoaded'
 
@@ -96,7 +96,8 @@ class ElectionMatch extends React.Component {
     const { data, voted, startDate, endDate } = this.state
     const motions = filterMotionsSelector(this.state)
     return (
-      <div style={{paddingTop: 16, borderTop: '1px solid #eee'}}>
+      <div>
+        <h3>假如你是立法會議員，你會如何投票？<small>根據你的投票，找到相近似的議員</small></h3>
         <p className="lead">共 {_.size(data.motions)} 個議案，最近更新：{maxDateSelector(this.state).format(DATE_FORMAT)}。</p>
         <DateRangeFilter
           minDate={minDateSelector(this.state)}
@@ -327,8 +328,8 @@ class ElectionMatch extends React.Component {
   }
 
   render() {
-    const { data } = this.state
-    const activeTab = activeTabSelector(this.state)
+    const { currentNav, data } = this.state
+    const activeTab = currentNav === 'about' || currentNav === 'limitation' ? 5 : activeTabSelector(this.state)
     if (!data) {
       return <div>載入議案資料中⋯⋯</div>
     }
@@ -342,15 +343,15 @@ class ElectionMatch extends React.Component {
       transitionDelay: '0s',
     }
     return (
-      <div style={{paddingBottom: 20}}>
+      <div style={{paddingBottom: 60}}>
+        <PageNavbar
+          activeTab={activeTab}
+          onSelectTab={(eventKey) => this.setState({ activeTab: eventKey })}
+          votedCount={votedCountSelector(this.state)}
+          isAllVoted={isAllVotedSelector(this.state)}
+          canShare={canShareSelector(this.state)}
+          />
         <Grid>
-          <VoteSectionHeader
-            activeTab={activeTab}
-            onSelectTab={(eventKey) => this.setState({ activeTab: eventKey })}
-            votedCount={votedCountSelector(this.state)}
-            isAllVoted={isAllVotedSelector(this.state)}
-            canShare={canShareSelector(this.state)}
-            />
           {[
             this.renderFilterVotesTab,
             this.renderSelectedVotesTab,
