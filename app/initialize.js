@@ -34,8 +34,6 @@ import {
 import AboutSection from './components/AboutSection'
 import DateRangeFilter from './components/DateRangeFilter'
 import GenerateShareUrl from './components/GenerateShareUrl'
-import LimitationSection from './components/LimitationSection'
-import PageNavbar from './components/PageNavbar'
 import renderMotionVote from './components/renderMotionVote'
 import ScoreForm from './components/ScoreForm'
 import ScoreFormGroup from './components/ScoreFormGroup'
@@ -84,44 +82,10 @@ class ElectionMatch extends React.Component {
 
       this.setState({
         data,
-        startDate: minDateSelector({ data }),
+        startDate: moment(maxDateSelector({ data })).add(-6, 'months'),
         endDate: maxDateSelector({ data }),
       })
     })
-  }
-
-  renderMainSection() {
-    const { data, voted } = this.state
-    const activeTab = activeTabSelector(this.state)
-    return (
-      <Grid>
-        <VoteSectionHeader
-          activeTab={activeTab}
-          onSelectTab={(eventKey) => this.setState({ activeTab: eventKey })}
-          votedCount={votedCountSelector(this.state)}
-          isAllVoted={isAllVotedSelector(this.state)}
-          canShare={canShareSelector(this.state)}
-          />
-        {[
-          this.renderFilterVotesTab,
-          this.renderSelectedVotesTab,
-          this.renderResultTab,
-          this.renderShareTab,
-        ][activeTab - 1].call(this)}
-      </Grid>
-    )
-  }
-
-  renderStatsSection() {
-    return (
-      <div>stats</div>
-    )
-  }
-
-  renderLimitationSection() {
-    return (
-      <LimitationSection />
-    )
   }
 
   renderAboutSection() {
@@ -132,7 +96,7 @@ class ElectionMatch extends React.Component {
     const { data, voted, startDate, endDate } = this.state
     const motions = filterMotionsSelector(this.state)
     return (
-      <Panel>
+      <div style={{paddingTop: 16, borderTop: '1px solid #eee'}}>
         <p className="lead">共 {_.size(data.motions)} 個議案，最近更新：{maxDateSelector(this.state).format(DATE_FORMAT)}。</p>
         <DateRangeFilter
           minDate={minDateSelector(this.state)}
@@ -166,7 +130,7 @@ class ElectionMatch extends React.Component {
             type="simple"
             />
         )}
-      </Panel>
+      </div>
     )
   }
 
@@ -363,14 +327,15 @@ class ElectionMatch extends React.Component {
   }
 
   render() {
-    const { currentNav, data } = this.state
+    const { data } = this.state
+    const activeTab = activeTabSelector(this.state)
     if (!data) {
       return <div>載入議案資料中⋯⋯</div>
     }
     const upStyle = {
       position: 'fixed',
-      bottom: 120,
-      right: 30,
+      bottom: 30,
+      right: 0,
       cursor: 'pointer',
       transitionDuration: '0.2s',
       transitionTimingFunction: 'linear',
@@ -378,13 +343,22 @@ class ElectionMatch extends React.Component {
     }
     return (
       <div style={{paddingBottom: 20}}>
-        <PageNavbar currentNav={currentNav} />
-        {{
-          vote: this.renderMainSection,
-          stats: this.renderStatsSection,
-          limitation: this.renderLimitationSection,
-          about: this.renderAboutSection,
-        }[currentNav].call(this)}
+        <Grid>
+          <VoteSectionHeader
+            activeTab={activeTab}
+            onSelectTab={(eventKey) => this.setState({ activeTab: eventKey })}
+            votedCount={votedCountSelector(this.state)}
+            isAllVoted={isAllVotedSelector(this.state)}
+            canShare={canShareSelector(this.state)}
+            />
+          {[
+            this.renderFilterVotesTab,
+            this.renderSelectedVotesTab,
+            this.renderResultTab,
+            this.renderShareTab,
+            this.renderAboutSection,
+          ][activeTab - 1].call(this)}
+        </Grid>
         <ScrollToTop showUnder={160} style={upStyle}>
           <img src="/images/up.png" alt="移至頂部" />
         </ScrollToTop>

@@ -114,7 +114,7 @@ export const votedMotionsSelector = createSelector(
 export const activeTabSelector = createSelector(
   state => state.activeTab,
   votedSelector,
-  (activeTab, voted) => (_.isEmpty(voted) ? 1 : activeTab)
+  (activeTab, voted) => (_.isEmpty(voted) && activeTab <= 4 ? 1 : activeTab)
 )
 
 const getOppositeVote = (vote) => {
