@@ -99,7 +99,7 @@ export const filterMotionsSelector = createSelector(
     const filteredMotions = _.filter(searchResult, (motion) => {
       return motion.voteDateMoment.isBetween(startDate, endDate)
     })
-    return filteredMotions
+    return _.sortBy(filteredMotions, 'voteDateMoment').reverse()
   }
 )
 
