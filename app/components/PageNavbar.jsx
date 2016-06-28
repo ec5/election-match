@@ -4,7 +4,8 @@ import Nav from 'react-bootstrap/lib/Nav'
 import NavItem from 'react-bootstrap/lib/NavItem'
 import Badge from 'react-bootstrap/lib/Badge'
 
-const PageNavbar = ({ activeTab, onSelectTab, votedCount, showResult, canShare }) => {
+const PageNavbar = ({ activeTab, onSelectTab, votedCount, isAllVoted, canShare }) => {
+  const showResult = votedCount > 0 && isAllVoted
   return (
     <div style={{height: 60}}>
       <Navbar fixedTop>

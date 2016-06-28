@@ -36,6 +36,7 @@ import DateRangeFilter from './components/DateRangeFilter'
 import GenerateShareUrl from './components/GenerateShareUrl'
 import PageNavbar from './components/PageNavbar'
 import renderMotionVote from './components/renderMotionVote'
+import renderMotionSelector from './components/renderMotionSelector'
 import ScoreForm from './components/ScoreForm'
 import ScoreFormGroup from './components/ScoreFormGroup'
 
@@ -82,7 +83,7 @@ class ElectionMatch extends React.Component {
 
       this.setState({
         data,
-        startDate: moment(maxDateSelector({ data })).add(-6, 'months'),
+        startDate: minDateSelector({ data }),
         endDate: maxDateSelector({ data }),
       })
     })
@@ -93,7 +94,7 @@ class ElectionMatch extends React.Component {
   }
 
   renderFilterVotesTab = () => {
-    const { data, voted, startDate, endDate } = this.state
+    const { data, voted, startDate: startD, endDate: endD } = this.state
     const motions = filterMotionsSelector(this.state)
     return (
       <div>
@@ -102,9 +103,9 @@ class ElectionMatch extends React.Component {
         <DateRangeFilter
           minDate={minDateSelector(this.state)}
           maxDate={maxDateSelector(this.state)}
-          startDate={startDate}
-          endDate={endDate}
-          onChange={(event, picker) => {
+          startDate={startD}
+          endDate={endD}
+          onChange={(event) => {
             const [startDate, endDate] = _.map(_.split(event.target.value, ' - '), (x) => moment(x, DATE_FORMAT))
             this.setState({
               startDate,
@@ -120,11 +121,10 @@ class ElectionMatch extends React.Component {
           />
         {_.isEmpty(motions) ? <p className="text-warning">沒有議案可投票</p> : (
           <ReactList
-            itemRenderer={renderMotionVote({
+            itemRenderer={renderMotionSelector({
               motions,
               voted,
-              onVoteYes: this.onVote('yes'),
-              onVoteNo: this.onVote('no'),
+              onAddMotion: this.onVote('pending'),
               onRemoveMotion: this.onRemoveMotion,
             })}
             length={motions.length}
