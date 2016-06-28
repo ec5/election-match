@@ -4,7 +4,7 @@ import Nav from 'react-bootstrap/lib/Nav'
 import NavItem from 'react-bootstrap/lib/NavItem'
 import Badge from 'react-bootstrap/lib/Badge'
 
-const PageNavbar = ({ activeTab, onSelectTab, votedCount, isAllVoted, canShare }) => {
+const PageNavbar = ({ activeTab, onSelectTab, votedCount, isAllVoted }) => {
   const showResult = votedCount > 0 && isAllVoted
   return (
     <div style={{height: 60}}>
@@ -22,8 +22,7 @@ const PageNavbar = ({ activeTab, onSelectTab, votedCount, isAllVoted, canShare }
             <Badge className={showResult ? 'alert-success' : ''}>{votedCount}</Badge>
           </NavItem>
           <NavItem eventKey={3} disabled={!showResult}>結果</NavItem>
-          <NavItem eventKey={4} disabled={!canShare}>分享</NavItem>
-          <NavItem eventKey={5}>
+          <NavItem eventKey={4}>
             注意
             <Badge className="alert-danger">!</Badge>
           </NavItem>

@@ -7,6 +7,7 @@ import ButtonToolbar from 'react-bootstrap/lib/ButtonToolbar'
 import FormControl from 'react-bootstrap/lib/FormControl'
 import Grid from 'react-bootstrap/lib/Grid'
 import Panel from 'react-bootstrap/lib/Panel'
+import Clearfix from 'react-bootstrap/lib/Clearfix'
 import ReactList from 'react-list'
 import ScrollToTop from 'react-scroll-up'
 
@@ -169,6 +170,17 @@ class ElectionMatch extends React.Component {
             </Button>
           )}
         </ButtonToolbar>
+        {canShareMotionsSelector(this.state) && (
+          <div style={{marginTop: 50}}>
+            <p className="lead">分享你已選取的議案</p>
+            <p>對方只會看到議案表格，看不到你的投票，適合讓你的朋友就你關心的議題分享看法。</p>
+            <GenerateShareUrl
+              url={motionsShareUrlSelector(this.state)}
+              shortUrl={motionsShortUrlSelector(this.state)}
+              onGenerateShortUrl={this.onGenerateShortUrl}
+              /><br />
+          </div>
+        )}
       </div>
     )
   }
@@ -178,6 +190,16 @@ class ElectionMatch extends React.Component {
     const matchResult = matchResultSelector(this.state)
     const title = <h3>計分方法</h3>
     const defaultExpanded = !_.isEqual(scoreVars, defaultScoreVars)
+    const sharePanel = canShareVotedSelector(this.state) && (
+      <div>
+        <p>對方會看到你的投票及配對結果，適合讓你的朋友知道你對一些議題的看法。</p>
+        <GenerateShareUrl
+          url={votedShareUrlSelector(this.state)}
+          shortUrl={votedShortUrlSelector(this.state)}
+          onGenerateShortUrl={this.onGenerateShortUrl}
+          />
+      </div>
+    )
     return (
       <div>
         <ScoreForm title={title} defaultExpanded={defaultExpanded}>
@@ -186,6 +208,9 @@ class ElectionMatch extends React.Component {
           <ScoreFormGroup title="相反投票" value={scoreVars.opposite} onChange={this.onScoreVarsChange('opposite')} />
           <ScoreFormGroup title="沒有投票" value={scoreVars.novote} onChange={this.onScoreVarsChange('novote')} />
         </ScoreForm>
+        <Panel header="分享你的結果" collapsible defaultExpanded={false} bsStyle="info">
+          {sharePanel}
+        </Panel>
         <div className="table-responsive">
           <table className="table table-striped table-hover table-condensed">
             <thead>
@@ -224,50 +249,10 @@ class ElectionMatch extends React.Component {
               </tr>
             </tfoot>
           </table>
-          <ButtonToolbar style={{ padding: '16px 0' }}>
-            <Button
-              bsStyle="primary"
-              onClick={() => this.setState({ activeTab: 4 })}
-              className="pull-right"
-              >
-              複製分享連結
-            </Button>
-          </ButtonToolbar>
         </div>
-      </div>
-    )
-  }
 
-  renderShareTab() {
-    const titleStyle = {
-      marginBottom: 10,
-    }
-    return (
-      <div>
-        <Panel>
-          {canShareMotionsSelector(this.state) && (
-            <div>
-              <p className="lead" style={titleStyle}>分享你已選取的議案</p>
-              <p>對方只會看到議案表格，看不到你的投票，適合讓你的朋友就你關心的議題分享看法。</p>
-              <GenerateShareUrl
-                url={motionsShareUrlSelector(this.state)}
-                shortUrl={motionsShortUrlSelector(this.state)}
-                onGenerateShortUrl={this.onGenerateShortUrl}
-                /><br />
-            </div>
-          )}
-          {canShareVotedSelector(this.state) && (
-            <div>
-              <p className="lead" style={titleStyle}>分享你的配對結果</p>
-              <p>對方會看到你的投票及配對結果，適合讓你的朋友知道你對一些議題的看法。</p>
-              <GenerateShareUrl
-                url={votedShareUrlSelector(this.state)}
-                shortUrl={votedShortUrlSelector(this.state)}
-                onGenerateShortUrl={this.onGenerateShortUrl}
-                />
-            </div>
-          )}
-        </Panel>
+        <p className="lead">分享你的結果</p>
+        {sharePanel}
       </div>
     )
   }
@@ -329,7 +314,8 @@ class ElectionMatch extends React.Component {
 
   render() {
     const { currentNav, data } = this.state
-    const activeTab = currentNav === 'about' || currentNav === 'limitation' ? 5 : activeTabSelector(this.state)
+    const aboutTabNumber = 4
+    const activeTab = currentNav === 'about' || currentNav === 'limitation' ? aboutTabNumber : activeTabSelector(this.state)
     if (!data) {
       return <div>載入議案資料中⋯⋯</div>
     }
@@ -348,7 +334,7 @@ class ElectionMatch extends React.Component {
           activeTab={activeTab}
           onSelectTab={(eventKey) => {
             this.setState({ activeTab: eventKey })
-            if (eventKey < 5) {
+            if (eventKey < aboutTabNumber) {
               // not about page
               location.hash = '#vote'
             }
@@ -362,7 +348,6 @@ class ElectionMatch extends React.Component {
             this.renderFilterVotesTab,
             this.renderSelectedVotesTab,
             this.renderResultTab,
-            this.renderShareTab,
             this.renderAboutSection,
           ][activeTab - 1].call(this)}
         </Grid>

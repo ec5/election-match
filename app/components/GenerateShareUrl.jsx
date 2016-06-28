@@ -36,7 +36,7 @@ const GenerateShareUrl = ({ url, shortUrl, onGenerateShortUrl }) => {
             style={{textOverflow: 'ellipsis'}}
           />
           <InputGroup.Button>
-            <Button type="submit">複製短網址</Button>
+            <Button type="submit" bsStyle="primary">複製短網址</Button>
           </InputGroup.Button>
         </InputGroup>
       </FormGroup>
