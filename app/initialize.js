@@ -346,7 +346,13 @@ class ElectionMatch extends React.Component {
       <div style={{paddingBottom: 60}}>
         <PageNavbar
           activeTab={activeTab}
-          onSelectTab={(eventKey) => this.setState({ activeTab: eventKey })}
+          onSelectTab={(eventKey) => {
+            this.setState({ activeTab: eventKey })
+            if (eventKey < 5) {
+              // not about page
+              location.hash = '#vote'
+            }
+          }}
           votedCount={votedCountSelector(this.state)}
           isAllVoted={isAllVotedSelector(this.state)}
           canShare={canShareSelector(this.state)}
